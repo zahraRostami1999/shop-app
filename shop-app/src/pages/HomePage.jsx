@@ -4,7 +4,6 @@ import Products from "../components/products/Products";
 function HomePage(){
   return (
     <>
-      <Header />
       <Products />
     </>
   );
