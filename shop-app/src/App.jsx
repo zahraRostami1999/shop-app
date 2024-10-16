@@ -1,4 +1,6 @@
-import Header from './components/header/Header'
+import Header from './components/header/Header';
+import Products from './components/products/Products';
+
 
 function App() {
 
@@ -6,6 +8,7 @@ function App() {
   return (
     <>
       <Header />
+      <Products />
     </>
   )
 }
