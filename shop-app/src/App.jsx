@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
 import Header from "./components/header/Header";
+import Page404 from "./pages/Page404";
 
 function App() {
   return (
@@ -9,8 +10,9 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage />}></Route>
+          <Route exact path="/" element={<HomePage />}></Route>
           <Route path="/cart" element={<CartPage />}></Route>
+          <Route path="*" element={<Page404 />}></Route>
         </Routes>
       </BrowserRouter>
     </>
