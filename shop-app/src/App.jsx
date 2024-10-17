@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import CartPage from "./pages/CartPage";
 import Header from "./components/header/Header";
 import Page404 from "./pages/Page404";
+import ProductPage from "./pages/ProductPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />}></Route>
           <Route path="/cart" element={<CartPage />}></Route>
+          <Route path="/Product/:id" element={<ProductPage />}></Route>
           <Route path="*" element={<Page404 />}></Route>
         </Routes>
       </BrowserRouter>
