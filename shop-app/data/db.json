@@ -3,20 +3,23 @@
         {
             "id":1,
             "name":"Product 1",
-            "desc": "...",
-            "price":100
+            "description": "...",
+            "price":100,
+            "image": "..."
         },
         {
             "id":2,
             "name":"Product 2",
-            "desc": "...",
-            "price":200
+            "description": "...",
+            "price":200,
+            "image": "..."
         },
         {
-            "id":2,
-            "name":"Product 2",
-            "desc": "...",
-            "price":200
+            "id":3,
+            "name":"Product 3",
+            "description": "...",
+            "price":300,
+            "image": "..."
         }
     ]
 }
