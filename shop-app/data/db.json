@@ -1,0 +1,22 @@
+{
+    "ProductAPI":[
+        {
+            "id":1,
+            "name":"Product 1",
+            "desc": "...",
+            "price":100
+        },
+        {
+            "id":2,
+            "name":"Product 2",
+            "desc": "...",
+            "price":200
+        },
+        {
+            "id":2,
+            "name":"Product 2",
+            "desc": "...",
+            "price":200
+        }
+    ]
+}
