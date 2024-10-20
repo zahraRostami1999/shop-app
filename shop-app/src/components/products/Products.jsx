@@ -1,25 +1,24 @@
-import { useEffect } from "react";
-import {useSelector, useDispatch} from 'react-redux';
+import { useEffect, useState } from "react";
 import Card from "../card/Card";
 import axios from "axios";
-import {addProduct} from '../../redux/ProductSlice';
+
 
 function Products() {
-  const products = useSelector((state) => state.products);
-  const dispatch = useDispatch()
+
+
+  const [productData, setProductData] = useState([]);
   
   useEffect(() => {
     axios
       .get("http://localhost:8000/ProductAPI")
       .then((result) => {
-        dispatch(addProduct(result.data)); 
+        setProductData((productData) => productData=result.data); 
+
       })
       .catch((error) => {
         console.log(error);
       });
   }, []);
-
-  console.log(products);
 
   return (
     <>
