@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "../card/Card";
 import axios from "axios";
+import { getProducts } from "../../services/api";
 
 
 function Products() {
@@ -9,15 +10,15 @@ function Products() {
   const [productData, setProductData] = useState([]);
   
   useEffect(() => {
-    axios
-      .get("http://localhost:8000/ProductAPI")
-      .then((result) => {
-        setProductData((productData) => productData=result.data); 
+    getProducts()
 
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+      // .then((result) => {
+
+
+      // })
+      // .catch((error) => {
+      //   console.log(error);
+      // });
   }, []);
 
   return (
