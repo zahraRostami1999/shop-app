@@ -19,8 +19,8 @@ function Products() {
   return (
     <>
       <div className="bg-red-100 pt-20 p-10 grid grid-cols-4">
-        {productData.map((product) => (
-          <Link to={`/products/${1}`}>
+        {productData.map((product) => ( 
+          <Link to={`/Product/${product.id}`}>
             <Card key={product.id} {...product}/>
           </Link>
         ))}
