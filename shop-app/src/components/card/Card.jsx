@@ -1,13 +1,20 @@
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-function Card() {
+function Card({ title, price, description, image }) {
   return (
     <>
-      <div className="border-slate-300 shadow-lg border col-span-3  my-10 mx-7 p-5 rounded-lg">
-        <h2 className="text-center my-4 text-lg font-sans font-bold">Card Title</h2>
-        <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" />
-        <p>Card Content</p>
-        <Link to={`Product/${1}`}>View Details</Link>
+      <div className="border-slate-100 shadow-lg border mx-7 rounded-lg mb-10 h-96 px-3">
+        <img className="w-full h-60 py-4 " src={image} />
+        <h2 className=" h-20 text-left text-sm font-sans pt-3 font-semibold">
+          {title}
+        </h2>
+        <p className="font-bold flex justify-between items-center">
+          <span>{price}$</span>
+
+          <span className="bg-orange-500 p-2 rounded-lg">
+            <Link to={`/products/${1}`}>View Details</Link>
+          </span>
+        </p>
       </div>
     </>
   );
