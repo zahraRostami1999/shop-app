@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Card({ title, price, description, image }) {
+function Card({ id,title, price, description, image }) {
   return (
     <>
       <div className="border-slate-100 shadow-lg border mx-7 rounded-lg mb-10 h-96 px-3">
@@ -12,7 +12,7 @@ function Card({ title, price, description, image }) {
           <span>{price}$</span>
 
           <span className="bg-orange-500 p-2 rounded-lg">
-            <Link to={`/products/${1}`}>View Details</Link>
+            <Link to={`/Product/${id}`}>View Details</Link>
           </span>
         </p>
       </div>
