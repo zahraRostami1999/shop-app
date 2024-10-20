@@ -18,10 +18,10 @@ function Products() {
   }, []);
   return (
     <>
-      <div className="bg-red-100 pt-20 p-10 grid grid-cols-3 gap-12">
+      <div className="bg-red-100 pt-20 p-10 grid grid-cols-4">
         {productData.map((product) => (
           <Link to={`/products/${1}`}>
-            <Card key={product.id} />
+            <Card key={product.id} {...product}/>
           </Link>
         ))}
       </div>
