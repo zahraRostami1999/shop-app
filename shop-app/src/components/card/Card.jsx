@@ -11,8 +11,8 @@ function Card({ id,title, price, description, image }) {
         <p className="font-bold flex justify-between items-center">
           <span>{price}$</span>
 
-          <span className="bg-orange-500 p-2 rounded-lg">
-            <Link to={`/Product/${id}`}>View Details</Link>
+          <span className="bg-yellow-400 p-2 rounded-lg">
+            <Link to={`/Product/${id}`}>Add to Basket</Link>
           </span>
         </p>
       </div>
