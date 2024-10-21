@@ -12,7 +12,7 @@ function Card({ id,title, price, description, image }) {
           <span>{price}$</span>
 
           <span className="bg-yellow-400 p-2 rounded-lg">
-            <Link to={`/Product/${id}`}>Add to Basket</Link>
+            <Link to='/cart'>Add to Basket</Link>
           </span>
         </p>
       </div>
