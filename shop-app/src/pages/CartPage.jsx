@@ -1,10 +1,16 @@
-import { CartSlice } from "../redux/CartSlice";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { getProducts } from "../services/api";
 
 function CartPage() {
-  const cart = useSelector((state) => state.cart);
-  const cartItems = cart.Item;
-  
+  const { cartItem } = useSelector((state) => state.cart);
+  const [productItems, setProductItems] = useState([]);
+
+  useEffect(() => {
+    getProducts().then((result) => {
+      setProductItems(result);
+    });
+  }, []);
 
   return (
     <>
