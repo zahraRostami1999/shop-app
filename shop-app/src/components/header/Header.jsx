@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <>
-      <div className="flex justify-between text-slate-700 bg-red-400 p-5 text-center font-mono font-extrabold text-3xl">
+      <div className="flex justify-between text-slate-700 bg-red-100 p-4 text-center font-mono font-extrabold text-3xl fixed w-full">
         <Link to="/">
           <h1>WELLCOME TO YOUR SHOP</h1>
         </Link>
