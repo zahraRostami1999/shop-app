@@ -23,7 +23,7 @@ function ProductPage() {
 
   return (
     <>
-      <div className="bg-slate-200 mx-auto my-5 pb-5 w-5/12">
+      <div className="mt-24 border shadow-xl mx-auto py-3 w-5/12">
         <h1 className="text-2xl font-bold text-center py-3">
           {productDetails.title}
         </h1>
