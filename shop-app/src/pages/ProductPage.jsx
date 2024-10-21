@@ -27,12 +27,12 @@ function ProductPage() {
         <h2 className="text-lg font-bold text-center">
           {productDetails.price} $
         </h2>
-        <h3 className="text-base px-10">
-        {productDetails.description}
-        </h3>
-        <button className="bg-green-500 px-16 py-2 rounded-md  my-5 mx-52">
-            Buy Now
+        <h3 className="text-base px-10">{productDetails.description}</h3>
+        <div className="flex justify-center items-center">
+          <button className="bg-yellow-500 px-16 py-2 rounded-md my-5 font-semiboldbold">
+            Add to Basket
           </button>
+        </div>
       </div>
     </>
   );
