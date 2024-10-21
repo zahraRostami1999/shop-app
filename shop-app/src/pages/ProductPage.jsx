@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductDetails } from "../services/api";
+import { Link } from "react-router-dom";
 
 function ProductPage() {
   const Params = useParams();
@@ -29,9 +30,11 @@ function ProductPage() {
         </h2>
         <h3 className="text-base px-10">{productDetails.description}</h3>
         <div className="flex justify-center items-center">
-          <button className="bg-yellow-500 px-16 py-2 rounded-md my-5 font-semiboldbold">
-            Add to Basket
-          </button>
+          <Link to="/cart">
+            <button className="bg-yellow-500 px-16 py-2 rounded-md my-5 font-semibold">
+              Add to Basket
+            </button>
+          </Link>
         </div>
       </div>
     </>
