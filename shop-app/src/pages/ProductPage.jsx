@@ -3,10 +3,17 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductDetails } from "../services/api";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { AddToCart } from "../redux/CartSlice";
 
 function ProductPage() {
   const Params = useParams();
   const [productDetails, setProductDetails] = useState({});
+  const dispatch = useDispatch();
+
+  const handleAddToBasket = (id) => {
+    dispatch(AddToCart(id));
+  };
 
   useEffect(() => {
     getProductDetails(Params.id).then((result) => {
@@ -31,7 +38,7 @@ function ProductPage() {
         <h3 className="text-base px-10">{productDetails.description}</h3>
         <div className="flex justify-center items-center">
           <Link to="/cart">
-            <button className="bg-yellow-500 px-16 py-2 rounded-md my-5 font-semibold">
+            <button onClick={() => handleAddToBasket(Params.id)} className="bg-yellow-500 px-16 py-2 rounded-md my-5 font-semibold">
               Add to Basket
             </button>
           </Link>
