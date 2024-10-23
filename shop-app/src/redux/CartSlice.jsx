@@ -6,6 +6,7 @@ export const CartSlice = createSlice({
     cartItem: [],
   },
   reducers: {
+    
     AddToCart: (state, action) => {
       let selected = state.cartItem.find(
         (item) => item.id === parseInt(action.payload)
@@ -24,6 +25,7 @@ export const CartSlice = createSlice({
         });
       }
     },
+
   },
 });
 
