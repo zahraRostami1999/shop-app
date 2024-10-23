@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getProducts } from "../services/api";
+import { useDispatch } from "react-redux";
+import { AddToCart } from "../redux/CartSlice";
 
 function CartPage() {
   const { cartItem } = useSelector((state) => state.cart);
-
+  const dispatch = useDispatch()
   const [productItems, setProductItems] = useState([]);
 
   useEffect(() => {
@@ -12,6 +14,7 @@ function CartPage() {
       setProductItems(result);
     });
   }, []);
+
 
   const displayCartItems = () => {
     return cartItem.map((item) => {
@@ -29,6 +32,7 @@ function CartPage() {
             <div className="grid grid-cols-2 grid-rows-4 ml-6">
               <h2 className="row-start-1 font-bold">{matchingProduct.title}</h2>
               <input
+                onChange={() => dispatch(AddToCart(matchingProduct.id))}
                 className="row-start-4 w-12 h-8 rounded text-center border"
                 type="number"
                 name="qty"
