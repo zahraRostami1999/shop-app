@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { getProducts } from "../services/api";
 import { useDispatch } from "react-redux";
-import { AddToCart } from "../redux/CartSlice";
+import { AddToCart, removeFromCart } from "../redux/CartSlice";
 
 function CartPage() {
   const { cartItem } = useSelector((state) => state.cart);
@@ -38,7 +38,10 @@ function CartPage() {
                   +
                 </button>
                 <p>{item.qty}</p>
-                <button className="bg-red-300 px-2  rounded-full font-mono font-semibold text-center mx-2">
+                <button
+                  className="bg-red-300 px-2  rounded-full font-mono font-semibold text-center mx-2"
+                  onClick={() => dispatch(removeFromCart(matchingProduct.id))}
+                >
                   -
                 </button>
               </div>
