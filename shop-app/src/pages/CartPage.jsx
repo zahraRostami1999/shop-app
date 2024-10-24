@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { getProducts } from "../services/api";
 import { useDispatch } from "react-redux";
 import { AddToCart, removeFromCart } from "../redux/CartSlice";
+import EmptyCartPage from "./EmptyCartPage";
 
 function CartPage() {
   const { cartItem } = useSelector((state) => state.cart);
@@ -59,13 +60,7 @@ function CartPage() {
     <>
       <div></div>
       <div className=" border h-full shadow-lg mt-28 mb-10 mx-6 rounded-md">
-        <ul>
-          {cartItem.length > 0 ? (
-            displayCartItems()
-          ) : (
-            <h1 className="text-center py-6 ">Cart is Empty</h1>
-          )}
-        </ul>
+        <ul>{cartItem.length > 0 ? displayCartItems() : <EmptyCartPage />}</ul>
       </div>
     </>
   );
