@@ -53,7 +53,16 @@ export const CartSlice = createSlice({
         };
       }
     },
+    deleteFromCart: (state, action) => {
+      let filtered = state.cartItem.filter(
+        (item) => item.id !== parseInt(action.payload)
+      );
+      return {
+        ...state,
+        cartItem: filtered,
+      };
+    }
   },
 });
 
-export const { AddToCart, removeFromCart } = CartSlice.actions;
+export const { AddToCart, removeFromCart, deleteFromCart } = CartSlice.actions;
