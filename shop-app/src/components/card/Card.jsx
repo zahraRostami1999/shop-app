@@ -17,7 +17,7 @@ function Card({ id, title, price, description, image }) {
           {title}
         </h2>
         <p className="font-bold flex justify-between items-center">
-          <span>{price}$</span>
+          <span>{price} €</span>
           <span
             onClick={() => handleAddToBasket(id)}
             className="bg-yellow-400 p-2 rounded-md cursor-pointer"
