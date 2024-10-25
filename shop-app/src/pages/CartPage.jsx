@@ -58,7 +58,6 @@ function CartPage() {
 
   return (
     <>
-      <div></div>
       <div className=" border h-full shadow-lg mb-10 mx-6 rounded-md">
         <ul>{cartItem.length > 0 ? displayCartItems() : <EmptyCartPage />}</ul>
       </div>
