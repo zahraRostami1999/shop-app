@@ -34,13 +34,14 @@ function EmptyCartPage() {
           </div>
         </div>
       </div> */}
-      <div className="relative w-full">
-      <div className="bg-yellow-400 w-1/2 h-4/6 absolute top-28 left-80 rounded-md">
-
-      </div>
-        <div className="w-full h-96 bg-teal-100 "></div>
-        
-        <div className="w-full h-96 bg-red-100 "></div>
+      <div className=" w-full h-screen bg-zinc-100 flex justify-center items-center">
+        <div className="bg-white w-2/5 h-5/6  top-28 left-96 rounded-md shadow-xl">
+          <img
+            src="https://i.pinimg.com/originals/81/c4/fc/81c4fc9a4c06cf57abf23606689f7426.jpg"
+            alt="Empty menu illustration"
+            className="mx-auto mb-6 w-full h-1/2 rounded-md"
+          />
+        </div>
       </div>
     </>
   );
