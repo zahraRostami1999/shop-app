@@ -7,6 +7,7 @@ import {
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+
 function Header() {
   const { cartItem } = useSelector((state) => state.cart);
 
@@ -14,7 +15,7 @@ function Header() {
     <>
       <div className="flex justify-between text-slate-700 bg-red-100 p-4 text-center font-mono font-extrabold text-3xl fixed top-0 w-full">
         <Link to="/">
-          <h1>Moonlit Couture</h1>
+          <h1 className="font-great-vibes font-extrabold text-4xl">Moonlit Couture</h1>
         </Link>
         <div className="w-48 flex justify-between">
           <Link to="/">
