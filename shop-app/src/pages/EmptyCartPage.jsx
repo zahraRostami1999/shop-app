@@ -16,7 +16,7 @@ function EmptyCartPage() {
           <h2 className="text-zinc-700 text-2xl text-center my-6">
             Go find the product you like.
           </h2>
-          <Link to="/">
+          <Link to="/Products">
             <button className="bg-red-400 text-zinc-900 text-xl text-center font-bold py-3 px-10 rounded-xl mx-40 my-10">
               Go Shopping 
             </button>
