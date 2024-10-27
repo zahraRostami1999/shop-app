@@ -1,23 +1,29 @@
-import cover from "../assets/images/HomePage.jpeg";
-import cover3 from "../assets/images/HomePage3.jpeg";
-import cover4 from "../assets/images/HomePage4.jpeg";
-import cover5 from "../assets/images/HomePage5.jpeg";
-import cover6 from "../assets/images/HomePage6.jpeg";
+import cover from "../assets/images/HomePage5.jpeg";
 
 function HomePage() {
   return (
     <>
       <div className="bg-white w-full h-screen flex justify-between pt-32 ">
-        <h1 className="pl-20 pr-5">
-          Welcome to our online clothing store, where style meets comfort! We
-          are thrilled to have you here. Explore our carefully curated
-          collection of trendy and timeless clothing items that cater to every
-          taste and occasion. From casual wear to elegant outfits, we have
-          something special for everyone. Our mission is to help you express
-          your unique style with confidence and ease. Happy shopping, and thank
-          you for choosing us to be a part of your fashion journey!
-        </h1>
-        <img className="bg-cover w-3/4 h-5/6 " src={cover5} />
+        <div className="pl-10 pr-5 font-sans ">
+          <h1 className="my-10 mb-20 text-2xl font-bold text-zinc-700">Welcome to Moonlit Couture🌜</h1>
+          <p className="my-8 text-xl font-semibold text-gray-700">
+            <h2 className="my-5">
+              Moonlit Couture is a boutique clothing brand, founded in 2024.
+            </h2>
+            <p>
+              Located in the heart of Paris, we strive to create a unique and
+              stylish lifestyle for our customers. Our mission is to bring the
+              beauty and comfort of fashion to your doorstep, making it easy to
+              feel your way through the world of clothing.
+            </p>
+            <p className="my-20">
+              We believe that every person has a unique style, and that with us,
+              you can find that style in our collection.
+            </p>
+          </p>
+        </div>
+
+        <img className="bg-cover w-4/6 h-5/6 " src={cover} />
       </div>
     </>
   );
