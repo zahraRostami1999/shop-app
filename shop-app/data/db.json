@@ -3,10 +3,11 @@
         {
             "id": "1",
             "title": "T-shirt cotton",
+            "brand": "",
             "price": 12.99,
             "description": "This classic crewneck t-shirt is a wardrobe essential made from soft, breathable cotton. Perfect for everyday wear, this versatile piece features a comfortable regular fit and a timeless design.",
             "category": "men's clothing",
-            "image": "https://cdn.engelbert-strauss.de/assets/pdp/images/Original/product/1.Release.3100031/e_s_T-Shirt_cotton-8075-3-637868074596475727.png",
+            "image": "https://image.hm.com/assets/hm/bb/e1/bbe12755c820ac538d957f4f827b637e4dd595b0.jpg?imwidth=2160",
             "rating": {
                 "rate": 3.9,
                 "count": 120
@@ -18,7 +19,7 @@
             "price": 39.95,
             "description": "Stay warm and comfortable in style with this heavyweight hooded sweatshirt from Independent Trading Company. Made from a thick, durable cotton blend, this sweatshirt is perfect for colder weather. The classic pullover design features a kangaroo pocket for added warmth and convenience, while the adjustable hood provides extra coverage.",
             "category": "men's clothing",
-            "image": "https://www.privateagentdnd.com/cdn/shop/products/IND5000P-DPNK_2048x_d2b746e3-3b54-4696-a729-186ef597f55f_grande.jpg?v=1631032181",
+            "image": "https://image.hm.com/assets/hm/0c/73/0c73e999486f93a53f084b54894f28238d6a81de.jpg?imwidth=2160",
             "rating": {
                 "rate": 4.1,
                 "count": 259
@@ -30,7 +31,7 @@
             "price": 35.99,
             "description": "Stay warm and comfortable in style with this full-zip hooded sweatshirt from Just Sweatshirts. Made from a durable cotton blend, this sweatshirt is perfect for colder weather. The full-zip closure makes it easy to put on and take off, while the adjustable hood provides extra coverage. The kangaroo pocket offers convenient storage for your essentials.",
             "category": "men's clothing",
-            "image": "https://cdn11.bigcommerce.com/s-12aon899vh/images/stencil/1280x1280/products/172/616/2005-133F__35868.1690870418.jpg?c=1",
+            "image": "https://image.hm.com/assets/hm/d1/b6/d1b6f775bb07108dcf481be84e89dc1981c8af77.jpg",
             "rating": {
                 "rate": 4.7,
                 "count": 500
@@ -42,7 +43,7 @@
             "price": 15.99,
             "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
             "category": "men's clothing",
-            "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+            "image": "https://image.hm.com/assets/hm/5d/22/5d224b2a265f6fb0828dd206ad336f183fad88ac.jpg?imwidth=2160",
             "rating": {
                 "rate": 2.1,
                 "count": 430
@@ -139,6 +140,54 @@
             "description": "Enjoy your favorite music with the Energy Sistem Style 3 Wireless Headphones. These comfortable and stylish headphones offer clear sound quality, long battery life, and a comfortable fit. With Bluetooth 5.1 technology, you can easily connect to your devices and enjoy wireless freedom.",
             "category": "electronics",
             "image": "https://www.energysistem.com/cdnassets/products/45305/principal_2000.jpg",
+            "rating": {
+                "rate": 4.8,
+                "count": 400
+            }
+        },
+        {
+            "id": "13",
+            "title": "Beats Studio Pro Headphones",
+            "price": 349.99,
+            "description": "Experience premium sound quality with the Beats Studio Pro Headphones. These over-ear headphones feature Pure ANC (Active Noise Canceling) technology to block out unwanted noise and immerse you in your music. With a sleek design, comfortable fit, and long-lasting battery life, the Studio Pro is perfect for both casual and professional use.",
+            "category": "electronics",
+            "image": "https://lsco.scene7.com/is/image/lsco/163650128-front-pdp-ld?fmt=jpeg&qlt=70&resMode=sharp2&fit=crop,1&op_usm=0.6,0.6,8&wid=2000&hei=1840",
+            "rating": {
+                "rate": 2.9,
+                "count": 470
+            }
+        },
+        {
+            "id": "14",
+            "title": "Sony WH-CH720N Noise-Canceling Headphones",
+            "price": 129.99,
+            "description": "Immerse yourself in your music with the Sony WH-CH720N Noise-Canceling Headphones. These stylish and comfortable headphones feature advanced noise cancellation technology to block out unwanted distractions, allowing you to enjoy your favorite tunes in peace. With long-lasting battery life and a sleek design, the WH-CH720N is the perfect companion for your on-the-go listening needs.",
+            "category": "electronics",
+            "image": "https://lsco.scene7.com/is/image/lsco/299450063-front-gstk?fmt=jpeg&qlt=70&resMode=sharp2&fit=crop,1&op_usm=0.6,0.6,8&wid=2000&hei=1840",
+            "rating": {
+                "rate": 4.8,
+                "count": 319
+            }
+        },
+        {
+            "id": "15",
+            "title": "Energy Sistem Style 3 Wireless Headphones",
+            "price": 49.99,
+            "description": "Enjoy your favorite music with the Energy Sistem Style 3 Wireless Headphones. These comfortable and stylish headphones offer clear sound quality, long battery life, and a comfortable fit. With Bluetooth 5.1 technology, you can easily connect to your devices and enjoy wireless freedom.",
+            "category": "electronics",
+            "image": "https://img01.ztat.net/article/spp-media-p1/27e07e8067c24d11b97e9ad29ede3f37/0d039808ee014142a6fcb2748487cda8.jpg?imwidth=762&filter=packshot",
+            "rating": {
+                "rate": 4.8,
+                "count": 400
+            }
+        },
+        {
+            "id": "16",
+            "title": "Energy Sistem Style 3 Wireless Headphones",
+            "price": 49.99,
+            "description": "Enjoy your favorite music with the Energy Sistem Style 3 Wireless Headphones. These comfortable and stylish headphones offer clear sound quality, long battery life, and a comfortable fit. With Bluetooth 5.1 technology, you can easily connect to your devices and enjoy wireless freedom.",
+            "category": "electronics",
+            "image": "https://lsco.scene7.com/is/image/lsco/A17430004-front-pdp-ld?fmt=jpeg&qlt=70&resMode=sharp2&fit=crop,1&op_usm=0.6,0.6,8&wid=2000&hei=1840",
             "rating": {
                 "rate": 4.8,
                 "count": 400
