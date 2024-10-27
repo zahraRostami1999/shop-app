@@ -7,7 +7,6 @@ import {
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-
 function Header() {
   const { cartItem } = useSelector((state) => state.cart);
 
@@ -15,15 +14,19 @@ function Header() {
     <>
       <div className="flex justify-between text-slate-700 bg-red-50 p-4 text-center font-mono font-extrabold text-3xl fixed top-0 w-full">
         <Link to="/">
-          <h1 className="font-great-vibes font-extrabold text-4xl">Moonlit Couture</h1>
+          <h1 className="font-great-vibes font-extrabold text-4xl">
+            Moonlit Couture
+          </h1>
         </Link>
-        <div className="w-48 flex justify-between">
-          <Link to="/">
-            <FontAwesomeIcon icon={faHome} size="x" />
-          </Link>
-          <Link>
-            <FontAwesomeIcon icon={faTshirt} size="x" />
-          </Link>
+        <div className="w-1/5  flex justify-between">
+          <div className="flex w-3/4  justify-around ">
+            <Link to="/">
+              <p className="font-sans font-bold text-xl">Home</p>
+            </Link>
+            <Link>
+              <p className="font-sans font-bold text-xl">Shop</p>
+            </Link>
+          </div>
 
           <Link to="/cart">
             <div className="flex">
