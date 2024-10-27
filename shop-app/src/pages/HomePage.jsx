@@ -1,12 +1,9 @@
-import Header from "../components/header/Header";
-import Products from "../components/products/Products";
-
 function HomePage(){
-  return (
-    <>
-      <Products />
-    </>
-  );
-};
+    return(
+        <>
+        <h1 className="mt-16">This is Home Page</h1>
+        </>
+    );
+}
 
 export default HomePage;
