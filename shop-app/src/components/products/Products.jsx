@@ -18,7 +18,7 @@ function Products() {
   }, []);
   return (
     <>
-      <div className="pt-28 p-10 grid grid-cols-4">
+      <div className="pt-28 p-10 grid grid-cols-4 ">
         {productData.map((product) => (
           <Card key={product.id} {...product} />
         ))}
