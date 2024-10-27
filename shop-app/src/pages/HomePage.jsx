@@ -3,8 +3,8 @@ import cover from "../assets/images/HomePage5.jpeg";
 function HomePage() {
   return (
     <>
-      <div className="bg-white w-full h-screen flex justify-between pt-32 ">
-        <div className="pl-10 pr-5 font-sans ">
+      <div className="bg-white w-full h-screen flex justify-between pt-32 px-10 ">
+        <div className="pr-16 font-sans ">
           <h1 className="my-10 mb-20 text-2xl font-bold text-zinc-700">Welcome to Moonlit Couture🌜</h1>
           <p className="my-8 text-xl font-semibold text-gray-700">
             <h2 className="my-5">
