@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'great-vibes': ['"Great Vibes"', 'cursive'],
+        'satisfy': ['Satisfy', 'cursive'],
+      },
+    },
   },
   plugins: [],
 }
