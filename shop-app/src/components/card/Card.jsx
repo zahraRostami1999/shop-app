@@ -11,8 +11,8 @@ function Card({ id, title, price, description, image }) {
 
   return (
     <>
-      <div className="border-slate-100 shadow-lg border mx-7 rounded-lg mb-10 px-3 py-2">
-        <img className="w-full h-60 " src={image} />
+      <div className=" shadow-gray-500 shadow-2xl border mx-7 rounded-lg mb-10 px-3 py-2 bg-gradient-to-tr from-zinc-300 to-stone-100 ">
+        <img className="w-full h-80 rounded-3xl" src={image} />
         <h2 className=" h-20 text-left text-sm font-sans pt-3 font-semibold">
           {title}
         </h2>
