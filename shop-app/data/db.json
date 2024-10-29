@@ -2,10 +2,10 @@
     "Products":[
         {
             "id": "1",
-            "title": "T-shirt cotton",
-            "brand": "",
-            "price": 12.99,
-            "description": "This classic crewneck t-shirt is a wardrobe essential made from soft, breathable cotton. Perfect for everyday wear, this versatile piece features a comfortable regular fit and a timeless design.",
+            "title": "Adidas Fencing T-Shirt",
+            "brand": "Adidas",
+            "price": 29,
+            "description": "Adidas is a leading sportswear brand known for its innovative designs and high-quality materials. This fencing tee is no exception, offering a comfortable fit and durable construction. Made from soft and breathable cotton, this t-shirt is perfect for training, competing, or simply showing your love for the sport.",
             "category": "men's clothing",
             "image": "https://uhlmann-fechtsport.com/media/90/81/26/1605342349/805056.jpg",
             "rating": {
@@ -15,9 +15,10 @@
         },
         {
             "id": "2",
-            "title": "Independent Trading Company Heavyweight Hooded Sweatshirt",
-            "price": 39.95,
-            "description": "Stay warm and comfortable in style with this heavyweight hooded sweatshirt from Independent Trading Company. Made from a thick, durable cotton blend, this sweatshirt is perfect for colder weather. The classic pullover design features a kangaroo pocket for added warmth and convenience, while the adjustable hood provides extra coverage.",
+            "title": "Nike T-Shirt",
+            "brand": "Nike",
+            "price": 25,
+            "description": "Nike is a world-renowned sports brand known for its innovative designs and high-performance apparel. This classic t-shirt features a simple Nike logo on the chest, making it a versatile and comfortable option for everyday wear.",
             "category": "men's clothing",
             "image": "https://www.tennis-point.de/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw8ae72e3e/images/004/448/49457000_000.jpg?q=80&sw=2000",
             "rating": {
@@ -27,9 +28,10 @@
         },
         {
             "id": "3",
-            "title": "Just Sweatshirts Full-Zip Hooded Sweatshirt",
-            "price": 35.99,
-            "description": "Stay warm and comfortable in style with this full-zip hooded sweatshirt from Just Sweatshirts. Made from a durable cotton blend, this sweatshirt is perfect for colder weather. The full-zip closure makes it easy to put on and take off, while the adjustable hood provides extra coverage. The kangaroo pocket offers convenient storage for your essentials.",
+            "title": "Puma League T-Shirt",
+            "brand": "Puma",
+            "price": 20,
+            "description": "Puma is a well-known sportswear brand known for its athletic and stylish designs. This classic t-shirt features a Puma logo on the chest, making it a great choice for everyday wear or sports activities.",
             "category": "men's clothing",
             "image": "https://thumblr.uniid.it/product/267336/061cbeb6a2c2.jpg?width=3840&format=webp&q=75",
             "rating": {
@@ -39,9 +41,10 @@
         },
         {
             "id": "4",
-            "title": "Mens Casual Slim Fit",
-            "price": 15.99,
-            "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+            "title": "Reebok Classic T-Shirt",
+            "brand": "Reebok",
+            "price": 25,
+            "description": "This classic t-shirt features a bold Reebok Vector logo on the chest, making it a great choice for everyday wear or sports activities.",
             "category": "men's clothing",
             "image": "https://runnwalk.com/wp-content/uploads/nc/s-lgxabip/product_images/h/836/FS8446t_copy__01971.jpg",
             "rating": {
@@ -51,9 +54,10 @@
         },
         {
             "id": "5",
-            "title": "Nike Dunk High University Blue",
-            "price": 150,
-            "description": "The Nike Dunk High University Blue is a classic high-top sneaker that combines a timeless design with a bold colorway. Featuring a clean white leather base with striking university blue overlays, this shoe offers a stylish and versatile look. The iconic Nike Swoosh adds a pop of contrast, while the comfortable padded collar and durable rubber outsole provide all-day comfort.",
+            "title": "Adidas Grand Court Shoes",
+            "brand": "Adidas",
+            "price": 70,
+            "description": "These classic sneakers are perfect for everyday wear with a clean and timeless design. They feature a leather upper with contrasting 3-Stripes and a comfortable rubber sole.",
             "category": "shoes",
             "image": "https://media.kohlsimg.com/is/image/kohls/5533230_ALT?wid=400&hei=400&op_sharpen=1",
             "rating": {
@@ -63,9 +67,10 @@
         },
         {
             "id": "6",
-            "title": "Nike ACG React Terra Gore-Tex",
-            "price": 150,
-            "description": "The Nike ACG React Terra Gore-Tex is a versatile and durable sneaker designed for outdoor adventures. Featuring a water-resistant Gore-Tex upper, a comfortable React foam midsole, and a rugged outsole, this shoe is built to handle any terrain. The modern design and functional features make it perfect for hiking, camping, or everyday wear.",
+            "title": "Nike Air Max 97",
+            "brand": "Nike",
+            "price": 180,
+            "description": "The Nike Air Max 97 is an iconic sneaker with a full-length Max Air unit for maximum comfort and cushioning. This version features a sleek white and grey colorway with premium materials and a unique design.",
             "category": "shoes",
             "image": "https://cdn.sneakers123.com/release/11622951/nike-air-max-97-ultra-17-pure-platinum-s-size-9-5-924452-002.jpg",
             "rating": {
@@ -75,9 +80,9 @@
         },
         {
             "id": "7",
-            "title": "Nike Flex Runner 3",
-            "price": 50,
-            "description": "The Nike Flex Runner 3 is a comfortable and stylish slip-on shoe designed for kids. Its soft, flexible material makes it easy to put on and take off, while the breathable mesh upper keeps feet cool and comfortable. The versatile design makes it perfect for play, school, or everyday wear.",
+            "title": "Puma Smash v2",
+            "price": 80,
+            "description": "The Puma Smash v2 is a classic tennis-inspired sneaker with a clean and simple design. It features a leather upper with a rubber outsole for durability and traction.",
             "category": "shoes",
             "image": "https://www.ruzeshoes.com/cdn/shop/products/39678801-IMG6_01_large.jpg?v=1699564591",
             "rating": {
@@ -87,9 +92,9 @@
         },
         {
             "id": "8",
-            "title": "Nike Dunk Low University Blue",
-            "price": 115,
-            "description": "The Nike Dunk Low University Blue is a classic sneaker that combines a timeless design with a fresh colorway. Featuring a clean white leather base with striking university blue overlays, this shoe offers a versatile and stylish look. The iconic Nike Swoosh adds a pop of contrast, while the comfortable padded collar and durable rubber outsole provide all-day comfort.",
+            "title": "Reebok Floatride Energy 2",
+            "price": 125,
+            "description": "The Reebok Floatride Energy 2 is a lightweight and responsive running shoe with a breathable knit upper and a Floatride Energy foam midsole for maximum comfort and cushioning.",
             "category": "shoes",
             "image": "https://www.shopboxbasics.com/cdn/shop/files/shopify-featured-shoe_0b6f312f-1c1c-47de-8d69-1e0bff7bc80d.jpg?v=1706552320",
             "rating": {
@@ -99,9 +104,10 @@
         },
         {
             "id": "9",
-            "title": "Acefast H2 Wireless Noise-Canceling Headphones ",
-            "price": 690,
-            "description": "Experience premium sound quality and comfort with the Acefast H2 Wireless Noise-Canceling Headphones. These over-ear headphones feature advanced noise cancellation technology to block out unwanted distractions, allowing you to immerse yourself in your music. With a sleek design, long-lasting battery life, and comfortable ear cushions, the H2 is perfect for both casual and professional use.",
+            "title": "Adidas Aeroknit Seamless Crop Top",
+            "brand": "Adidas",
+            "price": 25,
+            "description": "This seamless crop top is designed for maximum comfort and support during your workout. It features AEROREADY technology to wick away moisture and keep you dry.",
             "category": "electronics",
             "image": "https://www.flyeralarm-sports.com/media/image/product/3576961/md/adidas-damen-aeroknit-seamless-crop-top.jpg",
             "rating": {
@@ -111,9 +117,10 @@
         },
         {
             "id": "10",
-            "title": "Beats Studio Pro Headphones",
-            "price": 2295,
-            "description": "Experience premium sound quality with the Beats Studio Pro Headphones. These over-ear headphones feature Pure ANC (Active Noise Canceling) technology to block out unwanted noise and immerse you in your music. With a sleek design, comfortable fit, and long-lasting battery life, the Studio Pro is perfect for both casual and professional use.",
+            "title": "Nike Sportswear Crop Top",
+            "brand": "Nike",
+            "price": 25,
+            "description": "This stylish and comfortable crop top is perfect for your workout routine. It features a relaxed fit, a Nike Swoosh logo on the chest, and a Nike wordmark band at the bottom.",
             "category": "electronics",
             "image": "https://mobile.yoox.com/images/items/12/12754119DU_14_f.jpg?impolicy=crop&width=387&height=490",
             "rating": {
@@ -123,9 +130,9 @@
         },
         {
             "id": "11",
-            "title": "Sony WH-CH720N Noise-Canceling Headphones",
-            "price": 2300,
-            "description": "Immerse yourself in your music with the Sony WH-CH720N Noise-Canceling Headphones. These stylish and comfortable headphones feature advanced noise cancellation technology to block out unwanted distractions, allowing you to enjoy your favorite tunes in peace. With long-lasting battery life and a sleek design, the WH-CH720N is the perfect companion for your on-the-go listening needs.",
+            "title": "Puma Essential Sports Bra",
+            "price": 20,
+            "description": "This basic sports bra offers comfortable support for low-impact activities. It features a racerback design and a Puma wordmark band for a sporty look.",
             "category": "electronics",
             "image": "https://i.ebayimg.com/images/g/SQ8AAOSwPBZlsMjp/s-l400.jpg",
             "rating": {
@@ -135,9 +142,9 @@
         },
         {
             "id": "12",
-            "title": "Energy Sistem Style 3 Wireless Headphones",
-            "price": 790,
-            "description": "Enjoy your favorite music with the Energy Sistem Style 3 Wireless Headphones. These comfortable and stylish headphones offer clear sound quality, long battery life, and a comfortable fit. With Bluetooth 5.1 technology, you can easily connect to your devices and enjoy wireless freedom.",
+            "title": "Reebok Yoga Performance Rib Crop Top",
+            "price": 26,
+            "description": "This stylish and comfortable crop top is perfect for your workout routine. It features a ribbed fabric for a flattering look and a cropped fit for added style.",
             "category": "electronics",
             "image": "https://img01.ztat.net/article/spp-media-p1/62d4808e020c4b3a9378bf4a38ed376f/298b3adc4fc14eb386592434352d95f8.jpg?imwidth=762&filter=packshot",
             "rating": {
@@ -147,9 +154,10 @@
         },
         {
             "id": "13",
-            "title": "Beats Studio Pro Headphones",
-            "price": 349.99,
-            "description": "Experience premium sound quality with the Beats Studio Pro Headphones. These over-ear headphones feature Pure ANC (Active Noise Canceling) technology to block out unwanted noise and immerse you in your music. With a sleek design, comfortable fit, and long-lasting battery life, the Studio Pro is perfect for both casual and professional use.",
+            "title": "Adidas Originals Trefoil Cap",
+            "brand": "Adidas",
+            "price": 25,
+            "description": "This classic baseball cap features the iconic Adidas Trefoil logo embroidered on the front. It's a timeless piece that can be worn with any outfit.",
             "category": "electronics",
             "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a617821fb77b4425a351a9d601062080_9366/TREFOIL_BASEBALL_CAP_White_FJ2544_01_standard.jpg",
             "rating": {
@@ -159,9 +167,10 @@
         },
         {
             "id": "14",
-            "title": "Sony WH-CH720N Noise-Canceling Headphones",
-            "price": 129.99,
-            "description": "Immerse yourself in your music with the Sony WH-CH720N Noise-Canceling Headphones. These stylish and comfortable headphones feature advanced noise cancellation technology to block out unwanted distractions, allowing you to enjoy your favorite tunes in peace. With long-lasting battery life and a sleek design, the WH-CH720N is the perfect companion for your on-the-go listening needs.",
+            "title": "Nike Storm-Fit Cap",
+            "brand": "Nike",
+            "price": 30,
+            "description": "This Nike Storm-Fit cap is designed to keep you dry and comfortable in any weather. It features a waterproof, breathable design and an adjustable strap for a custom fit.",
             "category": "electronics",
             "image": "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/ee6762f6-782e-49f5-a41e-d90894ed8936/U+NK+SFADV+CLUB+CAP+S+AB+P.png",
             "rating": {
@@ -171,9 +180,9 @@
         },
         {
             "id": "15",
-            "title": "Energy Sistem Style 3 Wireless Headphones",
-            "price": 790,
-            "description": "Enjoy your favorite music with the Energy Sistem Style 3 Wireless Headphones. These comfortable and stylish headphones offer clear sound quality, long battery life, and a comfortable fit. With Bluetooth 5.1 technology, you can easily connect to your devices and enjoy wireless freedom.",
+            "title": "Puma Sportswear Cap",
+            "price": 20,
+            "description": "This classic baseball cap features a bold Puma logo on the front and a curved brim for sun protection. It's a great choice for everyday wear or sports activities.",
             "category": "electronics",
             "image": "https://assets.ajio.com/medias/sys_master/root/h80/hba/14789129535518/-473Wx593H-460535575-red-MODEL.jpg",
             "rating": {
@@ -183,9 +192,9 @@
         },
         {
             "id": "16",
-            "title": "Energy Sistem Style 3 Wireless Headphones",
-            "price": 690,
-            "description": "Enjoy your favorite music with the Energy Sistem Style 3 Wireless Headphones. These comfortable and stylish headphones offer clear sound quality, long battery life, and a comfortable fit. With Bluetooth 5.1 technology, you can easily connect to your devices and enjoy wireless freedom.",
+            "title": " Reebok Classic Cap",
+            "price": 20,
+            "description": "This classic baseball cap features a simple and understated design with a small Reebok logo on the front. It's a versatile piece that can be worn with any outfit.",
             "category": "electronics",
             "image": "https://reebok.bynder.com/transform/cc5dc9cf-94ca-4068-9351-277c25d9eca6/100218790_FR_eCom-tif?io=transform:fit,width:500&quality=100",
             "rating": {
@@ -195,9 +204,10 @@
         },
         {
             "id": "17",
-            "title": "Beats Studio Pro Headphones",
-            "price": 1280,
-            "description": "Experience premium sound quality with the Beats Studio Pro Headphones. These over-ear headphones feature Pure ANC (Active Noise Canceling) technology to block out unwanted noise and immerse you in your music. With a sleek design, comfortable fit, and long-lasting battery life, the Studio Pro is perfect for both casual and professional use.",
+            "title": "Adidas Own the Run Shorts",
+            "brand": "Adidas",
+            "price": 25,
+            "description": "These lightweight and breathable running shorts are perfect for your next workout. They feature an elastic waistband with a drawcord, side pockets, and reflective details for added visibility.",
             "category": "electronics",
             "image": "https://prosteps.cloudimg.io/v7m/resizeinbox/1000x1000/fsharp0/https://tilroy.s3.eu-west-1.amazonaws.com/175/product/Runnerslab-ADIDAS-own-the-run-b-7-short-heren-men-FB4316-black-running-hardloopshort-online-kopen-1.jpg",
             "rating": {
@@ -207,9 +217,10 @@
         },
         {
             "id": "18",
-            "title": "Sony WH-CH720N Noise-Canceling Headphones",
-            "price": 870,
-            "description": "Immerse yourself in your music with the Sony WH-CH720N Noise-Canceling Headphones. These stylish and comfortable headphones feature advanced noise cancellation technology to block out unwanted distractions, allowing you to enjoy your favorite tunes in peace. With long-lasting battery life and a sleek design, the WH-CH720N is the perfect companion for your on-the-go listening needs.",
+            "title": "NikeCourt Dri-FIT Advantage Shorts",
+            "brand": "Nike",
+            "price": 50,
+            "description": "hese NikeCourt Dri-FIT Advantage Shorts are designed for peak performance on the court. They feature Dri-FIT technology to wick away sweat, side pockets for storage, and a comfortable elastic waistband.",
             "category": "electronics",
             "image": "https://www.tennis-point.de/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc9c7913e/images/004/458/55296000_000.jpg?q=80&sw=2000",
             "rating": {
@@ -219,9 +230,9 @@
         },
         {
             "id": "19",
-            "title": "Energy Sistem Style 3 Wireless Headphones",
-            "price": 790,
-            "description": "Enjoy your favorite music with the Energy Sistem Style 3 Wireless Headphones. These comfortable and stylish headphones offer clear sound quality, long battery life, and a comfortable fit. With Bluetooth 5.1 technology, you can easily connect to your devices and enjoy wireless freedom.",
+            "title": "Puma Teamliga Shorts",
+            "price": 25,
+            "description": "These Puma Teamliga shorts are designed for performance and comfort on the soccer field. They feature a lightweight and breathable fabric, an elastic waistband with a drawcord, and mesh inserts for ventilation.",
             "category": "electronics",
             "image": "https://teamsportshop24.de/media/image/product/210726/lg/704936-01_teamliga-shorts-w-puma-red-puma-white.jpg",
             "rating": {
@@ -231,9 +242,9 @@
         },
         {
             "id": "20",
-            "title": "Energy Sistem Style 3 Wireless Headphones",
-            "price": 4800,
-            "description": "Enjoy your favorite music with the Energy Sistem Style 3 Wireless Headphones. These comfortable and stylish headphones offer clear sound quality, long battery life, and a comfortable fit. With Bluetooth 5.1 technology, you can easily connect to your devices and enjoy wireless freedom.",
+            "title": "Reebok Workout Ready Shorts",
+            "price": 25,
+            "description": "These Reebok Workout Ready shorts are perfect for your next workout. They feature a comfortable elastic waistband with a drawstring, side pockets, and a Reebok logo on the leg.",
             "category": "electronics",
             "image": "https://img01.ztat.net/article/spp-media-p1/8a9e109a33524a14aff86efe5033a5b1/0a9d989a47fa4719bd0007e0ed9681ae.jpg?imwidth=762&filter=packshot",
             "rating": {
