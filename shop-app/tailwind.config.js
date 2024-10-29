@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         'great-vibes': ['"Great Vibes"', 'cursive'],
         'satisfy': ['Satisfy', 'cursive'],
+        'Poppins': ['Poppins', 'cursive'],
       },
     },
   },
