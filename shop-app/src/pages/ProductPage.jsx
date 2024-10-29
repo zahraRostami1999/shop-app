@@ -33,24 +33,20 @@ function ProductPage() {
             />
           </div>
           <div className="mx-5 w-2/5 h-11/12">
-            <h1 className="text-3xl font-bold py-3">
-              {productDetails.title}
-            </h1>
+            <h1 className="text-3xl font-bold py-3">{productDetails.title}</h1>
             <h3 className=" h-1/2 text-xl mt-10">
               {productDetails.description}
             </h3>
             <div className="w-2/3  flex justify-between items-center mt-5">
               <h2 className="text-lg font-bold ">€{productDetails.price}</h2>
 
-              <div className="">
-                <Link to="/cart">
-                  <button
-                    onClick={() => handleAddToBasket(Params.id)}
-                    className="bg-orange-500 px-16 py-2 rounded-md my-5 font-semibold"
-                  >
-                    Add to Basket
-                  </button>
-                </Link>
+              <div>
+                <button
+                  onClick={() => handleAddToBasket(Params.id)}
+                  className="bg-orange-500 px-16 py-2 rounded-md my-5 font-semibold"
+                >
+                  Add to Basket
+                </button>
               </div>
             </div>
           </div>
