@@ -21,13 +21,13 @@ function Card({ id, title, price, description, image }) {
             <span>€{price}</span>
             <span
               onClick={() => handleAddToBasket(id)}
-              className="bg-red-500 p-2 rounded-md cursor-pointer"
+              className="bg-orange-500 p-2 rounded-md cursor-pointer text-white"
             >
               Add to Basket
             </span>
           </p>
           <Link to={`/Product/${id}`}>
-            <button className="bg-orange-300 w-full my-2 rounded-md py-2 font-bold">
+            <button className="bg-blue-950 w-full my-2 rounded-md py-2 font-bold text-white">
               View Details
             </button>
           </Link>
