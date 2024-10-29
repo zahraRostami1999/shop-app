@@ -11,17 +11,17 @@ function Card({ id, title, price, description, image }) {
 
   return (
     <>
-      <div className=" shadow-gray-400 shadow-2xl border mx-7 rounded-lg mb-32 mt-10   bg-gradient-to-tr from-zinc-300 to-stone-100 ">
-        <img className="w-full h-80 rounded-b-lg " src={image} />
-        <div className="px-3 py-5">
-          <h2 className=" h-20 text-left text-base font-sans pt-3 font-bold">
+      <div className=" shadow-gray-400 shadow-2xl pb-5 border-zinc-300 border-2 mx-7 rounded-2xl mb-32 bg-gradient-to-tr from-zinc-300 to-stone-100 ">
+        <img className="w-full h-80 rounded-t-2xl" src={image} />
+        <div className="px-3">
+          <h2 className=" h-20 text-left text-zinc-800 text-base font-Poppins pt-3 font-bold">
             {title}
           </h2>
-          <p className="font-bold flex justify-between items-center">
+          <p className="font-bold flex text-zinc-900 justify-between items-center">
             <span>€{price}</span>
             <span
               onClick={() => handleAddToBasket(id)}
-              className="bg-orange-500 p-2 rounded-md cursor-pointer text-white"
+              className="bg-orange-500 mt-5 p-2 rounded-md cursor-pointer text-white"
             >
               Add to Basket
             </span>
