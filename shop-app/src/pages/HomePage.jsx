@@ -11,17 +11,13 @@ function HomePage() {
           <p className="my-12 text-xl font-semibold text-gray-700">
             <p>
               Find the best in sportswear and fashion here! From comfortable
-              t-shirts and functional pants to yoga and running apparel. With
-              brands like Nike, Adidas, Puma, and Reebok, you can always look
-              your best in style and performance
+              t-shirts and functional pants to yoga and running apparel.
             </p>
-            <p className="my-10">
-              We believe that every person has a unique style, and that with us,
-              you can find that style in our collection.
+            <p className="my-5">
+              With brands like Nike, Adidas, Puma, and Reebok, you can always
+              look your best in style and performance
             </p>
-            <h3>
-            Buy now and enjoy the sport!
-            </h3>
+            <h3 className="my-12">Buy now and enjoy the sport!</h3>
           </p>
         </div>
 
