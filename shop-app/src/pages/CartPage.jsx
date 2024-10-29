@@ -63,7 +63,7 @@ function CartPage() {
   return (
     <>
       <div className="h-full  w-full flex justify-center flex-wrap">
-        <ul className="  w-11/12 flex justify-center flex-wrap">
+        <ul className="flex justify-center flex-wrap">
           {cartItem.length > 0 ? displayCartItems() : <EmptyCartPage />}
         </ul>
       </div>
