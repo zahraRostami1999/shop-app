@@ -27,31 +27,36 @@ function CartPage() {
         return (
           <li
             key={matchingProduct.id}
-            className="  w-2/3 flex first:mt-28 shadow-lg mb-10 mx-10 rounded-md border px-10 py-3 relative"
+            className=" first:mt-24 flex flex-wrap w-full border-2 shadow-md px-10 py-3 mb-10 rounded-md"
           >
             <img className="w-32 h-28 bg-cover" src={matchingProduct.image} />
-            <div className="grid grid-cols-2 grid-rows-2 ml-6">
-              <h2 className="row-start-1 font-bold">{matchingProduct.title}</h2>
-              <div className="row-start-3 flex my-1">
+            <div className="grid grid-rows-1 grid-cols-7 w-5/6 ">
+              <h2 className=" col-start-1 row-start-1 col-span-3  flex items-center text-left pl-5">
+                {matchingProduct.title}
+              </h2>
+              <div className="col-start-6 row-start-1 flex justify-center items-center col-span-1 ">
                 <button
-                  className="bg-green-300 px-2 rounded-full font-mono font-semibold text-center hover:bg-green-400"
+                  className="bg-green-300 px-2 row-start-1 rounded-full font-mono font-semibold text-center hover:bg-green-400 mx-2"
                   onClick={() => dispatch(AddToCart(matchingProduct.id))}
                 >
                   +
                 </button>
-                <p className="ml-2">{item.qty}</p>
+                <p className="row-start-1 text-center">{item.qty}</p>
                 <button
-                  className="bg-red-300 px-2 rounded-full font-mono font-semibold text-center mx-2 hover:bg-red-400"
+                  className="bg-red-300 px-2 row-start-1  rounded-full font-mono font-semibold text-center mx-2 hover:bg-red-400"
                   onClick={() => dispatch(removeFromCart(matchingProduct.id))}
                 >
                   -
                 </button>
               </div>
-              <p className="row-start-2 font-semibold">
-                Price: {matchingProduct.price} €
+              <p className="font-semibold col-start-4 row-start-1 flex justify-center items-center">
+                €{matchingProduct.price}
               </p>
-              <button onClick={() => dispatch(deleteFromCart(matchingProduct.id))} className="absolute bottom-0 right-0 px-3 py-4 text-3xl cursor-pointer hover:text-red-600">
-                <FontAwesomeIcon icon={faTrash} /> 
+              <button
+                onClick={() => dispatch(deleteFromCart(matchingProduct.id))}
+                className="col-start-7 row-start-1  py-4 text-3xl cursor-pointer hover:text-red-600"
+              >
+                <FontAwesomeIcon icon={faTrash} />
               </button>
             </div>
           </li>
@@ -62,7 +67,7 @@ function CartPage() {
 
   return (
     <>
-      <div className="h-full  w-full flex justify-center flex-wrap">
+      <div className="h-screan w-full flex justify-center items-center flex-wrap">
         <ul className="flex justify-center flex-wrap">
           {cartItem.length > 0 ? displayCartItems() : <EmptyCartPage />}
         </ul>
