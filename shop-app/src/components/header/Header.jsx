@@ -34,7 +34,7 @@ function Header() {
 
           <Link to="/cart">
             <div className="flex text-white ">
-              <FontAwesomeIcon icon={faShoppingCart} size="x" />
+              <FontAwesomeIcon icon={faShoppingCart} size="1x" />
               <div className="bg-orange-500 rounded-3xl text-xs font-normal h-5 px-2 py-0.5 inline -translate-x-3 -translate-y-3 cursor-pointer">
                 <div className="font-mono font-medium">
                   {cartItem.length === 0 ||
