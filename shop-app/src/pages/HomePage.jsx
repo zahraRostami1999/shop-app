@@ -1,4 +1,5 @@
 import cover from "../assets/images/HomePage.jpeg";
+import {Link} from "react-router-dom"
 
 function HomePage() {
   return (
@@ -18,9 +19,13 @@ function HomePage() {
               look your best in style and performance
             </p>
           </p>
-          <div className="w-full my-16">
-            <button className="bg-orange-500 w-5/6 py-3 rounded-lg font-semibold text-lg shadow-lg shadow-slate-300 text-white hover:scale-105 transition duration-300">Buy now and enjoy the sport</button>
-          </div>
+          <Link to="/Products">
+            <div className="w-full my-16">
+              <button className="bg-orange-500 w-5/6 py-3 rounded-lg font-semibold text-lg shadow-lg shadow-slate-300 text-white hover:scale-105 transition duration-300">
+                Buy now and enjoy the sport
+              </button>
+            </div>
+          </Link>
         </div>
 
         <img className="bg-cover w-4/6 h-5/6 " src={cover} />
