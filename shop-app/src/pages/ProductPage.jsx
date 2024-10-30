@@ -43,7 +43,7 @@ function ProductPage() {
               <div>
                 <button
                   onClick={() => handleAddToBasket(Params.id)}
-                  className="bg-orange-500 px-16 py-2 rounded-md my-5 font-semibold"
+                  className="bg-orange-500 px-16 py-2 rounded-md my-5 font-semibold hover:scale-110  transition duration-500 ease-in-out"
                 >
                   Add to Basket
                 </button>
