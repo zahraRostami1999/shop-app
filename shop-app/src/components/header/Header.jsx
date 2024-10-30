@@ -27,7 +27,7 @@ function Header() {
             </Link>
             <Link to='/Products'>
               <p className="font-Poppins font-bold text-xl  duration-600 delay-75  transform  hover:hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
-                Shop
+                Store
               </p>
             </Link>
             <Link to='/Login'>
