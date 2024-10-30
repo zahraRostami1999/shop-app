@@ -33,8 +33,11 @@ function LoginPage() {
               />
             </div>
           </div>
+
           <div className="flex justify-center w-full px-20 mt-10 h-11 text-xl font-semibold">
-            <button className="bg-orange-500 rounded-3xl w-full hover:bg-orange-600 transition duration-300">Login</button>
+            <button className="bg-orange-500 rounded-3xl w-full hover:bg-orange-600 transition duration-300">
+              Login
+            </button>
           </div>
         </div>
       </div>
