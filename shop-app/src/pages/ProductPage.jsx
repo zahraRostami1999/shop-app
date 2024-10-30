@@ -23,9 +23,9 @@ function ProductPage() {
 
   return (
     <>
-      <div className="h-screen  w-full">
+      <div className="h-screen w-full">
         <div className="h-3/4 mx-auto mt-24  py-8 flex justify-around">
-          <div className="bg-red-700 w-2/5 h-11/12">
+          <div className="w-2/5 h-11/12">
             <img
               src={productDetails.image}
               alt={productDetails.title}
