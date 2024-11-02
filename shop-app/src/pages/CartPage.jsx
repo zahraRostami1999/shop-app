@@ -27,7 +27,7 @@ function CartPage() {
         return (
           <li
             key={matchingProduct.id}
-            className=" first:mt-24 flex flex-wrap w-11/12 border-2 shadow-md px-10 py-3 mb-10 rounded-md"
+            className=" first:mt-20 flex flex-wrap w-11/12 border-2 shadow-md px-10 py-3 mb-10 rounded-lg"
           >
             <img className="w-32 h-28 bg-cover" src={matchingProduct.image} />
             <div className="grid grid-rows-1 grid-cols-7 w-5/6 ">
