@@ -3,12 +3,12 @@ import cover from "../assets/images/LoginPage.jpeg";
 function LoginPage() {
   return (
     <>
-      <div className="w-full h-screen pt-16 flex justify-between font-Poppins">
+      <div className="w-full h-screen mt-20 flex justify-between font-Poppins">
         <div className="w-1/2">
           <img className="w-full " src={cover} />
         </div>
-        <div className=" w-2/5 mx-10">
-          <h1 className="text-center text-3xl mt-28 font-semibold mb-24">
+        <div className=" w-2/5 mx-10 border-2 shadow-lg h-4/6 mt-24 pt-8 rounded-2xl">
+          <h1 className="text-center text-3xl  font-semibold mb-24">
             Login to your account
           </h1>
           <div className=" px-20">
