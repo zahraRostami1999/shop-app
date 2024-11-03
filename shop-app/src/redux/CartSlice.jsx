@@ -1,71 +1,60 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const initialState = {
+  cartItem: JSON.parse(localStorage.getItem("cartItem")) || [],
+};
+
 export const CartSlice = createSlice({
   name: "cart",
-  initialState: {
-    cartItem: localStorage.getItem("cartItem")
-      ? JSON.parse(localStorage.getItem("cartItem"))
-      : [],
-  },
+  initialState,
   reducers: {
     AddToCart: (state, action) => {
       let selected = state.cartItem.find(
         (item) => item.id === parseInt(action.payload)
       );
-      if (selected === undefined) {
-        return {
-          ...state,
-          cartItem: [
-            ...state.cartItem,
-            { id: parseInt(action.payload), qty: 1 },
-          ],
-        };
+
+      if (!selected) {
+        state.cartItem.push({ id: parseInt(action.payload), qty: 1 });
       } else {
-        state.cartItem = state.cartItem.map((item) => {
-          if (item.id === parseInt(action.payload)) {
-            return { ...item, qty: item.qty + 1 };
-          }
-          return item;
-        });
+
+        state.cartItem = state.cartItem.map((item) =>
+          item.id === parseInt(action.payload)
+            ? { ...item, qty: item.qty + 1 }
+            : item
+        );
       }
       localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
     },
     removeFromCart: (state, action) => {
-      let selected = state.cartItem.find(
+      const selected = state.cartItem.find(
         (item) => item.id === parseInt(action.payload)
       );
 
-      if (selected.qty === 1) {
-        let filtered = state.cartItem.filter(
+      if (selected && selected.qty === 1) {
+        state.cartItem = state.cartItem.filter(
           (item) => item.id !== parseInt(action.payload)
         );
-        return {
-          ...state,
-          cartItem: filtered,
-        };
       } else {
-        const updatedCart = state.cartItem.map((item) => {
-          if (item.id === parseInt(action.payload)) {
-            return { ...item, qty: item.qty - 1 };
-          }
-          return item;
-        });
-        return {
-          ...state,
-          cartItem: updatedCart,
-        };
+
+        state.cartItem = state.cartItem.map((item) =>
+          item.id === parseInt(action.payload)
+            ? { ...item, qty: item.qty - 1 }
+            : item
+        );
       }
+      localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
     },
     deleteFromCart: (state, action) => {
-      let filtered = state.cartItem.filter(
+
+      state.cartItem = state.cartItem.filter(
         (item) => item.id !== parseInt(action.payload)
       );
-      return {
-        ...state,
-        cartItem: filtered,
-      };
+
+
+      localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
     },
   },
 });
 
 export const { AddToCart, removeFromCart, deleteFromCart } = CartSlice.actions;
+export default CartSlice.reducer;
