@@ -30,28 +30,31 @@ function CartPage() {
             key={matchingProduct.id}
             className=" first:mt-20 flex flex-wrap w-11/12 border-2 shadow-md px-10 py-3 mb-10 rounded-lg"
           >
-            <img className="w-32 h-28 bg-cover" src={matchingProduct.image} />
-            <div className="grid grid-rows-1 grid-cols-7 w-5/6 ">
-              <h2 className=" col-start-1 row-start-1 col-span-3  flex items-center text-left pl-5">
+            <img className="w-32 h-28 bg-cover ml-16" src={matchingProduct.image} />
+            <div className="grid grid-rows-1 grid-cols-7 w-10/12 ">
+              <h2 className=" col-start-1 row-start-1 col-span-2  flex items-center text-left pl-5">
                 {matchingProduct.title}
               </h2>
-              <div className="col-start-6 row-start-1 flex justify-center items-center col-span-1 ">
+              <div className="col-start-4 row-start-1 mt-10 flex justify-center items-center col-span-1 border-2 border-gray-200 h-10 w-28 rounded-3xl">
                 <button
-                  className="bg-green-300 px-2 row-start-1 rounded-full font-mono font-semibold text-center hover:bg-green-400 mx-2"
+                  className="bg-orange-300 px-2 row-start-1 rounded-full font-mono font-semibold text-center hover:bg-orange-400 mx-5"
                   onClick={() => dispatch(AddToCart(matchingProduct.id))}
                 >
                   +
                 </button>
                 <p className="row-start-1 text-center">{item.qty}</p>
                 <button
-                  className="bg-red-300 px-2 row-start-1  rounded-full font-mono font-semibold text-center mx-2 hover:bg-red-400"
+                  className="bg-gray-300 px-2 row-start-1  rounded-full font-mono font-semibold text-center mx-5 hover:bg-gray-400"
                   onClick={() => dispatch(removeFromCart(matchingProduct.id))}
                 >
                   -
                 </button>
               </div>
-              <p className="font-semibold col-start-4 row-start-1 flex justify-center items-center">
+              <p className="font-semibold col-start-3 row-start-1 flex justify-center items-center">
                 €{matchingProduct.price}
+              </p>
+              <p className="font-bold text-xl col-start-5 row-start-1 flex justify-center items-center">
+              €{matchingProduct.price*item.qty}
               </p>
               <button
                 onClick={() => dispatch(deleteFromCart(matchingProduct.id))}
