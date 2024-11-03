@@ -3,23 +3,15 @@ import { useSelector } from "react-redux";
 import { getProducts } from "../services/api";
 import { useDispatch } from "react-redux";
 import { AddToCart, removeFromCart, deleteFromCart } from "../redux/CartSlice";
-import { useLocalStorage } from "../hooks/useLocalStorage";
 import EmptyCartPage from "./EmptyCartPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 function CartPage() {
+
   const { cartItem } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [productItems, setProductItems] = useState([]);
-  const [cartItems, setCartItems] = useLocalStorage("cartItem", cartItem);
-
-  // Synchronize local storage with Redux cartItem
-  useEffect(() => {
-    if (JSON.stringify(cartItems) !== JSON.stringify(cartItem)) {
-      setCartItems(cartItem);
-    }
-  }, [cartItem, cartItems]);
 
   useEffect(() => {
     getProducts().then((result) => {
