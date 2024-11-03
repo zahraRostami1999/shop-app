@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 
 function Header() {
   const { cartItem } = useSelector((state) => state.cart);
-
+  
   return (
     <>
       <div className="flex justify-between text-gray-600 bg-blue-950 px-5 pt-4 pb-2 text-center font-mono font-extrabold text-3xl fixed top-0 w-full">
