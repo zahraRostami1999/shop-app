@@ -6,19 +6,23 @@ import Page404 from "./pages/Page404";
 import ProductPage from "./pages/ProductPage";
 import Header from "./components/header/Header";
 import LoginPage from "./pages/LoginPage";
+import PrivateRoute from "./components/privateRoute/PrivateRoute";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-      <Header />
+        <Header />
         <Routes>
-        <Route exact path="/" element={<HomePage />}></Route>
+          <Route exact path="/" element={<HomePage />}></Route>
           <Route exact path="/Products" element={<ProductsListPage />}></Route>
-          <Route path="/Cart" element={<CartPage />}></Route>
+
           <Route path="/Product/:id" element={<ProductPage />}></Route>
           <Route path="/Login" element={<LoginPage />}></Route>
           <Route path="*" element={<Page404 />}></Route>
+          <Route element={<PrivateRoute />}>
+            <Route path="/Cart" element={<CartPage />}></Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
