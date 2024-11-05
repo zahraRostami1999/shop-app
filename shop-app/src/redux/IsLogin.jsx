@@ -11,17 +11,10 @@ export const IsLogin = createSlice({
   },
   reducers: {
     checkUser: (state, actions) => {
+
       let username = actions.payload.username;
       let password = actions.payload.password;
-
-      if (
-        state.user.userName === username &&
-        state.user.passWord === password
-      ) {
-        state.isLoggedIn = true;
-      } else {
-        state.isLoggedIn = false;
-      }
+      state.isLoggedIn = state.user.userName === username && state.user.passWord === password;
     },
   },
 });
