@@ -1,14 +1,29 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShoppingCart,
-  faHome,
-  faTshirt,
+  faSignOutAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUser } from "../../redux/IsLogin";
+import { useNavigate } from "react-router-dom";
+import {useEffect} from 'react'
 
 function Header() {
   const { cartItem } = useSelector((state) => state.cart);
+  const { isLoggedIn } = useSelector((state) => state.isLogin);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleSignOutClick = () => {
+    dispatch(logoutUser());
+  };
+
+  useEffect(() => {
+    if (isLoggedIn == false) {
+      navigate("/Login");
+    }
+  }, [isLoggedIn]);
 
   return (
     <>
@@ -38,7 +53,11 @@ function Header() {
           </div>
         </div>
 
-        <div className="w-10 flex justify-between text-white">
+        <div className="w-28 flex justify-between text-white">
+          <div onClick={() => handleSignOutClick()} className="cursor-pointer">
+            <FontAwesomeIcon icon={faSignOutAlt} />
+          </div>
+
           <Link to="/cart">
             <div className="flex text-white hover:scale-105 transition duration-200 ease-in-out">
               <FontAwesomeIcon icon={faShoppingCart} size="1x" />
