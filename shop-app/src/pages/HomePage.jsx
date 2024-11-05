@@ -1,5 +1,5 @@
 import cover from "../assets/images/HomePage.jpeg";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 function HomePage() {
   return (
