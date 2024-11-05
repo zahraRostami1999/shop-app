@@ -1,12 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import cover from "../assets/images/LoginPage.jpeg";
 import { checkUser } from "../redux/IsLogin";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function LoginPage() {
   const dispatch = useDispatch();
-  const [userName, setUserName] = useState();
-  const [password, setPassword] = useState();
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
+  
+  const { isLoggedIn } = useSelector((state) => state.isLogin);
 
   const handleUserNameChange = (e) => {
     setUserName(e.target.value);
@@ -18,7 +23,13 @@ function LoginPage() {
 
   const handleLoginClick = () => {
     dispatch(checkUser({username: userName, password: password} ));
-  };
+   }
+
+    useEffect(() => {
+      if (isLoggedIn) {
+        navigate("/Cart");
+      }
+    }, [isLoggedIn]);
   return (
     <>
       <div className="w-full h-screen mt-20 flex justify-between font-Poppins">
