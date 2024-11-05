@@ -1,6 +1,24 @@
+import { useState } from "react";
 import cover from "../assets/images/LoginPage.jpeg";
+import { checkUser } from "../redux/IsLogin";
+import { useDispatch } from "react-redux";
 
 function LoginPage() {
+  const dispatch = useDispatch();
+  const [userName, setUserName] = useState();
+  const [password, setPassword] = useState();
+
+  const handleUserNameChange = (e) => {
+    setUserName(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleLoginClick = () => {
+    dispatch(checkUser({username: userName, password: password} ));
+  };
   return (
     <>
       <div className="w-full h-screen mt-20 flex justify-between font-Poppins">
@@ -20,6 +38,7 @@ function LoginPage() {
                 className="border-2 w-full h-11 my-3 px-5 border-slate-200 rounded-3xl shadow hover:border-slate-300 transition duration-200 hover:scale-105"
                 name="userName"
                 type="text"
+                onChange={(e) => handleUserNameChange(e)}
               />
             </div>
             <div className="my-7">
@@ -30,12 +49,16 @@ function LoginPage() {
                 className="border-2 w-full h-11 my-3 px-5 border-slate-200 rounded-3xl  shadow hover:border-slate-300 transition duration-200 hover:scale-105"
                 name="password"
                 type="text"
+                onChange={(e) => handlePasswordChange(e)}
               />
             </div>
           </div>
 
           <div className="flex justify-center w-full px-20 mt-10 h-11 text-xl font-semibold">
-            <button className="bg-orange-500 rounded-3xl w-full hover:bg-orange-600 transition duration-300">
+            <button
+              onClick={() => handleLoginClick()}
+              className="bg-orange-500 rounded-3xl w-full hover:bg-orange-600 transition duration-300"
+            >
               Login
             </button>
           </div>
