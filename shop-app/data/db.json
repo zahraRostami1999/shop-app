@@ -81,6 +81,7 @@
         {
             "id": "7",
             "title": "Puma Smash v2",
+            "brand": "Puma",
             "price": 80,
             "description": "The Puma Smash v2 is a classic tennis-inspired sneaker with a clean and simple design. It features a leather upper with a rubber outsole for durability and traction.",
             "category": "shoes",
@@ -93,6 +94,7 @@
         {
             "id": "8",
             "title": "Reebok Floatride Energy 2",
+            "brand": "Reebok",
             "price": 125,
             "description": "The Reebok Floatride Energy 2 is a lightweight and responsive running shoe with a breathable knit upper and a Floatride Energy foam midsole for maximum comfort and cushioning.",
             "category": "shoes",
@@ -131,6 +133,7 @@
         {
             "id": "11",
             "title": "Puma Essential Sports Bra",
+            "brand": "Puma",
             "price": 20,
             "description": "This basic sports bra offers comfortable support for low-impact activities. It features a racerback design and a Puma wordmark band for a sporty look.",
             "category": "electronics",
@@ -143,6 +146,7 @@
         {
             "id": "12",
             "title": "Reebok Yoga Performance Rib Crop Top",
+            "brand": "Reebok",
             "price": 26,
             "description": "This stylish and comfortable crop top is perfect for your workout routine. It features a ribbed fabric for a flattering look and a cropped fit for added style.",
             "category": "electronics",
@@ -181,6 +185,7 @@
         {
             "id": "15",
             "title": "Puma Sportswear Cap",
+            "brand": "Puma",
             "price": 20,
             "description": "This classic baseball cap features a bold Puma logo on the front and a curved brim for sun protection. It's a great choice for everyday wear or sports activities.",
             "category": "electronics",
@@ -193,6 +198,7 @@
         {
             "id": "16",
             "title": " Reebok Classic Cap",
+            "brand": "Reebok",
             "price": 20,
             "description": "This classic baseball cap features a simple and understated design with a small Reebok logo on the front. It's a versatile piece that can be worn with any outfit.",
             "category": "electronics",
@@ -231,6 +237,7 @@
         {
             "id": "19",
             "title": "Puma Teamliga Shorts",
+            "brand": "Puma",
             "price": 25,
             "description": "These Puma Teamliga shorts are designed for performance and comfort on the soccer field. They feature a lightweight and breathable fabric, an elastic waistband with a drawcord, and mesh inserts for ventilation.",
             "category": "electronics",
@@ -243,6 +250,7 @@
         {
             "id": "20",
             "title": "Reebok Workout Ready Shorts",
+            "brand": "Reebok",
             "price": 25,
             "description": "These Reebok Workout Ready shorts are perfect for your next workout. They feature a comfortable elastic waistband with a drawstring, side pockets, and a Reebok logo on the leg.",
             "category": "electronics",
