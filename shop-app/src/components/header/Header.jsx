@@ -6,47 +6,38 @@ import {
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../redux/IsLogin";
-import { useNavigate } from "react-router-dom";
-import {useEffect} from 'react'
 
 function Header() {
   const { cartItem } = useSelector((state) => state.cart);
-  const { isLoggedIn } = useSelector((state) => state.isLogin);
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const handleSignOutClick = () => {
     dispatch(logoutUser());
+    alert("You have been logged out");
   };
-
-  useEffect(() => {
-    if (!isLoggedIn) {
-      navigate("/Login");
-    }
-  }, [isLoggedIn]);
 
   return (
     <>
       <div className="flex justify-between text-white bg-blue-950 px-5 pt-4 pb-2 text-center font-mono font-extrabold text-3xl fixed top-0 w-full">
-        <div className="flex justify-between w-1/3">
+        <div className="flex justify-between w-1/4">
           <Link to="/">
             <h1 className="font-great-vibes font-extrabold text-4xl text-orange-500">
               SportyFit
             </h1>
           </Link>
-          <div className="flex w-2/3  justify-around ml-5">
+          <div className="flex w-3/5 justify-around ml-5 text-lg font-bold font-Poppins pt-1 ">
             <Link to="/">
-              <p className="font-Poppins font-bold text-xl  duration-600 delay-75  transform  hover:hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
+              <p className="duration-600 delay-75  transform  hover:hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
                 Home
               </p>
             </Link>
             <Link to="/Products">
-              <p className="font-Poppins font-bold text-xl  duration-600 delay-75  transform  hover:hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
+              <p className="duration-600 delay-75  transform  hover:hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
                 Store
               </p>
             </Link>
             <Link to="/Login">
-              <p className="font-Poppins font-bold text-xl  duration-600 delay-75  transform  hover:hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
+              <p className="duration-600 delay-75  transform  hover:hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
                 Login
               </p>
             </Link>
