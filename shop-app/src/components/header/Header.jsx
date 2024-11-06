@@ -20,7 +20,7 @@ function Header() {
   };
 
   useEffect(() => {
-    if (isLoggedIn == false) {
+    if (!isLoggedIn) {
       navigate("/Login");
     }
   }, [isLoggedIn]);
@@ -54,7 +54,7 @@ function Header() {
         </div>
 
         <div className="w-28 flex justify-between text-white">
-          <div onClick={() => handleSignOutClick()} className="cursor-pointer">
+          <div onClick={handleSignOutClick} className="cursor-pointer">
             <FontAwesomeIcon icon={faSignOutAlt} />
           </div>
 
