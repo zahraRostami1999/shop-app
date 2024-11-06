@@ -16,7 +16,6 @@ function App() {
         <Routes>
           <Route exact path="/" element={<HomePage />}></Route>
           <Route path="/Products" element={<ProductsListPage />}></Route>
-
           <Route path="/Product/:id" element={<ProductPage />}></Route>
           <Route path="/Login" element={<LoginPage />}></Route>
           <Route path="*" element={<Page404 />}></Route>
