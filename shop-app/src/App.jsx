@@ -19,8 +19,9 @@ function App() {
           <Route path="/Product/:id" element={<ProductPage />}></Route>
           <Route path="/Login" element={<LoginPage />}></Route>
           <Route path="*" element={<Page404 />}></Route>
+          <Route path="/Cart" element={<CartPage />}></Route>
           <Route element={<PrivateRoute />}>
-            <Route path="/Cart" element={<CartPage />}></Route>
+            <Route path="/Checkout"></Route>
           </Route>
         </Routes>
       </BrowserRouter>
