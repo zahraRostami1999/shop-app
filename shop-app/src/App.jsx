@@ -15,7 +15,7 @@ function App() {
         <Header />
         <Routes>
           <Route exact path="/" element={<HomePage />}></Route>
-          <Route exact path="/Products" element={<ProductsListPage />}></Route>
+          <Route path="/Products" element={<ProductsListPage />}></Route>
 
           <Route path="/Product/:id" element={<ProductPage />}></Route>
           <Route path="/Login" element={<LoginPage />}></Route>
