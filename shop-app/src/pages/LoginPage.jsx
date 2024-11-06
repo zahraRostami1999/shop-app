@@ -28,9 +28,12 @@ function LoginPage() {
 
     useEffect(() => {
       if (isLoggedIn) {
-        navigate("/Cart");
+        navigate("/");
       }
     }, [isLoggedIn]);
+
+
+
   return (
     <>
       <div className="w-full h-screen mt-20 flex justify-between font-Poppins">
