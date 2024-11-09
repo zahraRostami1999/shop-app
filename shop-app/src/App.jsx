@@ -5,7 +5,7 @@ import CartPage from "./pages/CartPage";
 import Page404 from "./pages/Page404";
 import ProductPage from "./pages/ProductPage";
 import Header from "./components/header/Header";
-import LoginPage from "./pages/LoginPage";
+
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
 
 function App() {
@@ -17,7 +17,6 @@ function App() {
           <Route exact path="/" element={<HomePage />}></Route>
           <Route path="/Products" element={<ProductsListPage />}></Route>
           <Route path="/Product/:id" element={<ProductPage />}></Route>
-          <Route path="/Login" element={<LoginPage />}></Route>
           <Route path="*" element={<Page404 />}></Route>
           <Route path="/Cart" element={<CartPage />}></Route>
           <Route element={<PrivateRoute />}>
