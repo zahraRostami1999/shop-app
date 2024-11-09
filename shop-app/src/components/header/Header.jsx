@@ -1,20 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faShoppingCart,
-  faSignOutAlt,
-} from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { logoutUser } from "../../redux/IsLogin";
+import { useSelector } from "react-redux";
 
 function Header() {
   const { cartItem } = useSelector((state) => state.cart);
-  const dispatch = useDispatch();
-
-  const handleSignOutClick = () => {
-    dispatch(logoutUser());
-    alert("You have been logged out");
-  };
 
   return (
     <>
@@ -36,19 +26,10 @@ function Header() {
                 Store
               </p>
             </Link>
-            <Link to="/Login">
-              <p className="duration-600 delay-75  transform  hover:hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
-                Login
-              </p>
-            </Link>
           </div>
         </div>
 
-        <div className="w-28 flex justify-between text-white">
-          <div onClick={handleSignOutClick} className="cursor-pointer">
-            <FontAwesomeIcon icon={faSignOutAlt} />
-          </div>
-
+        <div className="w-10 flex justify-between text-white">
           <Link to="/cart">
             <div className="flex text-white hover:scale-105 transition duration-200 ease-in-out">
               <FontAwesomeIcon icon={faShoppingCart} size="1x" />
