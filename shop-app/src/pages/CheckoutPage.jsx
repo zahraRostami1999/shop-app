@@ -21,7 +21,7 @@ function CheckoutPage() {
                 <div className="flex justify-between pt-5">
                   <div>Your order contains {cartItem.length} items</div>
                   <div>Shipping Cost is €10</div>
-                  <div>Your total order amount is {totalPrice}</div>
+                  <div>Your total order amount is €{totalPrice}</div>
                 </div>
               </div>
             </div>
