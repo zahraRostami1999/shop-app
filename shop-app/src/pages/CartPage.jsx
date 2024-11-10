@@ -33,6 +33,8 @@ function CartPage() {
     setTotal(newTotal);
   }, [cartItem, productItems]);
 
+  localStorage.setItem("totalPrice", total);
+
   const displayCartItems = () => {
     return cartItem.map((item) => {
       const matchingProduct = productItems.find(
