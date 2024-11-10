@@ -1,26 +1,33 @@
 import cover from "../assets/images/checkout.png";
 import googlepay from "../assets/images/googlePay.png";
 import Input from "../components/input/Input";
+import { useSelector } from "react-redux";
 
 function CheckoutPage() {
+  const { cartItem } = useSelector((state) => state.cart);
+  const totalPrice = localStorage.getItem("totalPrice");
+
   return (
     <>
-      <div className=" w-full h-screen px-10 font-Poppins">
+      <div className=" w-full h-screen px-10 font-Poppins text-zinc-800">
         <div className="flex w-full h-2/3 mt-5">
           <div className=" w-1/2">
             <div className="pt-20">
               <div className="text-3xl font-semibold">
                 <h1>Thank you for shopping at Sportyfit store</h1>
               </div>
-              <div className="flex justify-between mt-10">
-                <div>Your order contains X items.</div>
-                <div>Shipping Cost is Y.</div>
-                <div>Your total order amount is Z.</div>
+              <div className="my-5 text-base bg-orange-500 px-5 pb-8 pt-3 rounded-lg shadow-lg shadow-zinc-400">
+                <div className="border-b-2 border-zinc-800 font-semibold pb-2">Order Summary:</div>
+                <div className="flex justify-between pt-5">
+                  <div>Your order contains {cartItem.length} items</div>
+                  <div>Shipping Cost is €10</div>
+                  <div>Your total order amount is {totalPrice}</div>
+                </div>
               </div>
             </div>
             <img src={cover} alt="cover" />
           </div>
-          <div className=" w-1/2 px-24 mt-20">
+          <div className=" w-1/2 px-24 mt-32">
             <div>
               <h3 className="text-lg font-bold">
                 To complete your order, we need to gather some shipping
@@ -28,24 +35,24 @@ function CheckoutPage() {
                 your high-quality products to you.
               </h3>
             </div>
-            <div className="my-10">
-            <Input label="Full Name:"/>
-            <Input label="Email Address:"/>
-            <Input label="Phone Number:"/>
-            <Input label="Shipping Address:"/>
+            <div className="mt-10 mb-20">
+              <Input label="Full Name:" />
+              <Input label="Email Address:" />
+              <Input label="Phone Number:" />
+              <Input label="Shipping Address:" />
             </div>
             <div>
-              <h4>Choose your payment method</h4>
-              <div className="flex w-2/3 h-10 justify-around mt-5 items-center">
-                <button className="h-5 px-5 py-5 bg-slate-200 flex items-center rounded">
+              <h4 className="font-semibold">Choose your payment method</h4>
+              <div className="flex w-1/2 h-10 justify-between mt-5 items-center">
+                <button className="h-5 px-5 py-5 bg-slate-200 flex items-center rounded hover:bg-slate-300">
                   <img
                     className="w-16 h-5 "
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/2560px-PayPal.svg.png"
                     alt=""
                   />
                 </button>
-                <button className="h-5 px-5 py-5 bg-slate-200 flex items-center rounded">
-                  <img className="w-16 h-5 " src={googlepay} alt="googlepay" />
+                <button className="h-5 px-5 py-5 bg-slate-200 flex items-center rounded hover:bg-slate-300">
+                  <img className="w-16 h-5" src={googlepay} alt="googlepay" />
                 </button>
               </div>
             </div>
