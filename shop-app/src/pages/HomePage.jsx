@@ -4,11 +4,11 @@ function HomePage() {
   return (
     <>
       <div className="bg-gray-100 w-full h-screen flex justify-between pt-24 px-10 ">
-        <div className=" font-Poppins pl-10">
+        <div className=" font-Poppins pl-10 pt-5">
           <h1 className="mt-20 mb-10 text-3xl font-bold text-gray-800">
             Welcome to SportyFit sports store!
           </h1>
-          <p className="my-14 text-xl font-semibold text-gray-700">
+          <p className="my-20 text-xl font-semibold text-gray-700">
             <p>
               Find the best in sportswear and fashion here! From comfortable
               t-shirts and functional pants to yoga and running apparel.
