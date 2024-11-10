@@ -5,8 +5,7 @@ import CartPage from "./pages/CartPage";
 import Page404 from "./pages/Page404";
 import ProductPage from "./pages/ProductPage";
 import Header from "./components/header/Header";
-
-import PrivateRoute from "./components/privateRoute/PrivateRoute";
+import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
   return (
@@ -19,9 +18,7 @@ function App() {
           <Route path="/Product/:id" element={<ProductPage />}></Route>
           <Route path="*" element={<Page404 />}></Route>
           <Route path="/Cart" element={<CartPage />}></Route>
-          <Route element={<PrivateRoute />}>
-            <Route path="/Checkout"></Route>
-          </Route>
+          <Route path="/Checkout" element={<CheckoutPage />}></Route>
         </Routes>
       </BrowserRouter>
     </>
