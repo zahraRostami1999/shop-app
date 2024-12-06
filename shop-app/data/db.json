@@ -1,3 +1,4 @@
+
 {
     "Products":[
         {
@@ -7,7 +8,7 @@
             "price": 29,
             "description": "Adidas is a leading sportswear brand known for its innovative designs and high-quality materials. This fencing tee is no exception, offering a comfortable fit and durable construction. Made from soft and breathable cotton, this t-shirt is perfect for training, competing, or simply showing your love for the sport.",
             "category": "men's clothing",
-            "image": "https://uhlmann-fechtsport.com/media/90/81/26/1605342349/805056.jpg",
+            "image": "./assets/ProductsImage/1.jpg",
             "rating": {
                 "rate": 3.9,
                 "count": 120
@@ -20,7 +21,7 @@
             "price": 25,
             "description": "Nike is a world-renowned sports brand known for its innovative designs and high-performance apparel. This classic t-shirt features a simple Nike logo on the chest, making it a versatile and comfortable option for everyday wear.",
             "category": "men's clothing",
-            "image": "https://www.tennis-point.de/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dw8ae72e3e/images/004/448/49457000_000.jpg?q=80&sw=2000",
+            "image": "assets/ProductsImage/2.webp",
             "rating": {
                 "rate": 4.1,
                 "count": 259
@@ -33,7 +34,7 @@
             "price": 20,
             "description": "Puma is a well-known sportswear brand known for its athletic and stylish designs. This classic t-shirt features a Puma logo on the chest, making it a great choice for everyday wear or sports activities.",
             "category": "men's clothing",
-            "image": "https://thumblr.uniid.it/product/267336/061cbeb6a2c2.jpg?width=3840&format=webp&q=75",
+            "image": "assets/ProductsImage/3.webp",
             "rating": {
                 "rate": 4.7,
                 "count": 500
@@ -46,7 +47,7 @@
             "price": 25,
             "description": "This classic t-shirt features a bold Reebok Vector logo on the chest, making it a great choice for everyday wear or sports activities.",
             "category": "men's clothing",
-            "image": "https://runnwalk.com/wp-content/uploads/nc/s-lgxabip/product_images/h/836/FS8446t_copy__01971.jpg",
+            "image": "assets/ProductsImage/4.jpg",
             "rating": {
                 "rate": 2.1,
                 "count": 430
@@ -59,7 +60,7 @@
             "price": 70,
             "description": "These classic sneakers are perfect for everyday wear with a clean and timeless design. They feature a leather upper with contrasting 3-Stripes and a comfortable rubber sole.",
             "category": "shoes",
-            "image": "https://media.kohlsimg.com/is/image/kohls/5533230_ALT?wid=400&hei=400&op_sharpen=1",
+            "image": "assets/ProductsImage/5.avif",
             "rating": {
                 "rate": 4.6,
                 "count": 400
@@ -72,7 +73,7 @@
             "price": 180,
             "description": "The Nike Air Max 97 is an iconic sneaker with a full-length Max Air unit for maximum comfort and cushioning. This version features a sleek white and grey colorway with premium materials and a unique design.",
             "category": "shoes",
-            "image": "https://cdn.sneakers123.com/release/11622951/nike-air-max-97-ultra-17-pure-platinum-s-size-9-5-924452-002.jpg",
+            "image": "assets/ProductsImage/6.jpg",
             "rating": {
                 "rate": 3.9,
                 "count": 70
@@ -85,7 +86,7 @@
             "price": 80,
             "description": "The Puma Smash v2 is a classic tennis-inspired sneaker with a clean and simple design. It features a leather upper with a rubber outsole for durability and traction.",
             "category": "shoes",
-            "image": "https://www.ruzeshoes.com/cdn/shop/products/39678801-IMG6_01_large.jpg?v=1699564591",
+            "image": "assets/ProductsImage/7.webp",
             "rating": {
                 "rate": 3,
                 "count": 400
@@ -98,7 +99,7 @@
             "price": 125,
             "description": "The Reebok Floatride Energy 2 is a lightweight and responsive running shoe with a breathable knit upper and a Floatride Energy foam midsole for maximum comfort and cushioning.",
             "category": "shoes",
-            "image": "https://www.shopboxbasics.com/cdn/shop/files/shopify-featured-shoe_0b6f312f-1c1c-47de-8d69-1e0bff7bc80d.jpg?v=1706552320",
+            "image": "assets/ProductsImage/8.webp",
             "rating": {
                 "rate": 1.9,
                 "count": 100
@@ -111,7 +112,7 @@
             "price": 25,
             "description": "This seamless crop top is designed for maximum comfort and support during your workout. It features AEROREADY technology to wick away moisture and keep you dry.",
             "category": "electronics",
-            "image": "https://www.flyeralarm-sports.com/media/image/product/3576961/md/adidas-damen-aeroknit-seamless-crop-top.jpg",
+            "image": "assets/ProductsImage/9.jpg",
             "rating": {
                 "rate": 3.3,
                 "count": 203
@@ -124,7 +125,7 @@
             "price": 25,
             "description": "This stylish and comfortable crop top is perfect for your workout routine. It features a relaxed fit, a Nike Swoosh logo on the chest, and a Nike wordmark band at the bottom.",
             "category": "electronics",
-            "image": "https://mobile.yoox.com/images/items/12/12754119DU_14_f.jpg?impolicy=crop&width=387&height=490",
+            "image": "assets/ProductsImage/10.avif",
             "rating": {
                 "rate": 2.9,
                 "count": 470
@@ -137,7 +138,7 @@
             "price": 20,
             "description": "This basic sports bra offers comfortable support for low-impact activities. It features a racerback design and a Puma wordmark band for a sporty look.",
             "category": "electronics",
-            "image": "https://i.ebayimg.com/images/g/SQ8AAOSwPBZlsMjp/s-l400.jpg",
+            "image": "assets/ProductsImage/11.jpg",
             "rating": {
                 "rate": 4.8,
                 "count": 319
@@ -150,7 +151,7 @@
             "price": 26,
             "description": "This stylish and comfortable crop top is perfect for your workout routine. It features a ribbed fabric for a flattering look and a cropped fit for added style.",
             "category": "electronics",
-            "image": "https://img01.ztat.net/article/spp-media-p1/62d4808e020c4b3a9378bf4a38ed376f/298b3adc4fc14eb386592434352d95f8.jpg?imwidth=762&filter=packshot",
+            "image": "assets/ProductsImage/12.webp",
             "rating": {
                 "rate": 4.8,
                 "count": 400
@@ -163,7 +164,7 @@
             "price": 25,
             "description": "This classic baseball cap features the iconic Adidas Trefoil logo embroidered on the front. It's a timeless piece that can be worn with any outfit.",
             "category": "electronics",
-            "image": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a617821fb77b4425a351a9d601062080_9366/TREFOIL_BASEBALL_CAP_White_FJ2544_01_standard.jpg",
+            "image": "assets/ProductsImage/13.avif",
             "rating": {
                 "rate": 2.9,
                 "count": 470
@@ -176,7 +177,7 @@
             "price": 30,
             "description": "This Nike Storm-Fit cap is designed to keep you dry and comfortable in any weather. It features a waterproof, breathable design and an adjustable strap for a custom fit.",
             "category": "electronics",
-            "image": "https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/ee6762f6-782e-49f5-a41e-d90894ed8936/U+NK+SFADV+CLUB+CAP+S+AB+P.png",
+            "image": "assets/ProductsImage/14.png",
             "rating": {
                 "rate": 4.8,
                 "count": 319
@@ -189,7 +190,7 @@
             "price": 20,
             "description": "This classic baseball cap features a bold Puma logo on the front and a curved brim for sun protection. It's a great choice for everyday wear or sports activities.",
             "category": "electronics",
-            "image": "https://assets.ajio.com/medias/sys_master/root/h80/hba/14789129535518/-473Wx593H-460535575-red-MODEL.jpg",
+            "image": "assets/ProductsImage/15.jpg",
             "rating": {
                 "rate": 4.8,
                 "count": 400
@@ -202,7 +203,7 @@
             "price": 20,
             "description": "This classic baseball cap features a simple and understated design with a small Reebok logo on the front. It's a versatile piece that can be worn with any outfit.",
             "category": "electronics",
-            "image": "https://reebok.bynder.com/transform/cc5dc9cf-94ca-4068-9351-277c25d9eca6/100218790_FR_eCom-tif?io=transform:fit,width:500&quality=100",
+            "image": "assets/ProductsImage/16.webp",
             "rating": {
                 "rate": 4.8,
                 "count": 400
@@ -215,7 +216,7 @@
             "price": 25,
             "description": "These lightweight and breathable running shorts are perfect for your next workout. They feature an elastic waistband with a drawcord, side pockets, and reflective details for added visibility.",
             "category": "electronics",
-            "image": "https://prosteps.cloudimg.io/v7m/resizeinbox/1000x1000/fsharp0/https://tilroy.s3.eu-west-1.amazonaws.com/175/product/Runnerslab-ADIDAS-own-the-run-b-7-short-heren-men-FB4316-black-running-hardloopshort-online-kopen-1.jpg",
+            "image": "assets/ProductsImage/17.webp",
             "rating": {
                 "rate": 2.9,
                 "count": 470
@@ -228,7 +229,7 @@
             "price": 50,
             "description": "hese NikeCourt Dri-FIT Advantage Shorts are designed for peak performance on the court. They feature Dri-FIT technology to wick away sweat, side pockets for storage, and a comfortable elastic waistband.",
             "category": "electronics",
-            "image": "https://www.tennis-point.de/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwc9c7913e/images/004/458/55296000_000.jpg?q=80&sw=2000",
+            "image": "assets/ProductsImage/18.webp",
             "rating": {
                 "rate": 4.8,
                 "count": 319
@@ -241,7 +242,7 @@
             "price": 25,
             "description": "These Puma Teamliga shorts are designed for performance and comfort on the soccer field. They feature a lightweight and breathable fabric, an elastic waistband with a drawcord, and mesh inserts for ventilation.",
             "category": "electronics",
-            "image": "https://teamsportshop24.de/media/image/product/210726/lg/704936-01_teamliga-shorts-w-puma-red-puma-white.jpg",
+            "image": "assets/ProductsImage/19.jpg",
             "rating": {
                 "rate": 4.8,
                 "count": 400
@@ -254,7 +255,7 @@
             "price": 25,
             "description": "These Reebok Workout Ready shorts are perfect for your next workout. They feature a comfortable elastic waistband with a drawstring, side pockets, and a Reebok logo on the leg.",
             "category": "electronics",
-            "image": "https://img01.ztat.net/article/spp-media-p1/8a9e109a33524a14aff86efe5033a5b1/0a9d989a47fa4719bd0007e0ed9681ae.jpg?imwidth=762&filter=packshot",
+            "image": "assets/ProductsImage/20.webp",
             "rating": {
                 "rate": 4.8,
                 "count": 400
