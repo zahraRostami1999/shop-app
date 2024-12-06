@@ -44,45 +44,51 @@ function CartPage() {
         return (
           <li
             key={matchingProduct.id}
-            className=" first:mt-20 flex flex-wrap w-11/12 border-2 shadow-md px-10 py-3 mb-10 rounded-lg"
+            className="first:mt-20 flex flex-wrap justify-center items-center lg:w-11/12 md:w-11/12 w-full border-2 shadow-lg lg:px-10 md:px-8 px-2 py-3 lg:mb-10 md:mb-8 mb-5 rounded-lg"
           >
-            <img
-              className="w-32 h-28 bg-cover ml-16"
-              src={matchingProduct.image}
-            />
-            <div className="grid grid-rows-1 grid-cols-7 w-10/12 ">
-              <h2 className=" col-start-1 row-start-1 col-span-2 flex items-center text-left pl-5">
+            <div className="flex items-start lg:w-11/12 md:w-11/12 w-full">
+              <img
+                className="w-1/4 lg:w-1/12 md:w-1/6 h-28 object-cover lg:ml-16 md:ml-10 ml-3"
+                src={matchingProduct.image}
+                alt={matchingProduct.title}
+              />
+              <h2 className="col-span-2 flex items-center text-left text-sm md:text-base lg:text-lg pl-5 font-semibold">
                 {matchingProduct.title}
               </h2>
-              <div className="col-start-4 row-start-1 mt-10 flex justify-center items-center col-span-1 border-2 border-gray-200 h-10 w-28 rounded-3xl">
+            </div>
+
+            <div className="grid grid-cols-5 lg:grid-cols-5 gap-4 w-full lg:w-10/12 md:w-11/12 mt-4 lg:mt-0">
+              
+              <p className="font-semibold flex justify-center items-center text-sm md:text-base lg:text-lg">
+                €{matchingProduct.price}
+              </p>
+              <div className="col-span-2 flex justify-center items-center h-10 rounded-3xl">
                 <button
-                  className="bg-orange-400 px-2 row-start-1 rounded-full font-mono font-semibold text-center hover:bg-orange-500 mx-5"
+                  className="bg-orange-400 px-3 py-1.5 rounded-full font-mono font-semibold text-sm hover:bg-orange-500 mx-2"
                   onClick={() => dispatch(AddToCart(matchingProduct.id))}
                 >
                   +
                 </button>
-                <p className="row-start-1 text-center">{item.qty}</p>
+                <p className="text-sm font-semibold">{item.qty}</p>
                 <button
-                  className="bg-gray-300 px-2 row-start-1  rounded-full font-mono font-semibold text-center mx-5 hover:bg-gray-400"
+                  className="bg-gray-300 px-3 py-1.5 rounded-full font-mono font-semibold text-sm hover:bg-gray-400 mx-2"
                   onClick={() => dispatch(removeFromCart(matchingProduct.id))}
                 >
                   -
                 </button>
               </div>
-              <p className="font-semibold col-start-3 row-start-1 flex justify-center items-center ">
-                €{matchingProduct.price}
-              </p>
-              <p className="font-bold text-xl col-start-5 row-start-1 flex justify-center items-center">
+              <p className="font-bold text-center text-sm md:text-base lg:text-xl mt-2">
                 €{matchingProduct.price * item.qty}
               </p>
               <button
                 onClick={() => dispatch(deleteFromCart(matchingProduct.id))}
-                className="col-start-7 row-start-1  py-4 text-3xl cursor-pointer hover:text-red-600"
+                className="flex justify-center items-center text-red-400 hover:text-red-600 text-xl md:text-2xl lg:text-3xl"
               >
                 <FontAwesomeIcon icon={faTrash} />
               </button>
             </div>
           </li>
+
         );
       }
     });
@@ -90,29 +96,36 @@ function CartPage() {
 
   const confirmOrder = () => {
     return (
-      <div className="mt-10 text-xl font-Poppins font-semibold  flex w-11/12 justify-around items-center pb-5 border-gray-200 border-2 shadow-md px-10 py-3 mb-10 rounded-lg">
-        <p>Your total Price is €{total}</p>
-        <Link to="/Checkout">
-          <button className="bg-orange-500 hover:scale-105 transition duration-100 ease-in-out text-zinc-900 text-xl text-center font-bold py-3 px-10 rounded-xl mt-6">
-            Proceed to checkout
-          </button>
-        </Link>
+      <div className="lg:text-xl md:text-xl  text-base font-Poppins font-semibold flex flex-wrap lg:w-10/12 md:w-10/12 w-1/2 justify-between items-center pb-5 mb-10 border-gray-200 border-2 shadow-md lg:px-5 px-0 py-3 rounded-lg flex-grow">
+        <div>
+          <p>Your total Price is €{total}</p>
+        </div>
 
-        <Link to="/Products">
-          <button className="bg-gray-300 hover:scale-105 transition duration-100 ease-in-out text-zinc-900 text-xl text-center font-bold py-3 px-10 rounded-xl mt-6">
-            Go back to store
-          </button>
-        </Link>
+        <div className="lg:w-1/2 md:w-2/3 w-11/12 px-2 flex justify-around mx-auto">
+          <Link to="/Checkout">
+            <button className="bg-orange-500 hover:scale-105 transition duration-100 ease-in-out text-zinc-900 lg:text-lg md:text-lg text-xs text-center font-bold py-3 lg:px-5 md:px-5 px-3 rounded-xl mt-6">
+              Proceed to checkout
+            </button>
+          </Link>
+
+          <Link to="/Products">
+            <button className="bg-gray-300 lg:hover:scale-105 hover:bg-gray-400 transition duration-100 ease-in-out text-zinc-900 lg:text-lg md:text-lg text-xs text-center font-bold py-3 lg:px-10 md:px-5 px-3 rounded-xl mt-6">
+              Go back to store
+            </button>
+          </Link>
+        </div>
+
       </div>
     );
   };
 
   return (
     <>
-      <div className="h-screan w-full flex justify-center items-center flex-wrap">
+      <div className=" min-h-screen w-full flex justify-center items-center flex-wrap">
         <ul className="flex justify-center flex-wrap">
           {cartItem.length > 0 ? displayCartItems() : <EmptyCartPage />}
-          {cartItem.length > 0 ? confirmOrder() : <EmptyCartPage />}
+          {cartItem.length > 0 ? confirmOrder() : console.log(cartItem.length)}
+
         </ul>
       </div>
     </>
