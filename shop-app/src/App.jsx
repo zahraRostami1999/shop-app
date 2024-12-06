@@ -6,6 +6,7 @@ import Page404 from "./pages/Page404";
 import ProductPage from "./pages/ProductPage";
 import Header from "./components/header/Header";
 import CheckoutPage from "./pages/CheckoutPage";
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/Cart" element={<CartPage />}></Route>
           <Route path="/Checkout" element={<CheckoutPage />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
