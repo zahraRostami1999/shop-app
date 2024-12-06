@@ -8,14 +8,14 @@ function Header() {
 
   return (
     <>
-      <div className="flex justify-between text-white bg-blue-950 px-5 pt-4 pb-2 text-center font-mono font-extrabold text-3xl fixed top-0 w-full">
-        <div className="flex justify-between w-1/4">
+      <div className="flex justify-between text-white bg-blue-950 lg:px-5 pt-4 pb-2 text-center font-mono font-extrabold text-3xl fixed top-0 w-full">
+        <div className="flex justify-between lg:w-1/4 w-3/4 md:w-1/2">
           <Link to="/">
-            <h1 className="font-great-vibes font-extrabold text-4xl text-orange-500">
+            <h1 className="font-great-vibes lg:mr-5 md:mr-5 mr-0 text-2xl font-bold text-orange-500 sm:text-xl lg:font-extrabold md:font-extrabold sm:bold lg:text-4xl md:text-3xl">
               SportyFit
             </h1>
           </Link>
-          <div className="flex w-3/5 justify-around ml-5 text-lg font-bold font-Poppins pt-1 ">
+          <div className="flex lg:w-3/5 w-full justify-around lg:justify-around md:justify-around ml-5 lg:text-lg md:text-lg text-base font-bold font-Poppins pt-1 ">
             <Link to="/">
               <p className="duration-600 delay-75  transform  hover:hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
                 Home
@@ -29,7 +29,7 @@ function Header() {
           </div>
         </div>
 
-        <div className="w-10 flex justify-between text-white">
+        <div className="lg:w-20 md:w-20 lg:w-20 w-12 flex justify-between text-white">
           <Link to="/cart">
             <div className="flex text-white hover:scale-105 transition duration-200 ease-in-out">
               <FontAwesomeIcon icon={faShoppingCart} size="1x" />
