@@ -9,7 +9,7 @@ function CheckoutPage() {
 
   return (
     <>
- <div className="h-min-screen w-full h-full lg:px-10 md:px-8 font-Poppins text-zinc-800">
+ <div className="min-h-screen w-full h-full lg:px-10 md:px-8 font-Poppins text-zinc-800">
   <div className="flex flex-wrap lg:flex-nowrap w-full h-auto lg:h-2/3 lg:mt-10 mt-7">
     <div className="lg:w-1/2 w-full flex flex-col items-center p-4 lg:pt-20 pt-10">
       <div className="text-left">
