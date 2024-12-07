@@ -65,7 +65,7 @@ function Products() {
         </button>
       </div>
 
-      <div className="mt-5 lg:p-10 md:p-10 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
+      <div className="min-h-screen mt-5 lg:p-10 md:p-10 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
         <div className="fixed bottom-16 right-2 w-10">
           <button
             onClick={scrollUp}
