@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const domain = window.location.hostname;
+const domain = "zahrarostami.away.pk";
 
 const client = axios.create({
   baseURL: `http://${domain}:4500`,
