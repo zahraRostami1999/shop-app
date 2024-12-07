@@ -96,7 +96,7 @@ function CartPage() {
 
   const confirmOrder = () => {
     return (
-      <div className="lg:text-xl md:text-xl  text-base font-Poppins font-semibold flex flex-wrap lg:w-10/12 md:w-10/12 w-1/2 justify-between items-center pb-5 mb-10 border-gray-200 border-2 shadow-md lg:px-5 px-0 py-3 rounded-lg flex-grow">
+      <div className="min-h-screen lg:text-xl md:text-xl  text-base font-Poppins font-semibold flex flex-wrap lg:w-10/12 md:w-10/12 w-1/2 justify-between items-center pb-5 mb-10 border-gray-200 border-2 shadow-md lg:px-5 px-0 py-3 rounded-lg flex-grow">
         <div>
           <p>Your total Price is €{total}</p>
         </div>
