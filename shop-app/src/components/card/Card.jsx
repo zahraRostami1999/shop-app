@@ -20,12 +20,6 @@ function Card({ id, title, price, description, image }) {
             </h2>
             <p className="font-bold flex text-zinc-900 justify-between items-center">
               <span>€{price}</span>
-              <span
-                onClick={() => handleAddToBasket(id)}
-                className="text-xs lg:text-base bg-orange-500 border-2 border-orange-500 mt-5 p-1 mb-3 rounded-md cursor-pointer hover:scale-95  transition duration-300 ease-in-out"
-              >
-                Add to Basket
-              </span>
             </p>
             <Link to={`/Product/${id}`}>
               <button className="text-xs lg:text-base bg-blue-950 w-full border-blue-950 border-2 my-2 rounded-md py-2 font-bold focus:scale-95 text-white transition duration-300 ease-in-out">
