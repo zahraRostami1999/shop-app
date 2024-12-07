@@ -4,8 +4,7 @@ import cover from '../assets/images/Empty.jpeg'
 function EmptyCartPage() {
   return (
     <>
-      <div className="w-full mt-10 font-Poppins">
-
+      <div className="w-full min-h-screen mt-10 font-Poppins">
           <img
             src={cover}
             alt="Empty menu illustration"
