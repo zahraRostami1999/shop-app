@@ -23,7 +23,7 @@ function ProductPage() {
 
   return (
     <>
-      <div className="h-screen w-full">
+      <div className="h-screen w-full min-h-screen">
         <div className="lg:h-3/4 md:h-3/5 h-1/2 mx-auto mt-20 py-5 flex justify-around">
           <div className="lg:w-2/5 md:w-4/5 w-3/5 h-11/12">
             <img
