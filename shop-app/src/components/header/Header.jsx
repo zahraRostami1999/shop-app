@@ -17,12 +17,12 @@ function Header() {
           </Link>
           <div className="flex lg:w-3/5 w-full justify-around lg:justify-around md:justify-around ml-5 lg:text-lg md:text-lg text-base font-bold font-Poppins pt-1 ">
             <Link to="/">
-              <p className="duration-600 delay-75  transform  hover:hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
+              <p className="duration-600 delay-75  transform  hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
                 Home
               </p>
             </Link>
             <Link to="/Products">
-              <p className="duration-600 delay-75  transform  hover:hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
+              <p className="duration-600 delay-75  transform hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
                 Store
               </p>
             </Link>
