@@ -1,9 +1,13 @@
 import cover from "../assets/images/HomePage.jpeg";
 import { Link } from "react-router-dom";
+import Carousel from "../components/Carousel";
 function HomePage() {
   return (
     <>
       <div className="min-h-screen w-full flex flex-wrap justify-between lg:pt-20 md:pt-24 lg:px-10 px-2">
+        <div>
+          <Carousel />
+        </div>
         <div className="lg:h-screen md:h-full h-full w-full">
           <img className="bg-cover lg:w-2/3 md:w-5/6 lg:h-5/6 md:h-5/6 w-11/12 mx-auto" src={cover} />
         </div>
