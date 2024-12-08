@@ -5,7 +5,7 @@ function HomePage() {
   return (
     <>
       <div className="min-h-screen w-full flex flex-wrap justify-between lg:pt-20 md:pt-24 lg:px-10 px-2">
-        <div>
+        <div className="w-full">
           <Carousel />
         </div>
         <div className="lg:h-screen md:h-full h-full w-full">
