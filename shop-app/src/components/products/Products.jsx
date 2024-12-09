@@ -6,6 +6,7 @@ import React from "react";
 function Products() {
   const [productData, setProductData] = useState([]);
   const [filter, setFilter] = useState("All");
+  const filterBtn = ["All", "Adidas", "Nike", "Puma", "Reebok"];
 
   useEffect(() => {
     getProducts()
@@ -27,42 +28,15 @@ function Products() {
   };
 
   const scrollDown = () => {
-    window.scrollBy({ top: window.innerHeight -80, behavior: "smooth" });
+    window.scrollBy({ top: window.innerHeight - 80, behavior: "smooth" });
   };
 
   return (
     <>
       <div className="mt-24 flex flex-wrap justify-center gap-2 px-4 lg:px-24 md:px-12 sm:px-6 text-xs lg:text-lg md:text-lg font-Poppins font-medium">
-        <button
-          onClick={() => handleFilterProducts("All")}
-          className="border-2 border-orange-400 px-2 py-2 rounded-md hover:bg-orange-400 transition-all duration-300"
-        >
-          All
-        </button>
-        <button
-          onClick={() => handleFilterProducts("Adidas")}
-          className="border-2 border-orange-400 px-2 py-2 rounded-md hover:bg-orange-400 transition-all duration-300"
-        >
-          Adidas
-        </button>
-        <button
-          onClick={() => handleFilterProducts("Nike")}
-          className="border-2 border-orange-400 px-2 py-2 rounded-md hover:bg-orange-400 transition-all duration-300"
-        >
-          Nike
-        </button>
-        <button
-          onClick={() => handleFilterProducts("Puma")}
-          className="border-2 border-orange-400 px-2 py-2 rounded-md hover:bg-orange-400 transition-all duration-300"
-        >
-          Puma
-        </button>
-        <button
-          onClick={() => handleFilterProducts("Reebok")}
-          className="border-2 border-orange-400 px-2 py-2 rounded-md hover:bg-orange-400 transition-all duration-300"
-        >
-          Reebok
-        </button>
+        {filterBtn.map((btn) => {
+          return <button className="border-2 border-orange-400 px-2 py-2 rounded-md hover:bg-orange-400 transition-all duration-300" key={btn} onClick={() => handleFilterProducts(btn)}>{btn}</button>
+        })}
       </div>
 
       <div className="min-h-screen mt-5 lg:p-10 md:p-10 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2">
