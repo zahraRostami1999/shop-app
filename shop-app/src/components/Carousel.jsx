@@ -22,7 +22,7 @@ const Carousel = () => {
         1024: { items: 3 },
     };
 
-    const filterproducts = products.filter((product) => product.id > 4 && product.id < 14);
+    const filterproducts = products.filter((product) => product.id > 4 && product.id < 13);
 
     const items = filterproducts.map((item) => {        
         return (
