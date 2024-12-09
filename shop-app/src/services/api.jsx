@@ -7,8 +7,8 @@ const client = axios.create({
 });
 
 export async function getProducts() {
-  const { data } = await client("/Products");
-  // const { data } = await axios.get("http://zahrarostami.away.pk:4500/Products");
+  // const { data } = await client("/Products");
+  const { data } = await axios.get("https://api.zahra-rostami.ir/Products");
   return data;
 }
 
