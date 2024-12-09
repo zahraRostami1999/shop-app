@@ -3,7 +3,7 @@ import axios from "axios";
 const domain = "api.zahra-rostami.ir";
 
 const client = axios.create({
-  baseURL: `http://${domain}`,
+  baseURL: `https://${domain}`,
 });
 
 export async function getProducts() {
