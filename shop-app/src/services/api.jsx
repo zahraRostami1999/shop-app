@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const domain = "zahrarostami.away.pk";
+const domain = "https://api.zahra-rostami.ir";
 
 const client = axios.create({
   baseURL: `http://${domain}:4500`,
@@ -8,6 +8,7 @@ const client = axios.create({
 
 export async function getProducts() {
   const { data } = await client("/Products");
+  // const { data } = await axios.get("http://zahrarostami.away.pk:4500/Products");
   return data;
 }
 
