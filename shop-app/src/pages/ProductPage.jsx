@@ -1,11 +1,10 @@
-import React from "react";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getProductDetails } from "../services/api";
-import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { AddToCart } from "../redux/CartSlice";
-import {toast, Toaster} from 'react-hot-toast';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function ProductPage() {
   const Params = useParams();
@@ -14,24 +13,40 @@ function ProductPage() {
 
   const handleAddToBasket = (id) => {
     dispatch(AddToCart(id));
-    
+
+    toast.success(`You've added ${productDetails.title} to your cart.`, {
+      position: "bottom-left",
+      autoClose: 3000,
+      hideProgressBar: false,
+      pauseOnHover: true,
+      theme: "light",
+      transition: "bounce",
+      closeOnClick: true,
+      draggable: true,
+    });
   };
 
   useEffect(() => {
     getProductDetails(Params.id).then((result) => {
       setProductDetails(result);
     });
-  }, []);
+  }, [Params.id]);
 
   return (
     <>
       <div className="w-full min-h-screen">
         <div className="h-full mx-auto mt-20 py-5 flex flex-col lg:flex-row justify-center lg:justify-around">
+          <div className="">
+            <ToastContainer 
+            autoClose={1000}
+            closeOnClick
+            />
+          </div>
           <div className="lg:w-2/5 md:w-2/5 w-2/5 h-1/3 lg:h-auto mx-auto">
             <img
               src={productDetails.image}
               alt={productDetails.title}
-              className="w-full  object-cover"
+              className="w-full object-cover"
             />
           </div>
           <div className="lg:mx-5 md:mx-5 mx-1 w-full lg:w-3/5 h-auto flex flex-col justify-between px-7 lg:px-0 mt-10 lg:mt-0">
@@ -60,7 +75,6 @@ function ProductPage() {
         </div>
       </div>
     </>
-
   );
 }
 
