@@ -8,7 +8,7 @@ function Header() {
 
   return (
     <>
-      <div className="flex justify-between text-white bg-blue-950 lg:px-5 pt-4 pb-2 text-center font-mono font-extrabold text-3xl fixed top-0 w-full">
+      <div className="flex justify-between text-white bg-blue-950 lg:px-5 pt-4 pb-2 text-center font-mono font-extrabold text-3xl fixed top-0 w-full z-10">
         <div className="flex justify-between lg:w-1/4 w-3/4 md:w-1/2">
           <Link to="/">
             <h1 className="font-great-vibes lg:mr-5 md:mr-5 mr-0 text-2xl font-bold text-orange-500 sm:text-xl lg:font-extrabold md:font-extrabold sm:bold lg:text-4xl md:text-3xl">
