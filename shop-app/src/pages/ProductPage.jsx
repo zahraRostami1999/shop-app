@@ -17,7 +17,7 @@ function ProductPage() {
 
   useEffect(() => {
     getProductDetails(Params.id).then((result) => {
-      setProductDetails(result);      
+      setProductDetails(result);
     });
   }, []);
 
