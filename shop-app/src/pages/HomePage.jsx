@@ -27,7 +27,7 @@ function HomePage() {
           </div>
           <Link to="/Products">
             <div className="w-full lg:w-full md-2/3 lg:my-16 md:my-10 my-10 flex justify-center">
-              <button className="bg-orange-500 w-2/5 py-3 rounded-lg lg:font-semibold md:font-semibold lg:text-lg md:text-lg text-xs shadow-lg shadow-slate-400 text-white hover:scale-105 transition duration-300">
+              <button className="bg-orange-500 lg:w-2/5 md:w-2/5 w-5/6 py-3 rounded-lg lg:font-semibold md:font-semibold lg:text-lg md:text-lg text-xs shadow-lg shadow-slate-400 text-white hover:scale-105 transition duration-300">
                 Buy now and enjoy the sport
               </button>
             </div>
