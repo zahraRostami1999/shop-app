@@ -5,6 +5,7 @@ import { getProductDetails } from "../services/api";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { AddToCart } from "../redux/CartSlice";
+import {toast, Toaster} from 'react-hot-toast';
 
 function ProductPage() {
   const Params = useParams();
@@ -13,6 +14,7 @@ function ProductPage() {
 
   const handleAddToBasket = (id) => {
     dispatch(AddToCart(id));
+    
   };
 
   useEffect(() => {
