@@ -8,7 +8,6 @@ const client = axios.create({
 
 export async function getProducts() {
   const { data } = await client("/Products");
-// const {data} = axios.get("http://localhost:4500/Products")
   return data;
 }
 
