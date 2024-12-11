@@ -6,6 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      screens:{
+        'sm': '300px',
+        'md': '500px',
+        'lg': '900px',
+        'xl': '1200px',
+      },
       fontFamily: {
         'great-vibes': ['"Great Vibes"', 'cursive'],
         'satisfy': ['Satisfy', 'cursive'],
