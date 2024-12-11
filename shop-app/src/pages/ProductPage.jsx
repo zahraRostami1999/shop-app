@@ -3,8 +3,7 @@ import { useParams } from "react-router-dom";
 import { getProductDetails } from "../services/api";
 import { useDispatch } from "react-redux";
 import { AddToCart } from "../redux/CartSlice";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 
 function ProductPage() {
   const Params = useParams();
@@ -13,17 +12,6 @@ function ProductPage() {
 
   const handleAddToBasket = (id) => {
     dispatch(AddToCart(id));
-
-    toast.success(`You've added ${productDetails.title} to your cart.`, {
-      position: "bottom-left",
-      autoClose: 3000,
-      hideProgressBar: false,
-      pauseOnHover: true,
-      theme: "light",
-      transition: "bounce",
-      closeOnClick: true,
-      draggable: true,
-    });
   };
 
   useEffect(() => {
@@ -36,12 +24,6 @@ function ProductPage() {
     <>
       <div className="w-full min-h-screen">
         <div className="h-full mx-auto mt-20 py-5 flex flex-col lg:flex-row justify-center lg:justify-around">
-          <div className="">
-            <ToastContainer 
-            autoClose={1000}
-            closeOnClick
-            />
-          </div>
           <div className="lg:w-2/5 md:w-2/5 w-2/5 h-1/3 lg:h-auto mx-auto">
             <img
               src={productDetails.image}
