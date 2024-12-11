@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import { getProductDetails } from "../services/api";
 import { useDispatch } from "react-redux";
 import { AddToCart } from "../redux/CartSlice";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function ProductPage() {
   const Params = useParams();
@@ -12,6 +13,7 @@ function ProductPage() {
 
   const handleAddToBasket = (id) => {
     dispatch(AddToCart(id));
+    toast(`You've added ${productDetails.title} to your cart.`);
   };
 
   useEffect(() => {
@@ -54,6 +56,7 @@ function ProductPage() {
               </div>
             </div>
           </div>
+          <ToastContainer />
         </div>
       </div>
     </>
