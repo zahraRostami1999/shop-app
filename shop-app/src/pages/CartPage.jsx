@@ -56,7 +56,6 @@ function CartPage() {
                 {matchingProduct.title}
               </h2>
             </div>
-
             <div className="grid grid-cols-5 lg:grid-cols-5 gap-4 w-full lg:w-10/12 md:w-11/12 mt-4 lg:mt-0">
               
               <p className="font-semibold flex justify-center items-center text-sm md:text-base lg:text-lg">
@@ -65,30 +64,23 @@ function CartPage() {
               <div className="col-span-2 flex justify-center items-center h-10 rounded-3xl">
                 <button
                   className="bg-orange-400 px-3 py-1.5 rounded-full font-mono font-semibold text-sm hover:bg-orange-500 mx-2"
-                  onClick={() => dispatch(AddToCart(matchingProduct.id))}
-                >
-                  +
+                  onClick={() => dispatch(AddToCart(matchingProduct.id))}>
+                +
                 </button>
                 <p className="text-sm font-semibold">{item.qty}</p>
                 <button
                   className="bg-gray-300 px-3 py-1.5 rounded-full font-mono font-semibold text-sm hover:bg-gray-400 mx-2"
-                  onClick={() => dispatch(removeFromCart(matchingProduct.id))}
-                >
-                  -
-                </button>
+                  onClick={() => dispatch(removeFromCart(matchingProduct.id))}>-</button>
               </div>
               <p className="font-bold text-center text-sm md:text-base lg:text-xl mt-2">
                 €{matchingProduct.price * item.qty}
               </p>
-              <button
-                onClick={() => dispatch(deleteFromCart(matchingProduct.id))}
-                className="flex justify-center items-center text-red-400 hover:text-red-600 text-xl md:text-2xl lg:text-3xl"
-              >
+              <button onClick={() => dispatch(deleteFromCart(matchingProduct.id))}
+                className="flex justify-center items-center text-red-400 hover:text-red-600 text-xl md:text-2xl lg:text-3xl">
                 <FontAwesomeIcon icon={faTrash} />
               </button>
             </div>
           </li>
-
         );
       }
     });
@@ -125,7 +117,6 @@ function CartPage() {
         <ul className="flex justify-center flex-wrap">
           {cartItem.length > 0 ? displayCartItems() : <EmptyCartPage />}
           {cartItem.length > 0 ? confirmOrder() : console.log(cartItem.length)}
-
         </ul>
       </div>
     </>
