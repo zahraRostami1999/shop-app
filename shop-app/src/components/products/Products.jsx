@@ -31,7 +31,7 @@ function Products() {
           return <button className="border-2 border-orange-400 px-2 py-2 rounded-md hover:bg-orange-400 transition-all duration-300" key={btn} onClick={() => handleFilterProducts(btn)}>{btn}</button>
         })}
       </div>
-      <div className="min-h-screen xl:mx-10 lg:mx-8 md:mx-6 mx-3 mb-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 gap-3">
+      <div className="w-2/3 lg:w-11/12 md:w-5/6 sm:w-11/12 mx-auto min-h-screen mb-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 gap-3">
         {filteredProducts.map((product) => (
           <Card key={product.id} {...product} />
         ))}
