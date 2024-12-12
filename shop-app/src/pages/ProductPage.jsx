@@ -27,21 +27,19 @@ function ProductPage() {
     <>
       <div className="w-full min-h-screen">
         <div className="h-full mx-auto mt-20 py-5 flex flex-col lg:flex-row justify-center lg:justify-around">
-          <div className="lg:w-1/3 md:w-2/5 w-3/5 h-1/3 lg:h-auto mx-auto">
+          <div className="w-52 h-60 sm:w-60 sm:h-72 md:w-80 md:h-96 lg:w-80 lg:h-96 mx-auto">
             <img
               src={productDetails.image}
               alt={productDetails.title}
               className="w-full object-cover"
             />
           </div>
-          <div className="lg:mx-5 md:mx-5 mx-1 w-full lg:w-3/5 h-auto flex flex-col justify-between px-7 lg:px-0 mt-10 lg:mt-0">
+          <div className="lg:mx-20 md:mx-0 md:px-20 sm:px-20 px-3 mx-1 w-full lg:w-3/5 h-auto flex flex-col justify-between px-7 lg:px-0 mt-5 lg:mt-0">
             <div>
               <h1 className="lg:text-3xl md:text-3xl text-xl font-bold lg:pb-3 md:pb-3 pb-1">
                 {productDetails.title}
               </h1>
-            </div>
-            <div className="">
-              <h3 className="h-1/2 lg:text-xl md:text-xl text-base lg:mt-14 md:mt-16 mt-3">
+              <h3 className="h-1/2 lg:text-xl md:text-xl text-base lg:mt-14 md:mt-16 my-5">
                 {productDetails.description}
               </h3>
             </div>
