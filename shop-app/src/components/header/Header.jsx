@@ -16,7 +16,7 @@ function Header() {
                 SportyFit
               </h1>
             </Link>
-            <div className="flex lg:w-4/5 md:full w-full justify-around lg:justify-around md:justify-around ml-5 lg:text-lg md:text-base text-xs font-bold font-Poppins pt-1 ">
+            <div className="pt-1.5 flex lg:w-4/5 md:full w-full justify-around lg:justify-around md:justify-around ml-5 lg:text-lg md:text-base text-xs font-bold font-Poppins pt-1 ">
               <Link to="/">
                 <p className="duration-600 delay-75  transform  hover:border-b-2 hover:scale-110 transition duration-200 ease-in-out hover:border-white">
                   Home
