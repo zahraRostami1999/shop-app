@@ -16,7 +16,7 @@ const Carousel = () => {
     const responsive = {
         300: { items: 2 },
         400: { items: 3 },
-        1024: { items: 3 },
+        1024: { items: 4 },
     };
 
     const filterproducts = products.filter((product) => product.id > 4 && product.id < 13);
@@ -24,7 +24,7 @@ const Carousel = () => {
     const items = filterproducts.map((item) => {        
         return (
             <Link key={item.id} to={`/${item.id}`}> 
-                <div className="w-5/6 md:w-2/3 lg:w-2/3 xl:w-2/3 p-4 flex flex-col items-center rounded-lg shadow-md bg-zinc-50 hover:bg-zinc-100 transition-shadow duration-300 px-5">
+                <div className="w-5/6 md:w-2/3 lg:w-2/3 xl:w-2/3 lg:p-4 mb-5 flex flex-col items-center rounded-lg shadow-md bg-zinc-50 hover:bg-orange-100 transition-shadow duration-300">
                     <div className="h-44 w-full flex justify-center items-center">
                         <img className="h-full max-w-full object-contain" src={item.image} alt={item.title} />
                     </div>
