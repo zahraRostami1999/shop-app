@@ -24,12 +24,12 @@ const Carousel = () => {
     const items = filterproducts.map((item) => {        
         return (
             <Link key={item.id} to={`/${item.id}`}> 
-                <div className="w-5/6 md:w-2/3 lg:w-2/3 xl:w-2/3 lg:p-4 mb-5 flex flex-col items-center rounded-lg shadow-md bg-zinc-50 hover:bg-orange-100 transition-shadow duration-300">
-                    <div className="h-44 w-full flex justify-center items-center">
+                <div className="mx-2 lg:p-4 mb-5 flex flex-col items-center rounded-lg shadow-md bg-zinc-50 hover:bg-orange-100 transition-shadow duration-300">
+                    <div className="w-20 h-24 sm:w-28 sm:h-32 md:w-32 md:h-40 lg: lg: flex justify-center items-center">
                         <img className="h-full max-w-full object-contain" src={item.image} alt={item.title} />
                     </div>
-                    <h1 className="block text-center h-20 text-base lg:text-lg xl:text-lg font-medium mt-2 line-clamp-2">{item.title}</h1>
-                    <p className="block text-center text-green-700 font-semibold mt-1">$ {item.price}</p>
+                    <h1 className="block text-center h-10 lg:h-20 text-xs md:text-sm lg:text-base xl:text-lg font-medium mt-2 line-clamp-2">{item.title}</h1>
+                    <p className="block text-center text-green-700 font-semibold mt-1 text-xs md:text-sm lg:text-base lg:pb-5 md:pb-5 sm:pb-3">$ {item.price}</p>
                 </div>
             </Link>
         );
@@ -37,7 +37,7 @@ const Carousel = () => {
     
 
     return (
-        <div className='lg:mt-10 md:mt-10 mt-16 mb-10 w-full'>
+        <div className='lg:mt-10 md:mt-10 mt-16 mb-10 w-5/6 mx-auto'>
             <div className=''>
                 <AliceCarousel
                     mouseTracking
