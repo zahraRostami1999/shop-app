@@ -33,7 +33,7 @@ function Header() {
             <Link to="/cart">
               <div className="flex text-white hover:scale-105 transition duration-200 ease-in-out">
                 <FontAwesomeIcon icon={faShoppingCart} size="1x" />
-                <div className="bg-orange-500 rounded-full text-xs font-normal h-4 lg:h-5 lg:px-1.5 lg:py-0.5 lg:-translate-x-2 sm:px-1.5 sm:-translate-x-2 px-1.5 py-0 inline -translate-x-1 -translate-y-3 cursor-pointer">
+                <div className="bg-orange-500 rounded-full text-center text-xs font-normal h-4 w-4 lg:h-5 lg:w-5 md:h-5 md:w-5 lg:py-0.5 md:py-0.5  lg:-translate-x-2 lg:-translate-y-4 sm:-translate-x-2  inline -translate-x-1.5 -translate-y-3 cursor-pointer">
                   <div className="font-mono font-medium">
                     {cartItem.length === 0 ||
                       cartItem === undefined ||
