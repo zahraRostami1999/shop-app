@@ -25,11 +25,11 @@ const Carousel = () => {
         return (
             <Link key={item.id} to={`/${item.id}`}> 
                 <div className="mx-2 lg:p-4 mb-5 flex flex-col items-center rounded-lg shadow-md bg-zinc-50 hover:bg-orange-100 transition-shadow duration-300">
-                    <div className="w-20 h-24 sm:w-28 sm:h-32 md:w-32 md:h-40 lg: lg: flex justify-center items-center">
+                    <div className="w-20 h-24 sm:w-28 sm:h-32 md:w-32 md:h-40 flex justify-center items-center">
                         <img className="h-full max-w-full object-contain" src={item.image} alt={item.title} />
                     </div>
                     <h1 className="block text-center h-10 lg:h-20 text-xs md:text-sm lg:text-base xl:text-lg font-medium mt-2 line-clamp-2">{item.title}</h1>
-                    <p className="block text-center text-green-700 font-semibold mt-1 text-xs md:text-sm lg:text-base lg:pb-5 md:pb-5 sm:pb-3">$ {item.price}</p>
+                    <p className="block text-center text-green-700 font-semibold mt-1 text-xs md:text-sm lg:text-base lg:pb-5 md:pb-5 sm:pb-3 pb-3">$ {item.price}</p>
                 </div>
             </Link>
         );
