@@ -29,11 +29,11 @@ function Header() {
               </Link>
             </div>
           </div>
-          <div className="lg:w-10 md:w-10 w-8 flex justify-start items-center text-white lg:text-3xl md:text-3xl text-2xl">
+          <div className="lg:w-10 md:w-10 sm:w-7 w-6 flex justify-start items-center text-white lg:text-3xl md:text-3xl sm:text-2xl text-xl">
             <Link to="/cart">
               <div className="flex text-white hover:scale-105 transition duration-200 ease-in-out">
                 <FontAwesomeIcon icon={faShoppingCart} size="1x" />
-                <div className="bg-orange-500 rounded-full text-xs font-normal h-5 px-2 py-0.5 inline -translate-x-2 -translate-y-3 cursor-pointer">
+                <div className="bg-orange-500 rounded-full text-xs font-normal h-4 lg:h-5 lg:px-1.5 lg:py-0.5 lg:-translate-x-2 sm:px-1.5 sm:-translate-x-2 px-1.5 py-0 inline -translate-x-1 -translate-y-3 cursor-pointer">
                   <div className="font-mono font-medium">
                     {cartItem.length === 0 ||
                       cartItem === undefined ||
