@@ -19,7 +19,7 @@ const BackTop = () => {
         <>
             <div>
                 {backBtn && (
-                    <button className="bg-orange-500 rounded-full w-10 h-10 fixed bottom-5 right-1 shadow-lg hover:font-semibold transition-all duration-200 smooth" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}> <FontAwesomeIcon icon={faArrowUp} size="1x" /> </button>
+                    <button className="bg-orange-500 rounded-full w-10 h-10 fixed bottom-20 right-1 shadow-lg hover:font-semibold transition-all duration-200 smooth" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}> <FontAwesomeIcon icon={faArrowUp} size="1x" /> </button>
                 )}
             </div>
         </>
