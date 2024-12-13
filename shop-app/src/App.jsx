@@ -6,7 +6,8 @@ import Page404 from "./pages/Page404";
 import ProductPage from "./pages/ProductPage";
 import Header from "./components/header/Header";
 import CheckoutPage from "./pages/CheckoutPage";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="*" element={<Page404 />}></Route>
           <Route path="/Cart" element={<CartPage />}></Route>
           <Route path="/Checkout" element={<CheckoutPage />}></Route>
+          <Route path="/Login" element={<LoginPage />}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
