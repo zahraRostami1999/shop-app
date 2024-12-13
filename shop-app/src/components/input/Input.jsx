@@ -2,10 +2,10 @@
 function Input(props){
 
 return(
-    <div className="my-8 w-full  flex justify-between items-center pr-5">
-    <label className="w-1/3">{props.label} </label>
+    <div className="my-8 md:my-3 w-full  flex justify-between items-center pr-5">
+    <label className="lg:w-1/4 text-sm lg:text-lg">{props.label} </label>
     <input
-      className="w-2/3 h-9 rounded-lg border-2 border-zinc-200 px-3 focus:border-zinc-400"
+      className="lg:w-2/3 w-2/3 h-6 border lg:h-9 rounded lg:rounded-lg lg:border-2 border-zinc-200 lg:px-3 focus:border-zinc-400"
       type="text"
     />
   </div>
