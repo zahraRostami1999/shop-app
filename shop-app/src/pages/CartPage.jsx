@@ -46,9 +46,9 @@ function CartPage() {
             key={matchingProduct.id}
             className="first:mt-20 flex flex-wrap justify-center items-center lg:w-11/12 md:w-11/12 w-full border-2 shadow-lg lg:px-10 md:px-8 px-2 py-3 lg:mb-10 md:mb-8 mb-5 rounded-lg"
           >
-            <div className="flex items-start lg:w-11/12 md:w-11/12 w-full">
+            <div className="flex items-start lg:w-full md:w-11/12 w-11/12">
               <img
-                className="w-1/4 lg:w-1/12 md:w-1/6 h-28 object-cover lg:ml-16 md:ml-10 ml-3"
+                className="w-24 h-32 object-cover lg:ml-16 md:ml-10 ml-3"
                 src={matchingProduct.image}
                 alt={matchingProduct.title}
               />
@@ -57,15 +57,15 @@ function CartPage() {
               </h2>
             </div>
             <div className="grid grid-cols-5 lg:grid-cols-5 gap-4 w-full lg:w-10/12 md:w-11/12 mt-4 lg:mt-0">
-              
-              <p className="font-semibold flex justify-center items-center text-sm md:text-base lg:text-lg">
+
+              <p className="font-semibold flex justify-center items-center text-green-700 text-sm md:text-base lg:text-lg">
                 €{matchingProduct.price}
               </p>
               <div className="col-span-2 flex justify-center items-center h-10 rounded-3xl">
                 <button
                   className="bg-orange-400 px-3 py-1.5 rounded-full font-mono font-semibold text-sm hover:bg-orange-500 mx-2"
                   onClick={() => dispatch(AddToCart(matchingProduct.id))}>
-                +
+                  +
                 </button>
                 <p className="text-sm font-semibold">{item.qty}</p>
                 <button
@@ -88,9 +88,10 @@ function CartPage() {
 
   const confirmOrder = () => {
     return (
-      <div className="lg:text-xl md:text-xl  text-base font-Poppins font-semibold flex flex-wrap lg:w-10/12 md:w-10/12 w-1/2 justify-between items-center pb-5 mb-10 border-gray-200 border-2 shadow-md lg:px-5 px-0 py-3 rounded-lg flex-grow">
+      <div className="lg:text-xl md:text-xl text-base font-Poppins font-semibold flex flex-wrap lg:w-10/12 md:w-10/12 w-1/2 justify-between items-center pb-5 mb-10 border-gray-200 border-2 shadow-md lg:px-5 px-0 py-3 rounded-lg flex-grow">
         <div>
-          <p>Your total Price is €{total}</p>
+          <p>Your total Price is <span className="text-green-700">€{total}</span>
+          </p>
         </div>
 
         <div className="lg:w-1/2 md:w-2/3 w-11/12 px-2 flex justify-around mx-auto">
