@@ -3,7 +3,10 @@ import ForgetUserOrPass from "../components/ForgetUserOrPass";
 import { verifyUser } from "../services/api";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useDispatch } from "react-redux";
+import { logIn } from "../redux/UserSlice";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LoginPage = () => {
     const [username, setUsername] = useState('');
@@ -14,6 +17,8 @@ const LoginPage = () => {
         username: username,
         password: password
     };
+    const dispatch = useDispatch();
+
     const handleForget = () => {
         setForget(true);
     }
@@ -26,9 +31,10 @@ const LoginPage = () => {
         try {
             const verify = await verifyUser(userInfo);
             if (verify) {
-                navigate('/');
+                dispatch(logIn())
+                navigate('/Cart');
             } else {
-                navigate('/login');
+                toast('username or password is incorrect!')
             }
         } catch (error) {
             console.error('Error verifying user:', error);
@@ -67,8 +73,9 @@ const LoginPage = () => {
                             </div>
                         </div>
                     </div>
-                    {forget ? <ForgetUserOrPass /> : console.log(forget)}
+                    {forget ? <ForgetUserOrPass /> : console.log("*")}
                 </div>
+                <ToastContainer />
             </div>
         </>
     );
