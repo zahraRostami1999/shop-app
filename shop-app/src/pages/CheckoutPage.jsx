@@ -17,7 +17,7 @@ function CheckoutPage() {
           Thank you for shopping at Sportyfit store
         </h1>
       </div>
-      <div className="mt-5 text-base lg:w-5/6 md:w-5/6 w-full bg-orange-500 px-5 pb-8 pt-3 rounded-lg shadow-lg shadow-zinc-400">
+      <div className="mt-5 text-base lg:w-5/6 md:w-5/6 w-full bg-gold px-5 pb-8 pt-3 rounded-lg shadow-lg shadow-zinc-400">
         <div className="border-b-2 border-zinc-800 font-semibold pb-2">
           Order Summary:
         </div>
