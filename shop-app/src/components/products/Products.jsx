@@ -28,12 +28,12 @@ function Products() {
   return (
     <>
       <div className="min-h-screen">
-        <div className="mt-20 flex flex-wrap justify-center gap-2 px-4 lg:px-24 md:px-12 sm:px-6 text-xs lg:text-base md:text-base font-Poppins font-medium">
+        <div className="lg:mt-20 md:mt-20 mt-16 flex flex-wrap border-b justify-start px-2 lg:px-16 md:px-12 sm:px-5 text-xs lg:text-base md:text-base font-Poppins font-medium">
           {filterBtn.map((btn) => {
-            return <button className="border-2 border-orange-400 px-2 py-2 rounded-md hover:bg-orange-400 transition-all duration-300" key={btn} onClick={() => handleFilterProducts(btn)}>{btn}</button>
+            return <button className="px-2 lg:px-5 md:px-3 py-2  hover:text-neutral-600 hover:border-b hover:border-neutral-900 transition-all duration-300" key={btn} onClick={() => handleFilterProducts(btn)}>{btn}</button>
           })}
         </div>
-        <div className="w-2/3 lg:w-11/12 md:w-5/6 mt-20 sm:w-11/12 mx-auto mb-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 gap-3">
+        <div className="w-2/3 lg:w-11/12 md:w-5/6 sm:w-11/12 mx-auto mb-24 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 gap-3">
           {filteredProducts.map((product) => (
             <Card key={product.id} {...product} />
           ))}
