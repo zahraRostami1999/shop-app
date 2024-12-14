@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { getProductDetails } from "../services/api";
 import { useDispatch } from "react-redux";
 import { AddToCart } from "../redux/CartSlice";
-import { ToastContainer, toast } from 'react-toastify';
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function ProductPage() {
