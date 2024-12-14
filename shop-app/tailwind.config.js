@@ -17,6 +17,9 @@ export default {
         'satisfy': ['Satisfy', 'cursive'],
         'Poppins': ['Poppins', 'cursive'],
       },
+      colors:{
+        'gold': '	#FFD700'
+      }
     },
   },
   plugins: [],
