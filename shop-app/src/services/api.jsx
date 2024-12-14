@@ -16,12 +16,11 @@ export async function getProductDetails(id) {
 
 export const verifyUser = async (info) => {
   try {
-    const { data } = await axios.get('https://fakestoreapi.com/users');
-      console.log(data);
-      const ckeckUser = data.find(user => user.username === info.username && user.password === info.password);
-      return ckeckUser;
+    const { data } = await client('/users')
+    const ckeckUser = data.find(user => user.username === info.username && user.password === info.password);
+    return ckeckUser;
   } catch {
-      console.error('Error verifying user:', error);
-      return false;
+    console.error('Error verifying user:', error);
+    return false;
   }
 };
