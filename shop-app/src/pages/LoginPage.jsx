@@ -69,7 +69,7 @@ const LoginPage = () => {
                             </div>
                             <div className="block w-5/6 mx-auto">
                                 <p className="text-xs lg:text-sm ">Forget your username or password? <span className="cursor-pointer text-blue-700" onClick={() => handleForget()}>Click</span></p>
-                                <button onClick={verifyNewUser} className="lg:text-lg text-sm md:text-lg font-semibold bg-orange-500 w-full lg:py-2 my-3 sm:my-5 lg:my-1 md:my-1  py-1.5 sm:py-2 md:py-1.5 rounded-lg" >Login</button>
+                                <button onClick={verifyNewUser} className="lg:text-lg text-sm md:text-lg font-semibold bg-gold w-full lg:py-2 my-3 sm:my-5 lg:my-1 md:my-1  py-1.5 sm:py-2 md:py-1.5 rounded-lg" >Login</button>
                             </div>
                         </div>
                     </div>
