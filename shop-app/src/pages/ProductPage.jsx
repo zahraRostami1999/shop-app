@@ -25,7 +25,7 @@ function ProductPage() {
 
   return (
     <>
-      <div className="w-full min-h-screen">
+      <div className="w-full min-h-screen flex items-center">
         <div className="h-full mx-auto mt-20 py-5 flex flex-col lg:flex-row justify-center lg:justify-around">
           <div className="w-52 h-60 sm:w-60 sm:h-72 md:w-80 md:h-96 lg:w-80 lg:h-96 mx-auto">
             <img
@@ -48,7 +48,7 @@ function ProductPage() {
               <div>
                 <button
                   onClick={() => handleAddToBasket(Params.id)}
-                  className="text-sm lg:text-base md:text-base bg-orange-500 lg:px-16 md:px-16 px-3 py-2 rounded-md my-0 font-semibold hover:scale-110 transition duration-500 ease-in-out"
+                  className="text-sm lg:text-base md:text-base bg-gold lg:px-16 md:px-16 px-3 py-2 rounded-md my-0 font-semibold hover:scale-110 transition duration-500 ease-in-out"
                 >
                   Add to Basket
                 </button>
@@ -56,7 +56,7 @@ function ProductPage() {
               <div>
                 <Link to="/Products">
                   <button
-                    className="text-sm lg:text-base md:text-base bg-zinc-400 lg:px-16 md:px-16 px-3 py-2 rounded-md my-0 font-semibold hover:scale-110 transition duration-500 ease-in-out"
+                    className="text-sm lg:text-base md:text-base bg-neutral-400 lg:px-16 md:px-16 px-3 py-2 rounded-md my-0 font-semibold hover:scale-110 transition duration-500 ease-in-out"
                   >
                     Back to Store
                   </button>
