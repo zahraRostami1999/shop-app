@@ -1,11 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faSignOut } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logOut } from "../../redux/UserSlice";
 
 function Header() {
   const { cartItem } = useSelector((state) => state.cart);
+  const dispatch = useDispatch()
+
+  const handleSignOut = ()=>{
+    dispatch(logOut());
+    alert('You have signed out')
+  }
 
   return (
     <>
@@ -31,12 +38,10 @@ function Header() {
             </div>
           </div>
           <div className=" g:w-28 pb-1 sm:pb-1  md:w-24 sm:w-20 w-16 flex justify-between items-center text-white lg:text-3xl md:text-2xl sm:text-xl text-lg">
-            <Link to="/Login">
-              <div className="flex justify-center items-center pb0.5 hover:scale-105 transition duration-200 ease-in-out">
-                <FontAwesomeIcon icon={faUser} size="1x" />
-              </div>
-            </Link>
-            <Link to="/cart">
+            <div className="flex justify-center items-center pb0.5 hover:scale-105 transition duration-200 ease-in-out" onClick={()=>handleSignOut()}>
+              <FontAwesomeIcon icon={faSignOut} size="1x" />
+            </div>
+            <Link to="/Handle">
               <div className="flex text-white hover:scale-105 transition duration-200 ease-in-out">
                 <FontAwesomeIcon icon={faShoppingCart} size="1x" />
                 <div className="bg-orange-500 rounded-full text-center text-xs font-thin h-4 w-4 lg:h-5 lg:w-5 md:h-5 md:w-5 lg:py-0.5 md:py-0.5  lg:-translate-x-2 lg:-translate-y-3 sm:-translate-x-2  inline -translate-x-1.5 -translate-y-3 cursor-pointer">
