@@ -4,7 +4,7 @@ function Card({ id, title, price, image }) {
     <>
 <div
               
-              className=" px-1 overflow-hidden shadow-gray-400 shadow-md border-light-neutral-800 border-2 lg:mx-5 mt-10 mx-3 rounded-2xl hover:border-zinc-300 hover:shadow-gray-900 hover:shadow-2xl transition duration-500 ease-in-out">
+              className=" px-1 overflow-hidden  lg:mx-5 mt-10 mx-3 rounded-2xl hover:border-zinc-300 hover:shadow-gray-900 hover:shadow-2xl transition duration-500 ease-in-out">
               <Link to={`/${id}`}>
                 <div className="relative lg:w-44 lg:h-52 md:w-36 md:h-44 sm:w-40 sm:h-48 w-32 h-40 mx-auto mt-3">
                   <img
