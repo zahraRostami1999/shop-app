@@ -43,7 +43,7 @@ const LoginPage = () => {
 
     return (
         <>
-            <div className="min-h-screen mt-20 flex justify-center ">
+            <div className="min-h-screen mt-20 flex justify-center items-center">
                 <div className="w-11/12 sm:w-5/6 md:w-5/6 lg:w-2/3 flex flex-wrap justify-center lg:justify-between md:justify-between items-around">
                     <div className="w-2/3 lg:w-1/2 md:w-1/2 sm:w-2/3">
                         <img src={cover} alt="" />
