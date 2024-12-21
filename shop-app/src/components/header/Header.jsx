@@ -14,7 +14,7 @@ function Header() {
 
   const handleSignOut = ()=>{
     dispatch(logOut());
-    alert('You have signed out');
+    navigate('/');
   }
 
   const handleLogin = ()=>{
