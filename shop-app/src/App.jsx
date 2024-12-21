@@ -1,14 +1,16 @@
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductsListPage from "./pages/ProductsListPage";
-import HomePage from "./pages/HomePage";
-import CartPage from "./pages/CartPage";
-import Page404 from "./pages/Page404";
-import ProductPage from "./pages/ProductPage";
 import Header from "./components/header/Header";
-import CheckoutPage from "./pages/CheckoutPage";
 import Footer from "./components/Footer";
-import LoginPage from "./pages/LoginPage";
-import HandleCartPage from "./pages/HandleCartPage";
+const LazyCart = React.lazy(() => import('./pages/CartPage'));
+const LazyUndefined = React.lazy(() => import('./pages/Page404'));
+const LazyCheckout = React.lazy(() => import('./pages/CartPage'));
+const LazyProduct = React.lazy(() => import('./pages/ProductPage'));
+const LazyLogin = React.lazy(() => import('./pages/LoginPage'));
+const LazyHandleCart = React.lazy(() => import('./pages/HandleCartPage'));
+const LazyHome = React.lazy(() => import('./pages/HomePage'));
+const LazyProducts = React.lazy(() => import('./pages/ProductsListPage'));
 
 function App() {
   return (
@@ -16,14 +18,14 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route exact path="/" element={<HomePage />}></Route>
-          <Route path="/Products" element={<ProductsListPage />}></Route>
-          <Route path="/:id" element={<ProductPage />}></Route>
-          <Route path="*" element={<Page404 />}></Route>
-          <Route path="/Cart" element={<CartPage />}></Route>
-          <Route path="/Checkout" element={<CheckoutPage />}></Route>
-          <Route path="/Login" element={<LoginPage />}></Route>
-          <Route path="/Handle" element={<HandleCartPage />}></Route>
+          <Route exact path="/" element={<React.Suspense fallback="Loading"><LazyHome /></React.Suspense>}></Route>
+          <Route exact path="*" element={<React.Suspense fallback="Loading"><LazyUndefined /></React.Suspense>}></Route>
+          <Route exact path="/Checkout" element={<React.Suspense fallback="Loading"><LazyCheckout /></React.Suspense>}></Route>
+          <Route exact path="/:id" element={<React.Suspense fallback="Loading"><LazyProduct /></React.Suspense>}></Route>
+          <Route exact path="/Login" element={<React.Suspense fallback="Loading"><LazyLogin /></React.Suspense>}></Route>
+          <Route exact path="/Handle" element={<React.Suspense fallback="Loading"><LazyHandleCart /></React.Suspense>}></Route>
+          <Route exact path="/Cart" element={<React.Suspense fallback="Loading"><LazyCart /></React.Suspense>}></Route>
+          <Route exact path="/Products" element={<React.Suspense fallback="Loading"><LazyProducts /></React.Suspense>}></Route>
         </Routes>
         <Footer />
       </BrowserRouter>
