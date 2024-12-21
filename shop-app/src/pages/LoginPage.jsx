@@ -32,7 +32,7 @@ const LoginPage = () => {
             const verify = await verifyUser(userInfo);
             if (verify) {
                 dispatch(logIn())
-                navigate('/Cart');
+                navigate('/');
             } else {
                 toast('username or password is incorrect!')
             }
