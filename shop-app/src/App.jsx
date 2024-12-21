@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import ProductsListPage from "./pages/ProductsListPage";
 import Header from "./components/header/Header";
 import Footer from "./components/Footer";
 const LazyCart = React.lazy(() => import('./pages/CartPage'));
