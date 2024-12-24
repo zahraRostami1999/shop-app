@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../services/api";
-import { useDispatch } from "react-redux";
 import { AddToCart, removeFromCart, deleteFromCart } from "../redux/CartSlice";
 import EmptyCartPage from "./EmptyCartPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -35,6 +34,24 @@ function CartPage() {
 
   localStorage.setItem("totalPrice", total);
 
+  const handleDelete = (id, qty, title) => {
+    if (qty === 1) {
+      const confirmDelete = window.confirm(
+        `This is the last item. Are you sure you want to remove ${title} from the cart?`
+      );
+      if (confirmDelete) {
+        dispatch(deleteFromCart(id));
+      }
+    } else {
+      const confirmDelete = window.confirm(
+        "Are you sure you want to remove this product from the cart?"
+      );
+      if (confirmDelete) {
+        dispatch(deleteFromCart(id));
+      }
+    }
+  };
+
   const displayCartItems = () => {
     return cartItem.map((item) => {
       const matchingProduct = productItems.find(
@@ -57,7 +74,6 @@ function CartPage() {
               </h2>
             </div>
             <div className="grid grid-cols-5 lg:grid-cols-5 gap-4 w-full lg:w-10/12 md:w-11/12 mt-4 lg:mt-0">
-
               <p className="font-semibold flex justify-center items-center text-green-700 text-sm md:text-base lg:text-lg">
                 €{matchingProduct.price}
               </p>
@@ -70,12 +86,12 @@ function CartPage() {
                 <p className="text-sm font-semibold">{item.qty}</p>
                 <button
                   className="bg-gray-300 px-3 py-1.5 rounded-full font-mono font-semibold text-sm hover:bg-gray-400 mx-2"
-                  onClick={() => dispatch(removeFromCart(matchingProduct.id))}>-</button>
+                  onClick={() => handleDelete(matchingProduct.id, item.qty, matchingProduct.title)}>-</button>
               </div>
               <p className="font-bold text-center text-sm md:text-base lg:text-xl mt-2">
                 €{matchingProduct.price * item.qty}
               </p>
-              <button onClick={() => dispatch(deleteFromCart(matchingProduct.id))}
+              <button onClick={() => handleDelete(matchingProduct.id, item.qty, matchingProduct.title)}
                 className="flex justify-center items-center text-red-400 hover:text-red-600 text-xl md:text-2xl lg:text-3xl">
                 <FontAwesomeIcon icon={faTrash} />
               </button>
