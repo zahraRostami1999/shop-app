@@ -30,7 +30,7 @@ function Header() {
             </h1>
           </div>
           <div className="lg:w-32 pb-1 sm:pb-1 md:w-32 sm:w-28 w-28 flex justify-between items-center text-white lg:text-2xl md:text-2xl sm:text-xl text-lg">
-            <div>
+            <div className="hover:scale-105 transition duration-200 ease-in-out">
               <Link to="/">
                 <FontAwesomeIcon icon={faHome} />
               </Link>
