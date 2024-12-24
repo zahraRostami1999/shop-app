@@ -8,7 +8,7 @@ export const testers = [
         linkedIn: 'https://www.linkedin.com/in/hossein-mohammadzadeh-a847542b2'
     },
     {
-        name: ' Mahdi Hashemi',
+        name: 'Mahdi Hashemi',
         linkedIn: 'https://www.linkedin.com/in/s-m-hashemi',
     },
     {
@@ -28,7 +28,11 @@ export const testers = [
         linkedIn: 'https://www.linkedin.com/in/alireza-%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8Carjmandnia-537380340',
     },
     {
-        name: 'hassan Hamidi',
+        name: 'Hassan Hamidi',
         linkedIn: 'https://www.linkedin.com/in/hassan-hamidi',
-    }
+    },
+    {
+        name: 'Mahdi Solgi',
+        linkedIn: 'https://www.linkedin.com/in/mahdi-solgi',
+    },
 ]
