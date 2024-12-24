@@ -19,6 +19,9 @@ function Card({ id, title, price, image }) {
                   </h2>
                   <p className="font-bold flex text-sm text-zinc-900 justify-between items-center pb-3 sm:pb-5 lg:pb-8 md:pb-7">
                     <span className="text-green-700">€{price}</span>
+                    <button className="ml-auto bg-gold px-2 py-2 rounded text-neutral-900 hover:scale-x-105 lg:text-sm md:text-sm sm:text-xs text-xs font-semibold">
+                      Add to Cart
+                    </button>
                   </p>
                 </div>
               </Link>
