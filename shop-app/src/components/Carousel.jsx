@@ -24,7 +24,7 @@ const filterproducts = products.filter((product) => product.id > 14 && product.i
 const items = filterproducts.map((item) => {
     return (
         <Link key={item.id} to={`/${item.id}`}>
-            <div className="mx-2 lg:p-4 mb-5 flex flex-col items-center rounded-lg shadow-md transition-shadow duration-300">
+            <div className="mx-2 lg:p-4 mb-5 flex flex-col items-center rounded-lg shadow-md hover:border-zinc-300 hover:shadow-gray-900 hover:shadow-2xl transition duration-500 ease-in-out">
                 <div className="w-20 h-24 sm:w-28 sm:h-32 md:w-32 md:h-40 flex justify-center items-center">
                     <img className="h-full max-w-full object-contain" src={item.image} alt={item.title} />
                 </div>
