@@ -27,4 +27,8 @@ export const testers = [
         name: 'Alireza Arjmandnia',
         linkedIn: 'https://www.linkedin.com/in/alireza-%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8Carjmandnia-537380340',
     },
+    {
+        name: 'hassan Hamidi',
+        linkedIn: 'https://www.linkedin.com/in/hassan-hamidi',
+    }
 ]
