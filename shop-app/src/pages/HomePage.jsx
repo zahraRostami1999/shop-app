@@ -16,7 +16,7 @@ function HomePage() {
         </div>
         <div className="w-full font-Poppins lg:pl-10 pl-0 pt-10 text-left">
 
-          <p className="lg:my-20 md:my-14 my-2 lg:text-xl md:text-xl text-xs font-semibold text-gray-700 ">
+          <p className="lg:my-20 md:my-14 my-2 lg:text-xl md:text-xl text-xs font-semibold text-gray-700 px-5">
             <p>
               Discover a world of endless possibilities at ChicMarket, where we bring you the finest selection of products to suit every lifestyle and need. Whether you’re looking for stylish apparel, cutting-edge electronics, or timeless jewelry, we’ve got it all under one roof!
             </p>
