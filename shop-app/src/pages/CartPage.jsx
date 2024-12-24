@@ -48,7 +48,7 @@ function CartPage() {
           >
             <div className="flex items-start lg:w-full md:w-11/12 w-11/12">
               <img
-                className="w-24 h-32 object-cover lg:ml-16 md:ml-10 ml-3"
+                className="w-24 h-32 object-fill lg:ml-16 md:ml-10 ml-3"
                 src={matchingProduct.image}
                 alt={matchingProduct.title}
               />
