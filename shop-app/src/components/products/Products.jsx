@@ -33,7 +33,7 @@ function Products() {
             return <button className="px-2 lg:px-5 md:px-3 py-2  hover:text-neutral-600 hover:border-b hover:border-neutral-900 transition-all duration-300" key={btn} onClick={() => handleFilterProducts(btn)}>{btn}</button>
           })}
         </div>
-        <div className="w-2/3 lg:w-11/12 md:w-5/6 sm:w-11/12 mx-auto mb-24 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 gap-3">
+        <div className="w-5/6 lg:w-11/12 md:w-5/6 sm:w-11/12 mx-auto mb-24 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 gap-3">
           {filteredProducts.map((product) => (
             <Card key={product.id} {...product} />
           ))}
