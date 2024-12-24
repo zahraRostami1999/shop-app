@@ -1,6 +1,4 @@
 import { testers } from "./TesterList";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
     return (
