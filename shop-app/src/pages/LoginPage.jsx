@@ -31,6 +31,7 @@ const LoginPage = () => {
         try {
             const verify = await verifyUser(userInfo);
             if (verify) {
+                alert('You are now logged in.')
                 dispatch(logIn())
                 navigate('/');
             } else {
