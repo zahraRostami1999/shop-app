@@ -12,16 +12,17 @@ const LoginPage = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const [forget, setForget] = useState(false);
     const userInfo = {
         username: username,
         password: password
     };
-    const dispatch = useDispatch();
 
     const handleForget = () => {
         setForget(true);
     }
+    
     const verifyNewUser = async () => {
         const userInfo = {
             username: username,
