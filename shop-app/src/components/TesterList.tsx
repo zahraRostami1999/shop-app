@@ -1,4 +1,11 @@
-export const testers = [
+import React from "react";
+
+interface Tester {
+    name: string,
+    linkedIn: string,
+}
+
+export const testers: Tester[] = [
     {
         name: 'Sadra Yavarzadeh',
         linkedIn: 'https://www.linkedin.com/in/sadrayavar',
