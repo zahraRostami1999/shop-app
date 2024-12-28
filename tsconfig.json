@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "esModuleInterop": true,                             /* Enables emit interoperability between CommonJS and ES Modules via creation of namespace objects for all imports. */
+    "skipLibCheck": true,                                /* Skip type checking of declaration files. */
+    "forceConsistentCasingInFileNames": true,            /* Disallow inconsistently-cased references to the same file. */
+    "jsx": "react",                                      /* Specify what JSX code is generated. */
+    "moduleResolution": "node",                          /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */
+    "resolveJsonModule": true,                           /* Include modules imported with .json extension */
+    "allowSyntheticDefaultImports": true,                /* Allow default imports from modules with no default export. */
+    "baseUrl": ".",                                      /* Base directory to resolve non-relative module names. */
+    "paths": {                                           /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */
+      "@components/*": ["src/components/*"],
+      "@assets/*": ["src/assets/*"]
+    }
+  },
+  "include": ["src/**/*"],                               /* Include all files in the 'src' folder. */
+  "exclude": ["node_modules", "build"]                   /* Exclude 'node_modules' and 'build' folders. */
+}

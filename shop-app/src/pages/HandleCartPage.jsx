@@ -1,3 +1,4 @@
+import React from 'react';
 import CartPage from './CartPage';
 import LoginPage from "./LoginPage";
 import { useSelector } from 'react-redux';
