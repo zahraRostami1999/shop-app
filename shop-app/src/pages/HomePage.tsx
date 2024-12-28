@@ -1,3 +1,4 @@
+import React from "react";
 import cover from "../assets/images/HomePage.png";
 import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
