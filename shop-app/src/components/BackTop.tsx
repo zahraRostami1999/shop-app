@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp} from "@fortawesome/free-solid-svg-icons";
 
-const BackTop = () => {
+const BackTop:React.FC = () => {
     const [backBtn, setBackBtn] = useState(false);
 
     useEffect(() => {
