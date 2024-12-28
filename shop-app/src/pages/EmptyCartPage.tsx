@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 import cover from '../assets/images/Empty.png'
 
@@ -14,7 +15,7 @@ function EmptyCartPage() {
             />
           </div>
           <div>
-            <h1 className="text-zinc-800 text-center font-bold lg:text-4xl lg:text-3xl text-2xl">
+            <h1 className="text-zinc-800 text-center font-bold lg:text-4xl md:text-3xl text-2xl">
               Your Cart is Empty!
             </h1>
             <h2 className="text-zinc-700 text-md lg:text-2xl md:text-2xl text-center my-2">
