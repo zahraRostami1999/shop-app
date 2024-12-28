@@ -4,7 +4,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/Footer";
 const LazyCart = React.lazy(() => import('./pages/CartPage'));
 const LazyUndefined = React.lazy(() => import('./pages/Page404'));
-const LazyCheckout = React.lazy(() => import('./pages/CartPage'));
+const LazyCheckout = React.lazy(() => import('./pages/CheckoutPage'));
 const LazyProduct = React.lazy(() => import('./pages/ProductPage'));
 const LazyLogin = React.lazy(() => import('./pages/LoginPage'));
 const LazyHandleCart = React.lazy(() => import('./pages/HandleCartPage'));

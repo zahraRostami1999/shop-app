@@ -1,14 +1,23 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
-  cartItem: JSON.parse(localStorage.getItem("cartItem")) || [],
+interface CartItem {
+  id: number;
+  qty: number;
+}
+
+interface CartState{
+  cartItem: CartItem[];
+}
+
+const initialState: CartState = {
+  cartItem: JSON.parse(localStorage.getItem("cartItem") || "[]"),
 };
 
 export const CartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    AddToCart: (state, action) => {
+    AddToCart: (state, action: PayloadAction<string>) => {
       let selected = state.cartItem.find(
         (item) => item.id === parseInt(action.payload)
       );
