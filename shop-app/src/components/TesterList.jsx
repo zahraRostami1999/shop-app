@@ -17,11 +17,11 @@ export const testers = [
     },
     {
         name: 'Ahmadreza Navaie',
-        linkedIn: 'https://www.linkedin.com/ahmadreza-navaie-033813214',
+        linkedIn: 'https://www.linkedin.com/in/ahmadreza-navaie-033813214',
     },
     {
         name: 'Mohammad Zorrie',
-        linkedIn: 'https://www.linkedin.com/mohammad-zorrie-871aa91a8',
+        linkedIn: 'https://www.linkedin.com/in/mohammad-zorrie-871aa91a8',
     },
     {
         name: 'Alireza Arjmandnia',
