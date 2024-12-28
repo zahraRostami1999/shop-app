@@ -1,23 +1,24 @@
+import React, { useState } from "react";
 import cover from "../assets/images/Login.png";
 import ForgetUserOrPass from "../components/ForgetUserOrPass";
 import { verifyUser } from "../services/api";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logIn } from "../redux/UserSlice";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const LoginPage = () => {
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const [forget, setForget] = useState(false);
-    const userInfo = {
+const LoginPage:React.FC = () => {
+    const [username, setUsername] = useState<string>('');
+    const [password, setPassword] = useState<string>('');
+    const [forget, setForget] = useState<boolean>(false);
+    const userInfo: {username: string; password: string} = {
         username: username,
         password: password
     };
+
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const handleForget = () => {
         setForget(true);
@@ -75,7 +76,7 @@ const LoginPage = () => {
                             </div>
                         </div>
                     </div>
-                    {forget ? <ForgetUserOrPass /> : console.log("*")}
+                    {forget ? <ForgetUserOrPass /> : null}
                 </div>
                 <ToastContainer />
             </div>
