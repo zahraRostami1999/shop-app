@@ -34,7 +34,7 @@ function ProductPage() {
               className="w-full object-cover"
             />
           </div>
-          <div className="lg:mx-20 md:mx-0 md:px-20 sm:px-20 px-3 mx-1 w-full lg:w-3/5 h-auto flex flex-col justify-between px-7 lg:px-0 mt-5 lg:mt-0">
+          <div className="lg:mx-20 md:mx-0 md:px-20 sm:px-20 mx-1 w-full lg:w-3/5 h-auto flex flex-col justify-between px-7 lg:px-0 mt-5 lg:mt-0">
             <div>
               <h1 className="lg:text-3xl md:text-3xl text-base font-bold lg:pb-3 md:pb-3 pb-1">
                 {productDetails.title}
