@@ -1,4 +1,5 @@
-const HomeIntro = () => {
+import React from "react";
+const HomeIntro:React.FC = () => {
     return (
         <>
             <p className="lg:my-20 md:my-14 my-2 lg:text-xl md:text-xl text-xs font-semibold text-gray-700 px-5">

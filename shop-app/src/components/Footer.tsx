@@ -1,5 +1,6 @@
+import React from "react";
 import { testers } from "./TesterList";
-const Footer = () => {
+const Footer:React.FC = () => {
     return (
         <>
             <div className="bg-neutral-800 w-full lg:px-5 md:px-5 sm:px-1 px-1 py-3 mx-auto text-white">
