@@ -7,8 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 function Card({ id, title, price, image }) {
   const dispatch = useDispatch();
 
-  const handleAddBtn = () => {
-    dispatch(AddToCart(id));
+  const handleAddBtn = () => {    
+    dispatch(AddToCart({id, price}));
     toast(`You've added ${title} to your cart.`);
   }
 
