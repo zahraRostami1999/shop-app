@@ -6,6 +6,7 @@ import EmptyCartPage from "./EmptyCartPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import TotalPrice from "../components/TotalPrice";
 
 function CartPage() {
   const [total, setTotal] = useState(0);
@@ -18,21 +19,6 @@ function CartPage() {
       setProductItems(result);
     });
   }, []);
-
-  useEffect(() => {
-    let newTotal = 0;
-    cartItem.forEach((item) => {
-      const matchingProduct = productItems.find(
-        (product) => item.id === parseInt(product.id)
-      );
-      if (matchingProduct) {
-        newTotal += matchingProduct.price * item.qty;
-      }
-    });
-    setTotal(newTotal);
-  }, [cartItem, productItems]);
-
-  localStorage.setItem("totalPrice", total);
 
   const handleDelete = (id, qty, title) => {
     if (qty === 1) {
@@ -106,8 +92,7 @@ function CartPage() {
     return (
       <div className="lg:text-xl md:text-xl text-base font-Poppins font-semibold flex flex-wrap lg:w-10/12 md:w-10/12 w-1/2 justify-between items-center pb-5 mb-10 border-gray-200 border-2 shadow-md lg:px-5 px-0 py-3 rounded-lg flex-grow">
         <div>
-          <p>Your total Price is <span className="text-green-700">€{total}</span>
-          </p>
+          <TotalPrice />
         </div>
 
         <div className="lg:w-1/2 md:w-2/3 w-11/12 px-2 flex justify-around mx-auto">
