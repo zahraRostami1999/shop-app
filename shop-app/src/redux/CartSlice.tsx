@@ -3,10 +3,16 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 interface CartItem {
   id: number;
   qty: number;
+  price: number;
 }
 
-interface CartState{
+interface CartState {
   cartItem: CartItem[];
+}
+
+interface AddToCartPayload {
+  id: number;
+  price: number;
 }
 
 const initialState: CartState = {
@@ -17,19 +23,15 @@ export const CartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    AddToCart: (state, action: PayloadAction<string>) => {
-      let selected = state.cartItem.find(
-        (item) => item.id === parseInt(action.payload)
-      );
+    AddToCart: (state, action: PayloadAction<AddToCartPayload>) => {
+      const { id, price } = action.payload;
+      let selected = state.cartItem.find((item) => item.id === id);
 
       if (!selected) {
-        state.cartItem.push({ id: parseInt(action.payload), qty: 1 });
+        state.cartItem.push({ id, qty: 1, price });
       } else {
-
         state.cartItem = state.cartItem.map((item) =>
-          item.id === parseInt(action.payload)
-            ? { ...item, qty: item.qty + 1 }
-            : item
+          item.id === id ? { ...item, qty: item.qty + 1 } : item
         );
       }
       localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
@@ -44,7 +46,6 @@ export const CartSlice = createSlice({
           (item) => item.id !== parseInt(action.payload)
         );
       } else {
-
         state.cartItem = state.cartItem.map((item) =>
           item.id === parseInt(action.payload)
             ? { ...item, qty: item.qty - 1 }
@@ -54,11 +55,9 @@ export const CartSlice = createSlice({
       localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
     },
     deleteFromCart: (state, action) => {
-
       state.cartItem = state.cartItem.filter(
         (item) => item.id !== parseInt(action.payload)
       );
-
 
       localStorage.setItem("cartItem", JSON.stringify(state.cartItem));
     },
