@@ -6,9 +6,9 @@ import { logOut } from "../../redux/UserSlice";
 
 function Header() {
   const { cartItems } = useSelector((state) => state.cart);
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const isLoggedIn = localStorage.getItem("isLoggedIn");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSignOut = () => {
     dispatch(logOut());
