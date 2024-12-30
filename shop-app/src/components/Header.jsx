@@ -3,12 +3,22 @@ import { faShoppingCart, faSignOut, faUser, faHome } from "@fortawesome/free-sol
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "../redux/UserSlice";
+import { useEffect } from "react";
 
 function Header() {
   const { cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
-  const isLoggedIn = localStorage.getItem("isLoggedIn");
+  const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
   const navigate = useNavigate();
+
+
+  const handleLoginIcon = () => {
+    if (isLoggedIn) {
+      return <FontAwesomeIcon icon={faSignOut} size="1x" onClick={handleSignOut} />
+    } else {
+      return <FontAwesomeIcon icon={faUser} size="1x" onClick={handleLogin} />
+    }
+  }
 
   const handleSignOut = () => {
     dispatch(logOut());
@@ -35,7 +45,7 @@ function Header() {
               </Link>
             </div>
             <div className="flex justify-center items-center pb0.5 hover:scale-105 transition duration-200 ease-in-out">
-              {isLoggedIn ? <FontAwesomeIcon icon={faSignOut} size="1x" onClick={() => handleSignOut()} /> : <FontAwesomeIcon icon={faUser} size="1x" onClick={() => handleLogin()} />}
+              {handleLoginIcon()}
             </div>
             <Link to="/Handle">
               <div className="flex hover:scale-105 transition duration-200 ease-in-out">
