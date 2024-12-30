@@ -1,14 +1,29 @@
-import { useEffect, useState } from "react";
+import React,{ useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getProducts } from "../services/api";
 import { AddToCart, removeFromCart, deleteFromCart } from "../redux/CartSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { RootState } from "../redux/store";
 
-const DisplaycartItems = () => {
-    const { cartItems } = useSelector((state) => state.cart);
+interface Product {
+    id: string;
+    title: string;
+    description: string;
+    image: string;
+    price: number;
+    category: string;
+}
+
+interface CartItem {
+    id: number;
+    qty: number;
+}
+
+const DisplaycartItems: React.FC = () => {
+    const cartItems  = useSelector((state: RootState) => state.cart.cartItems);
     const dispatch = useDispatch();
-    const [productItems, setProductItems] = useState([]);
+    const [productItems, setProductItems] = useState<Product[]>([]);
 
     useEffect(() => {
         getProducts().then((result) => {
@@ -16,12 +31,11 @@ const DisplaycartItems = () => {
         });
     }, []);
 
-    const handleAdd = (id, price) => {
-        console.log("plusbtn:" + id + ": " + price)
+    const handleAdd = (id: string, price: number) => {
         dispatch(AddToCart({ id, price }));
     }
 
-    const handleDelete = (id, title) => {
+    const handleDelete = (id: string, title: string) => {
         const confirmDelete = window.confirm(
             `This is the last item. Are you sure you want to remove ${title} from the cart?`
         );
@@ -30,7 +44,7 @@ const DisplaycartItems = () => {
         }
     };
 
-    const handleRemove = (id, qty, title) => {
+    const handleRemove = (id: string, qty: number, title: string) => {
         if (qty === 1) {
             const confirmDelete = window.confirm(
                 `This is the last item. Are you sure you want to remove ${title} from the cart?`
@@ -43,7 +57,7 @@ const DisplaycartItems = () => {
             dispatch(removeFromCart(id));
         }
     }
-    return cartItems.map((item) => {
+    return cartItems.map((item: CartItem) => {
         const matchingProduct = productItems.find(
             (product) => item.id == parseInt(product.id)
         );

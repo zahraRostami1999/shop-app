@@ -18,7 +18,8 @@ export default {
         'Poppins': ['Poppins', 'cursive'],
       },
       colors:{
-        'gold': '	#FFD700'
+        'neutralLight': "rgba(0,0,0,0.83)",
+        'gold': '#FFD700',
       }
     },
   },
