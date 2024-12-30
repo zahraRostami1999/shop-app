@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "../../redux/UserSlice";
 
 function Header() {
-  const { cartItem } = useSelector((state) => state.cart);
+  const { cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch()
   const isLoggedIn = localStorage.getItem("isLoggedIn");
   const navigate = useNavigate()
@@ -42,11 +42,11 @@ function Header() {
                 <FontAwesomeIcon icon={faShoppingCart} size="1x" />
                 <div className="bg-gold rounded-full text-center text-xs font-thin h-4 w-4 lg:h-5 lg:w-5 md:h-5 md:w-5 lg:py-0.5 md:py-0.5 text-black lg:-translate-x-2 lg:-translate-y-3 sm:-translate-x-2  inline -translate-x-1.5 -translate-y-3 cursor-pointer">
                   <div className="font-mono ">
-                    {cartItem.length === 0 ||
-                      cartItem === undefined ||
-                      cartItem === null
+                    {cartItems.length === 0 ||
+                      cartItems === undefined ||
+                      cartItems === null
                       ? 0
-                      : cartItem.length}
+                      : cartItems.length}
                   </div>
                 </div>
               </div>
