@@ -14,9 +14,11 @@ export const UserSlice = createSlice({
   reducers: {
     logIn: (state) => {
       state.isLoggedIn = true;
+      localStorage.setItem("isLoggedIn", "true");
     },
     logOut: (state) => {
       state.isLoggedIn = false;
+      localStorage.setItem("isLoggedIn", "false");
     },
   },
 });

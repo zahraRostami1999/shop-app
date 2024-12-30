@@ -1,8 +1,8 @@
 import { useEffect, useState, useMemo } from "react";
-import Card from "../card/Card";
-import { getProducts } from "../../services/api";
+import Card from "./Card";
+import { getProducts } from "../services/api";
 import React from "react";
-import BackTop from '../BackTop'
+import BackTop from './BackTop'
 
 function Products() {
   const [productData, setProductData] = useState([]);

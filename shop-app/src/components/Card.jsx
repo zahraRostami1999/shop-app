@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { AddToCart } from "../../redux/CartSlice";
+import { AddToCart } from "../redux/CartSlice";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -7,8 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 function Card({ id, title, price, image }) {
   const dispatch = useDispatch();
 
-  const handleAddBtn = () => {
-    dispatch(AddToCart(id));
+  const handleAddBtn = () => {    
+    dispatch(AddToCart({id, price}));
     toast(`You've added ${title} to your cart.`);
   }
 
