@@ -1,33 +1,40 @@
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart, faSignOut, faUser, faHome } from "@fortawesome/free-solid-svg-icons";
+import {
+  faShoppingCart,
+  faSignOut,
+  faUser,
+  faHome,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logOut } from "../redux/UserSlice";
-import { useEffect } from "react";
+import { RootState } from "../redux/store";
 
 function Header() {
-  const { cartItems } = useSelector((state) => state.cart);
+  const cartItems = useSelector((state: RootState) => state.cart.cartItems);
   const dispatch = useDispatch();
-  const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn"));
+  const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn") || "");
   const navigate = useNavigate();
-
 
   const handleLoginIcon = () => {
     if (isLoggedIn) {
-      return <FontAwesomeIcon icon={faSignOut} size="1x" onClick={handleSignOut} />
+      return (
+        <FontAwesomeIcon icon={faSignOut} size="1x" onClick={handleSignOut} />
+      );
     } else {
-      return <FontAwesomeIcon icon={faUser} size="1x" onClick={handleLogin} />
+      return <FontAwesomeIcon icon={faUser} size="1x" onClick={handleLogin} />;
     }
-  }
+  };
 
   const handleSignOut = () => {
     dispatch(logOut());
-    navigate('/');
-  }
+    navigate("/");
+  };
 
   const handleLogin = () => {
     navigate("/Login");
-  }
+  };
 
   return (
     <>
@@ -53,8 +60,8 @@ function Header() {
                 <div className="bg-gold rounded-full text-center text-xs font-thin h-4 w-4 lg:h-5 lg:w-5 md:h-5 md:w-5 lg:py-0.5 md:py-0.5 text-black lg:-translate-x-2 lg:-translate-y-3 sm:-translate-x-2  inline -translate-x-1.5 -translate-y-3 cursor-pointer">
                   <div className="font-mono ">
                     {cartItems.length === 0 ||
-                      cartItems === undefined ||
-                      cartItems === null
+                    cartItems === undefined ||
+                    cartItems === null
                       ? 0
                       : cartItems.length}
                   </div>
