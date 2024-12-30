@@ -5,12 +5,10 @@ import { AddToCart, removeFromCart, deleteFromCart } from "../redux/CartSlice";
 import EmptyCartPage from "./EmptyCartPage";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-import TotalPrice from "../components/TotalPrice";
+import ConfirmOrder from "../components/ConfirmOrder";
 
 function CartPage() {
-  const [total, setTotal] = useState(0);
-  const { cartItem } = useSelector((state) => state.cart);
+  const { cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [productItems, setProductItems] = useState([]);
 
@@ -20,7 +18,21 @@ function CartPage() {
     });
   }, []);
 
-  const handleDelete = (id, qty, title) => {
+  const handleAdd = (id, price) => {
+    console.log("plusbtn:" + id + ": " + price)
+    dispatch(AddToCart({ id, price }));
+  }
+
+  const handleDelete = (id, title) => {
+    const confirmDelete = window.confirm(
+      `This is the last item. Are you sure you want to remove ${title} from the cart?`
+    );
+    if (confirmDelete) {
+      dispatch(deleteFromCart(id));
+    }
+  };
+
+  const handleRemove = (id, qty, title) => {
     if (qty === 1) {
       const confirmDelete = window.confirm(
         `This is the last item. Are you sure you want to remove ${title} from the cart?`
@@ -28,18 +40,14 @@ function CartPage() {
       if (confirmDelete) {
         dispatch(deleteFromCart(id));
       }
-    } else {
-      const confirmDelete = window.confirm(
-        "Are you sure you want to remove this product from the cart?"
-      );
-      if (confirmDelete) {
-        dispatch(deleteFromCart(id));
-      }
     }
-  };
+    else {
+      dispatch(removeFromCart(id));
+    }
+  }
 
-  const displayCartItems = () => {
-    return cartItem.map((item) => {
+  const displaycartItems = () => {
+    return cartItems.map((item) => {
       const matchingProduct = productItems.find(
         (product) => item.id == parseInt(product.id)
       );
@@ -66,18 +74,18 @@ function CartPage() {
               <div className="col-span-2 flex justify-center items-center h-10 rounded-3xl">
                 <button
                   className="bg-orange-400 px-3 py-1.5 rounded-full font-mono font-semibold text-sm hover:bg-orange-500 mx-2"
-                  onClick={() => dispatch(AddToCart(matchingProduct.id))}>
+                  onClick={() => handleAdd(matchingProduct.id, matchingProduct.price)}>
                   +
                 </button>
                 <p className="text-sm font-semibold">{item.qty}</p>
                 <button
                   className="bg-gray-300 px-3 py-1.5 rounded-full font-mono font-semibold text-sm hover:bg-gray-400 mx-2"
-                  onClick={() => handleDelete(matchingProduct.id, item.qty, matchingProduct.title)}>-</button>
+                  onClick={() => handleRemove(matchingProduct.id, item.qty, matchingProduct.title)}>-</button>
               </div>
               <p className="font-bold text-center text-sm md:text-base lg:text-xl mt-2">
                 €{matchingProduct.price * item.qty}
               </p>
-              <button onClick={() => handleDelete(matchingProduct.id, item.qty, matchingProduct.title)}
+              <button onClick={() => handleDelete(matchingProduct.id, matchingProduct.title)}
                 className="flex justify-center items-center text-red-400 hover:text-red-600 text-xl md:text-2xl lg:text-3xl">
                 <FontAwesomeIcon icon={faTrash} />
               </button>
@@ -88,37 +96,12 @@ function CartPage() {
     });
   };
 
-  const confirmOrder = () => {
-    return (
-      <div className="lg:text-xl md:text-xl text-base font-Poppins font-semibold flex flex-wrap lg:w-10/12 md:w-10/12 w-1/2 justify-between items-center pb-5 mb-10 border-gray-200 border-2 shadow-md lg:px-5 px-0 py-3 rounded-lg flex-grow">
-        <div>
-          <TotalPrice />
-        </div>
-
-        <div className="lg:w-1/2 md:w-2/3 w-11/12 px-2 flex justify-around mx-auto">
-          <Link to="/Checkout">
-            <button className="bg-orange-500 hover:scale-105 transition duration-100 ease-in-out text-zinc-900 lg:text-lg md:text-lg text-xs text-center font-bold py-3 lg:px-5 md:px-5 px-3 rounded-xl mt-6">
-              Proceed to checkout
-            </button>
-          </Link>
-
-          <Link to="/Products">
-            <button className="bg-gray-300 lg:hover:scale-105 hover:bg-gray-400 transition duration-100 ease-in-out text-zinc-900 lg:text-lg md:text-lg text-xs text-center font-bold py-3 lg:px-10 md:px-5 px-3 rounded-xl mt-6">
-              Go back to store
-            </button>
-          </Link>
-        </div>
-
-      </div>
-    );
-  };
-
   return (
     <>
       <div className=" min-h-screen w-full flex justify-center items-center flex-wrap">
         <ul className="flex justify-center flex-wrap">
-          {cartItem.length > 0 ? displayCartItems() : <EmptyCartPage />}
-          {cartItem.length > 0 ? confirmOrder() : console.log(cartItem.length)}
+          {cartItems.length > 0 ? displaycartItems() : <EmptyCartPage />}
+          {cartItems.length > 0 ? <ConfirmOrder /> : console.log(cartItems.length)}
         </ul>
       </div>
     </>
