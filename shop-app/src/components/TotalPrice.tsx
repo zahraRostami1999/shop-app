@@ -7,8 +7,7 @@ interface CartItem {
 }
 
 const TotalPrice: React.FC = () => {
-  const cartItems = JSON.parse(localStorage.getItem("cartItem") as string);
-
+  const cartItems = JSON.parse(localStorage.getItem("cartItems") as string);
   let total = 0;
   cartItems.map((item: CartItem) => {
     total += item.qty * item.price;
