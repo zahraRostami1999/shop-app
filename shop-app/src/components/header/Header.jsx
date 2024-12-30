@@ -24,7 +24,6 @@ function Header() {
       <div className="flex justify-between text-white w-full bg-neutral-800 fixed top-0 z-10">
         <div className="w-full ml-6 mr-2 my-3 py-0.5 flex justify-between">
           <div className="flex justify-start lg:w-2/5 2/4 md:w-3/5 w-5/6">
-
             <h1 className="font-great-vibes lg:pr-5 md:mr-5 mr-0 text-2xl font-bold text-gold sm:text-xl lg:font-extrabold md:font-extrabold sm:bold lg:text-4xl md:text-3xl">
               ChicMarket
             </h1>
@@ -37,7 +36,6 @@ function Header() {
             </div>
             <div className="flex justify-center items-center pb0.5 hover:scale-105 transition duration-200 ease-in-out">
               {isLoggedIn ? <FontAwesomeIcon icon={faSignOut} size="1x" onClick={() => handleSignOut()} /> : <FontAwesomeIcon icon={faUser} size="1x" onClick={() => handleLogin()} />}
-
             </div>
             <Link to="/Handle">
               <div className="flex hover:scale-105 transition duration-200 ease-in-out">
