@@ -9,22 +9,13 @@ export const CartSlice = createSlice({
   initialState,
   reducers: {
     AddToCart: (state, action) => {
-      console.log("action: " + action.payload)
-      console.log("actionid: " + action.payload.id)
-      console.log("actionprice: " + action.payload.price)
       const { id, price } = action.payload;
-      console.log("id: " + id + " price: " + price)
       const selected = state.cartItems.find((item) => item.id === id);
 
-      if (!selected) {
-        console.log("+");
-        
+      if (!selected) {        
         state.cartItems.push({ id, qty: 1, price });
       } else {
-        console.log("-");
-
         state.cartItems = state.cartItems.map((item) =>
-          // item.id === id ?  console.log("*") : item
           item.id === id ? { ...item, qty: item.qty + 1 } : item
         );
       }
