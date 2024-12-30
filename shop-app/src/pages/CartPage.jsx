@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import ConfirmOrder from "../components/ConfirmOrder";
 import DisplaycartItems from "../components/DisplaycartItems";
+import EmptyCartPage from "./EmptyCartPage";
 
 function CartPage() {
   const { cartItems } = useSelector((state) => state.cart);
