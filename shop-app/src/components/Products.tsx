@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useState, useMemo } from "react";
 import Card from "./Card";
-import { getProducts } from "../services/api";
 import BackTop from "./BackTop";
 import Spinner from "./Spinner";
+import useFetch from "../hooks/useFetch";
 
 interface Product {
   id: number;
@@ -14,7 +14,7 @@ interface Product {
 }
 
 const Products: React.FC = () => {
-  const [productData, setProductData] = useState<Product[]>([]);
+  const { data: productData, loading } = useFetch();
   const [filter, setFilter] = useState<string>("all");
   const filterBtn = [
     "all",
@@ -23,29 +23,18 @@ const Products: React.FC = () => {
     "jewelery",
     "electronics",
   ];
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    getProducts()
-      .then((result) => {
-        setProductData(result);
-        setIsLoading(false);
-      })
-      .catch((error) => console.log(error));
-  }, []);
-
   const handleFilterProducts = (newFilter: string) => {
     setFilter(newFilter);
   };
 
   const filteredProducts = useMemo(() => {
     if (filter === "all") return productData;
-    return productData.filter((product) => product.category === filter);
+    return productData?.filter((product) => product.category === filter);
   }, [productData, filter]);
 
   return (
     <>
-      {isLoading ? (
+      {loading ? (
         <Spinner />
       ) : (
         <div className="min-h-screen">
@@ -63,7 +52,7 @@ const Products: React.FC = () => {
             })}
           </div>
           <div className="w-5/6 lg:w-11/12 md:w-5/6 sm:w-11/12 mx-auto mb-24 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 gap-3">
-            {filteredProducts.map((product) => (
+            {filteredProducts?.map((product) => (
               <Card key={product.id} {...product} />
             ))}
           </div>
