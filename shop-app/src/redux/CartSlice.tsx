@@ -1,14 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
-  cartItems: JSON.parse(localStorage.getItem("cartItems")) || [],
+interface CartItem {
+  id: string;
+  qty: number;
+  price: number;
+}
+
+interface CartState {
+  cartItems: CartItem[];
+}
+
+const initialState: CartState = {
+  cartItems: JSON.parse(localStorage.getItem("cartItems") as string) || [],
 };
 
 export const CartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    AddToCart: (state, action) => {
+    AddToCart: (state, action: PayloadAction<{id: string; price: number}>) => {
       const { id, price } = action.payload;
       const selected = state.cartItems.find((item) => item.id === id);
 
@@ -21,7 +31,7 @@ export const CartSlice = createSlice({
       }
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
-    removeFromCart: (state, action) => {
+    removeFromCart: (state, action: PayloadAction<string>) => {
       const id = action.payload;
       const selected = state.cartItems.find((item) => item.id === id);
 
@@ -34,7 +44,7 @@ export const CartSlice = createSlice({
       }
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
     },
-    deleteFromCart: (state, action) => {
+    deleteFromCart: (state, action: PayloadAction<string>) => {
       const id = action.payload;
       state.cartItems = state.cartItems.filter((item) => item.id !== id);
       localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
