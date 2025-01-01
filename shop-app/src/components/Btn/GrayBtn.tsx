@@ -1,17 +1,15 @@
 import React from "react";
 
 interface Btn {
-  content: string;
+  children: React.ReactNode;
 }
 
-const GrayBtn: React.FC<Btn> = ({ content }) => {
+const GrayBtn: React.FC<Btn> = ({ children }) => {
   return (
     <>
-      <div>
-        <button className="w-full bg-gray-300 lg:hover:scale-105 hover:bg-gray-400 transition duration-100 ease-in-out text-zinc-900 lg:text-lg md:text-lg text-xs text-center font-bold rounded-md">
-          {content}
-        </button>
-      </div>
+      <button className="w-full bg-gray-300 lg:hover:scale-105 hover:bg-gray-400 transition duration-100 ease-in-out text-zinc-900 lg:text-lg md:text-lg text-xs text-center font-bold rounded-md">
+        {children}
+      </button>
     </>
   );
 };
