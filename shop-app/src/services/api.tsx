@@ -10,12 +10,12 @@ const client = axios.create({
 });
 
 export async function getProducts(): Promise<any> {
-  const { data } = await client("/products");
+  const  data  = await client("/products");
   return data;
 }
 
 export async function getProductDetails(id: string): Promise<any> {
-  const { data } = await client(`/products/${id}`);
+  const  data  = await client(`/products/${id}`);
   return data;
 }
 

@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { AddToCart, removeFromCart, deleteFromCart } from "../redux/CartSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import { RootState } from "../redux/store";
-import useFetch from "../hooks/useFetch";
+import { RootState } from "../redux/Store";
+import { useGetProducts } from "../services/Query";
 import { useHandleDelete } from "../hooks/useHandleDelete";
 import { useHandleRemove } from "../hooks/useHandleRemove";
 import OrangeBtn from "./Btn/OrangeBtn";
@@ -18,7 +18,7 @@ interface CartItem {
 const DisplaycartItems: React.FC = () => {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
   const dispatch = useDispatch();
-  const { data: productItems, loading } = useFetch();
+  const { data, isLoading, isError } = useGetProducts();
   const handleAdd = (id: string, price: number) => {
     dispatch(AddToCart({ id, price }));
   };
@@ -26,7 +26,7 @@ const DisplaycartItems: React.FC = () => {
   const handleRemove = useHandleRemove();
 
   return cartItems.map((item: CartItem) => {
-    const matchingProduct = productItems?.find(
+    const matchingProduct = data.data?.find(
       (product) => item.id == parseInt(product.id)
     );
     if (matchingProduct) {
