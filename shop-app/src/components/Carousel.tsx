@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { getProducts } from "../services/api";
 import { Link } from "react-router-dom";
+import {useGetProducts} from "../services/Query";
 
 interface Product {
     id: number;
@@ -15,12 +15,8 @@ interface Product {
 
 const Carousel: React.FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
+  const { data, isLoading, isError } = useGetProducts();
 
-  useEffect(() => {
-    getProducts()
-      .then((result) => setProducts(result))
-      .catch((err) => console.error(err));
-  }, []);
 
   const responsive = {
     300: { items: 2 },
@@ -28,7 +24,7 @@ const Carousel: React.FC = () => {
     1024: { items: 4 },
   };
 
-  const filterproducts = products.filter(
+  const filterproducts = data.data.filter(
     (product) => product.id > 14 && product.id < 21
   );
 
