@@ -3,12 +3,13 @@ import useFetch from "../hooks/useFetch";
 import Spinner from "./Spinner";
 import DisplaycartItems from "./DisplaycartItems";
 import ConfirmOrder from "./ConfirmOrder";
+import { useGetProducts } from "../services/Query";
 
-const ShoppingCart = () => {
-  const { data: productItems, loading } = useFetch();
+const ShoppingCart = ({ id }: { id: string }) => {
+  const { data, isLoading, isError } = useGetProducts();
   return (
     <>
-      {loading ? (
+      {isLoading ? (
         <div className="w-full">
           <Spinner />
         </div>

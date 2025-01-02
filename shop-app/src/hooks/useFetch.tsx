@@ -22,7 +22,7 @@ const useFetch = (): Result => {
   useEffect(() => {
     getProducts()
       .then((data) => {
-        setData(data);
+        setData(data.data);
         setLoading(false);
       })
       .catch((error) => console.log(error));
