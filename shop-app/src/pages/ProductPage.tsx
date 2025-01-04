@@ -16,7 +16,16 @@ const ProductPage: React.FC = () => {
   const handleAddToBasket = (id: string | undefined) => {
     if (id && productDetails) {
       dispatch(AddToCart({ id, price: productDetails.price }));
-      toast(`You've added ${productDetails?.title} to your cart.`);
+            toast.success(`You've added ${productDetails?.title} to your cart.`, {
+              position: "bottom-left",
+              autoClose: 1500,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+              });
     }
   };
 
@@ -26,15 +35,15 @@ const ProductPage: React.FC = () => {
         <Spinner />
       ) : (
         <div className="w-full min-h-screen flex items-center">
-          <div className="h-full mx-auto mt-10 py-5 flex flex-col lg:flex-row justify-center lg:justify-around">
-            <div className="w-32 h-44 sm:w-60 sm:h-72 md:w-80 md:h-96 lg:w-80 lg:h-96 mx-auto">
+          <div className="h-full mx-auto mt-10 py-5 flex flex-col lg:flex-row justify-center lg:justify-around my-28 sm:my-48 md:my-48">
+            <div className="w-32 h-44 sm:w-60 sm:h-72 md:w-60 md:h-72 lg:w-72 lg:h-60 mx-auto ">
               <img
                 src={productDetails?.image}
                 alt={productDetails?.title}
                 className="w-full object-cover"
               />
             </div>
-            <div className="lg:mx-20 md:mx-0 md:px-20 sm:px-20 mx-1 w-full lg:w-3/5 h-auto flex flex-col justify-between px-7 lg:px-0 mt-5 lg:mt-0">
+            <div className="lg:mx-20 md:mx-0 md:px-20 sm:px-20 mx-1 w-full lg:w-3/5 h-auto flex flex-col justify-between px-7 lg:px-0  my-28 sm:my-48 md:my-48 lg:my-5">
               <div>
                 <h1 className="lg:text-3xl md:text-3xl text-base font-bold lg:pb-3 md:pb-3 pb-1">
                   {productDetails?.title}
