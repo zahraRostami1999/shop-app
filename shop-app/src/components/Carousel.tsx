@@ -4,7 +4,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Link } from "react-router-dom";
 
-interface Product {
+interface IProduct {
   id: string;
   title: string;
   price: number;
@@ -12,7 +12,7 @@ interface Product {
 }
 
 interface Products {
-  products: Product[] | undefined;
+  products: IProduct[] | undefined;
 }
 
 const Carousel: React.FC<Products> = ({ products }) => {
