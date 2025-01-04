@@ -1,15 +1,14 @@
 import React from "react";
-import useFetch from "../hooks/useFetch";
 import Spinner from "./Spinner";
 import DisplaycartItems from "./DisplaycartItems";
 import ConfirmOrder from "./ConfirmOrder";
-import { useGetProducts } from "../services/Query";
+import { useGettingProducts } from "../services/Query";
 
-const ShoppingCart = ({ id }: { id: string }) => {
-  const { data, isLoading, isError } = useGetProducts();
+const ShoppingCart = () => {
+  const { isLoading: loading } = useGettingProducts();
   return (
     <>
-      {isLoading ? (
+      {loading ? (
         <div className="w-full">
           <Spinner />
         </div>
