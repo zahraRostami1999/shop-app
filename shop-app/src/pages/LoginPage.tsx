@@ -37,7 +37,16 @@ const LoginPage:React.FC = () => {
                 dispatch(logIn())
                 navigate('/');
             } else {
-                toast('username or password is incorrect!')
+                toast.error('Username or Password is incorrect!', {
+                    position: "bottom-left",
+                    autoClose: 3000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    });
             }
         } catch (error) {
             console.error('Error verifying user:', error);
