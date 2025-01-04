@@ -8,7 +8,7 @@ export const useGettingProducts = () => {
   });
 };
 
-export const useProductDetails = (id: string) => {
+export const useProductDetails = (id: string | undefined) => {
   return useQuery({
     queryKey: ["productDetails", id],
     queryFn: () => fetchProductDetails(id),
