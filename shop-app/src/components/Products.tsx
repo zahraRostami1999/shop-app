@@ -2,19 +2,10 @@ import React, { useState, useMemo } from "react";
 import Card from "./Card";
 import BackTop from "./BackTop";
 import Spinner from "./Spinner";
-import useFetch from "../hooks/useFetch";
-
-interface Product {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  price: number;
-  category: string;
-}
+import { useGettingProducts } from "../services/Query";
 
 const Products: React.FC = () => {
-  const { data: productData, loading } = useFetch();
+  const { data: productData, isLoading: loading } = useGettingProducts();
   const [filter, setFilter] = useState<string>("all");
   const filterBtn = [
     "all",
