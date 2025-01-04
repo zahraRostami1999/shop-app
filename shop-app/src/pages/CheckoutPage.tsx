@@ -3,7 +3,7 @@ import cover from "../assets/images/checkout.png";
 import googlepay from "../assets/images/googlePay.png";
 import Input from "../components/Input";
 import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
+import { RootState } from "../redux/Store";
 
 function CheckoutPage() {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);

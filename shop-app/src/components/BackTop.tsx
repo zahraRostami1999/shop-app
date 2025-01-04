@@ -19,7 +19,7 @@ const BackTop:React.FC = () => {
         <>
             <div>
                 {backBtn && (
-                    <button className="bg-gold text-neutral-900 rounded-full w-10 h-10 fixed bottom-2 right-1 shadow-lg hover:font-semibold transition-all duration-200 smooth" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}> <FontAwesomeIcon icon={faArrowUp} size="1x" /> </button>
+                    <button className="bg-rose-400 text-neutral-900 rounded-full w-10 h-10 fixed bottom-3 right-1 shadow-lg hover:font-semibold transition-all duration-200 smooth" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}> <FontAwesomeIcon icon={faArrowUp} size="1x" /> </button>
                 )}
             </div>
         </>
