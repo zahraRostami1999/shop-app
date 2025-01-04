@@ -1,22 +1,25 @@
-import React, { useEffect, useState } from "react";
+//Carousel: input: list output: carousel of list items with filter applied option
+import React from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Link } from "react-router-dom";
-import {useGetProducts} from "../services/Query";
 
 interface Product {
-    id: number;
-    title: string;
-    description: string;
-    image: string;
-    price: number;
-    category: string;
+  id: string;
+  title: string;
+  price: number;
+  image: string;
 }
 
-const Carousel: React.FC = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-  const { data, isLoading, isError } = useGetProducts();
+interface Products {
+  products: Product[] | undefined;
+}
 
+const Carousel: React.FC<Products> = ({ products }) => {
+
+  const filterproducts = products?.filter(
+    (product) => parseInt(product.id) > 14 && parseInt(product.id) < 21
+  );
 
   const responsive = {
     300: { items: 2 },
@@ -24,11 +27,7 @@ const Carousel: React.FC = () => {
     1024: { items: 4 },
   };
 
-  const filterproducts = data.data.filter(
-    (product) => product.id > 14 && product.id < 21
-  );
-
-  const items = filterproducts.map((item) => {
+  const items = filterproducts?.map((item) => {
     return (
       <Link key={item.id} to={`/${item.id}`}>
         <div className="mx-2 lg:p-4 mb-5 flex flex-col items-center rounded-lg shadow-md hover:border-zinc-800 hover:shadow-gray-400 hover:shadow-xl transition duration-500 ease-in-out">
@@ -51,21 +50,23 @@ const Carousel: React.FC = () => {
   });
 
   return (
-    <div className="lg:mt-10 md:mt-10 mt-16 mb-10 w-5/6 mx-auto">
-      <div className="">
-        <AliceCarousel
-          mouseTracking
-          infinite
-          autoPlayInterval={2000}
-          animationDuration={1500}
-          disableDotsControls
-          disableButtonsControls
-          responsive={responsive}
-          autoPlay
-          items={items}
-        />
+    <>
+      <div className="lg:mt-10 md:mt-10 mt-16 mb-10 w-5/6 mx-auto">
+        <div className="">
+          <AliceCarousel
+            mouseTracking
+            infinite
+            autoPlayInterval={2000}
+            animationDuration={1500}
+            disableDotsControls
+            disableButtonsControls
+            responsive={responsive}
+            autoPlay
+            items={items}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
