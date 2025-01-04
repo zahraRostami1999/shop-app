@@ -5,24 +5,37 @@ interface UserInfo {
   password: string;
 }
 
+interface Product {
+  id: string;
+  title: string;
+  price: number;
+  image: string;
+  category: string;
+}
+
 const client = axios.create({
   baseURL: "https://fakestoreapi.com",
 });
 
-export async function getProducts(): Promise<any> {
-  const  data  = await client("/products");
-  return data;
+export async function fetchProducts(): Promise<Product[]> {
+  const  data  = await client("/products");  
+  return data.data;
 }
 
-export async function getProductDetails(id: string): Promise<any> {
+export async function fetchProductDetails(id: string): Promise<any> {
   const  data  = await client(`/products/${id}`);
-  return data;
+  return data.data;
+}
+
+export async function fetchUsers(): Promise<UserInfo[]> {
+  const  data  = await client("/users");
+  return data.data;
 }
 
 export const verifyUser = async (info: UserInfo): Promise<any> => {
   try {
-    const { data } = await client("/users");
-    const ckeckUser = data.find(
+    const users = await fetchUsers();
+    const ckeckUser = users.find(
       (user: any) =>
         user.username === info.username && user.password === info.password
     );
