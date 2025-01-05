@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import HomeIntro from "../components/HomeIntro";
 import { useGettingProducts } from "../services/Query";
-import GoldBtn from "../components/Btn/GoldBtn";
 import Spinner from "../components/Spinner";
+import Button from "../components/Btn/Button";
 
 function HomePage() {
    const { data: products, isLoading: loading } = useGettingProducts();
@@ -27,11 +27,9 @@ function HomePage() {
                     </div>
                      <Carousel products={products} />
                   </div>
-                  <div className="w-1/2 lg:w-1/3 lg:my-16 md:my-10 my-10 flex justify-center mx-auto">
-                     <Link to="/Products" className="w-full">
-                        <GoldBtn>
-                           <h1 className="py-3">See More</h1>
-                        </GoldBtn>
+                  <div className="w-full h-24 flex justify-center items-center mx-auto mb-20">
+                     <Link to="/Products">
+                     <Button label="See More" size="large" />
                      </Link>
                   </div>
                </div>

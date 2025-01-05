@@ -45,7 +45,7 @@ function Header() {
               ChicMarket
             </h1>
           </div>
-          <div className="lg:w-32 pb-1 sm:pb-1 md:w-32 sm:w-28 w-28 flex justify-between items-center text-neutral-700 lg:text-2xl md:text-2xl sm:text-xl text-lg">
+          <div className="lg:w-32 pb-1 sm:pb-1 md:w-32 sm:w-28 w-28 flex justify-between items-center text-neutral-700 lg:text-xl md:text-xl sm:text-xl text-base">
             <div className="hover:scale-105 transition duration-200 ease-in-out">
               <Link to="/">
                 <FontAwesomeIcon icon={faHome} />
@@ -57,8 +57,8 @@ function Header() {
             <Link to="/Handle">
               <div className="flex hover:scale-105 transition duration-200 ease-in-out">
                 <FontAwesomeIcon icon={faShoppingCart} size="1x" />
-                <div className="bg-rose-400 rounded-full text-center text-xs font-thin h-4 w-4 lg:h-5 lg:w-5 md:h-5 md:w-5 lg:py-0.5 md:py-0.5 text-black lg:-translate-x-2 lg:-translate-y-3 sm:-translate-x-2  inline -translate-x-1.5 -translate-y-3 cursor-pointer">
-                  <div className="font-mono ">
+                <div className="bg-rose-400 rounded-full text-center  text-[9px] font-semibold h-3 w-3 lg:h-4 lg:w-4 md:h-4 md:w-4 sm:w-3 sm:h-3 lg:py-0.5 md:py-0.5 text-neutral-700 lg:-translate-x-1 lg:-translate-y-3 md:-translate-x-1 md:-translate-y-3 sm:-translate-x-1  inline -translate-x-1 -translate-y-2 cursor-pointer">
+                  <div className=" lg:-translate-y-2 md:-translate-y-2 sm:-translate-y-2 -translate-y-1.5 flex justify-center items-center">
                     {cartItems.length === 0 ||
                     cartItems === undefined ||
                     cartItems === null
