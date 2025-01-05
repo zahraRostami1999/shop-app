@@ -19,7 +19,7 @@ function CheckoutPage() {
                 Thank you for shopping at Sportyfit store
               </h1>
             </div>
-            <div className="mt-5 text-base lg:w-5/6 md:w-5/6 w-full bg-gold px-5 pb-8 pt-3 rounded-lg shadow-lg shadow-zinc-400">
+            <div className="mt-5 text-base lg:w-5/6 md:w-5/6 w-full bg-rose-400 px-5 pb-8 pt-3 rounded-lg shadow-lg shadow-zinc-400">
               <div className="border-b-2 border-zinc-800 font-semibold pb-2">
                 Order Summary:
               </div>
@@ -53,14 +53,14 @@ function CheckoutPage() {
             <div>
               <h4 className="font-semibold">Choose your payment method</h4>
               <div className="flex lg:w-1/2 w-full justify-center lg:justify-between my-20 items-center gap-4">
-                <button className="flex items-center justify-center w-32 h-10 bg-slate-200 rounded hover:bg-slate-300">
+                <button className="flex items-center justify-center w-32 h-10 bg-neutral-300 rounded hover:bg-slate-300">
                   <img
                     className="w-16"
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/2560px-PayPal.svg.png"
                     alt="PayPal"
                   />
                 </button>
-                <button className="flex items-center justify-center w-32 h-10 bg-slate-200 rounded hover:bg-slate-300">
+                <button className="flex items-center justify-center w-32 h-10 bg-neutral-300 rounded hover:bg-slate-300">
                   <img className="w-16" src={googlepay} alt="Google Pay" />
                 </button>
               </div>
