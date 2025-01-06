@@ -29,12 +29,12 @@ const DisplaycartItems: React.FC = () => {
 
    return (
       <>
-         <div className="w-11/12 flex justify-center flex-wrap">
-            <ul className="w-11/12 flex justify-between border-b-2 border-neutral-300 py-2 px-2 text-neutral-800 font-medium">
-               <li className="w-2/5">Product</li>
-               <li className="w-1/6">Price</li>
-               <li className="w-1/6">Quantity</li>
-               <li className="w-1/6">Total</li>
+         <div className="lg:w-11/12 md:w-11/12 sm:w-full w-full flex justify-center flex-wrap ">
+            <ul className="lg:w-11/12 md:w-11/12 sm:w-11/12 w-11/12 flex justify-between border-b-2 border-neutral-300 py-2 text-neutral-800 font-medium px-5">
+               <li className="w-2/5 block">Product</li>
+               <li className="w-1/6 block lg:text-center md:text-left sm:text-right text-right">Price</li>
+               <li className="w-1/6 lg:block md:block sm:hidden hidden lg:text-center">Quantity</li>
+               <li className="w-1/6 lg:block md:block sm:hidden hidden lg:text-center">Total</li>
             </ul>
             <div className="w-11/12">
                {displayItems()}
