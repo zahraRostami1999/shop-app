@@ -11,6 +11,9 @@ interface Product {
    price: number;
    image: string;
    category: string;
+   rating:{
+      rate: number;
+   }
 }
 
 const client = axios.create({

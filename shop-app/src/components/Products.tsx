@@ -3,56 +3,69 @@ import Card from "./Card";
 import BackTop from "./BackTop";
 import Spinner from "./Spinner";
 import { useGettingProducts } from "../services/Query";
+import ProductFitler from "./filter/ProductFilter";
+import { PriceFilterList, CategoryFilterList, RatingFilterList } from "./filter/FilterList";
 
 const Products: React.FC = () => {
-  const { data: productData, isLoading: loading } = useGettingProducts();
-  const [filter, setFilter] = useState<string>("all");
-  const filterBtn = [
-    "all",
-    "men's clothing",
-    "women's clothing",
-    "jewelery",
-    "electronics",
-  ];
-  const handleFilterProducts = (newFilter: string) => {
-    setFilter(newFilter);
-  };
+   const { data: productData, isLoading: loading } = useGettingProducts();
+   const [categoryFilter, setCategoryFilter] = useState<string>("all");
+   const [priceFilter, setPriceFilter] = useState<string>("all");
+   const [rateFilter, setRateFilter] = useState<string>("all");
+   
+   const handleCategoryFilterChange = (value: string) => {
+      setCategoryFilter(value);
+   };
 
-  const filteredProducts = useMemo(() => {
-    if (filter === "all") return productData;
-    return productData?.filter((product) => product.category === filter);
-  }, [productData, filter]);
+   const handlePriceFilterChange = (value: string) => {
+      setPriceFilter(value);
+   };
 
-  return (
-    <>
-      {loading ? (
-        <Spinner />
-      ) : (
-        <div className="min-h-screen">
-          <div className="lg:mt-20 md:mt-20 mt-16 flex flex-wrap border-b justify-start px-2 lg:px-16 md:px-12 sm:px-5 text-xs lg:text-base md:text-base font-Poppins font-medium">
-            {filterBtn.map((btn) => {
-              return (
-                <button
-                  className="px-2 lg:px-5 md:px-3 py-2  hover:text-neutral-600 hover:border-b hover:border-neutral-900 transition-all duration-300"
-                  key={btn}
-                  onClick={() => handleFilterProducts(btn)}
-                >
-                  {btn}
-                </button>
-              );
-            })}
-          </div>
-          <div className="w-5/6 lg:w-11/12 md:w-5/6 sm:w-11/12 mx-auto mb-24 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 gap-3">
-            {filteredProducts?.map((product) => (
-              <Card key={product.id} {...product} />
-            ))}
-          </div>
-          <div className="">
-            <BackTop />
-          </div>
-        </div>
-      )}
-    </>
-  );
+   const handleRateFilterChange = (value: string) => {
+      setRateFilter(value);      
+   };
+
+   const filteredProducts = useMemo(() => {
+      let filter = productData;
+      if (categoryFilter != "all") {
+         filter = filter?.filter((item) => item.category === categoryFilter); 
+      }
+      if (priceFilter != "all") {
+         if (priceFilter === "10") filter = filter?.filter((item) => item.price <= 10);
+         if (priceFilter === "30") filter = filter?.filter((item) => item.price <= 30 && item.price >= 10);
+         if (priceFilter === "100") filter = filter?.filter((item) => item.price <= 100 && item.price >= 30);
+         if (priceFilter === "+100") filter = filter?.filter((item) => item.price >= 100);
+      }
+      if (rateFilter!= "all") {
+         if (rateFilter === "4") filter = filter?.filter((item) => item.rating.rate >= 4);
+         // if (rateFilter === "4") console.log("*4");
+         if (rateFilter === "3") filter = filter?.filter((item) => item.rating.rate >= 3);
+         if (rateFilter === "1") filter = filter?.filter((item) => item.rating.rate >= 1);
+      }
+      return filter;
+   }, [productData, categoryFilter, priceFilter]);
+
+   return (
+      <>
+         {loading ? (
+            <Spinner />
+         ) : (
+            <div className="min-h-screen">
+               <div className="mt-20 font-Poppins font-medium w-full lg:px-7 md:px-7 px-0 flex lg:justify-start justify-center">
+                  <ProductFitler options={CategoryFilterList} onSelectChange={handleCategoryFilterChange} />
+                  <ProductFitler options={PriceFilterList} onSelectChange={handlePriceFilterChange} />
+                  <ProductFitler options={RatingFilterList} onSelectChange={handleRateFilterChange} />
+               </div>
+               <div className="w-5/6 lg:w-11/12 md:w-5/6 sm:w-11/12 mx-auto mb-24 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-3 gap-3">
+                  {filteredProducts?.map((product) => (
+                     <Card key={product.id} {...product} />
+                  ))}
+               </div>
+               <div className="">
+                  <BackTop />
+               </div>
+            </div>
+         )}
+      </>
+   );
 };
 export default Products;
