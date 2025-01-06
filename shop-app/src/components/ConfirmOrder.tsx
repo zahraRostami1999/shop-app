@@ -13,19 +13,17 @@ const ConfirmOrder: React.FC = () => {
    const total = useTotalPrice(cartItems);
 
    return (
-      <div className="lg:w-2/3 md:w-2/3 lg:text-2xl md:text-xl w-full text-base font-Poppins font-semibold flex lg:mx-10 md:mx-7 justify-center items-center pb-5 mb-10 border-gray-200 border-2 shadow-md lg:px-5 px-5 py-3 rounded-lg flex-wrap">
-         <div className="sm:w-full w-full text-center px-3">
-            <h1>
-               Your total Price is <span className="text-green-700">€{total}</span>
-            </h1>
-         </div>
-         <div className="lg:w-full md:w-4/5 sm:w-10/12 w-2/3 px-2 flex justify-center mx-auto py-3">
-            <Link className="" to="/Checkout">
-            <Button label="Ceckout" size="medium"/>
-            </Link>
-            <Link className="lg:w-36 lg:h-12 md:w-36 md:h-12 sm:w-24 sm:h-10 w-20 h-8 mx-3" to="/Products">
-            <Button label="Store" color="neutral" size="medium"/>
-            </Link>
+      <div className="lg:w-10/12 md:w-10/12 sm:w-11/12 w-full font-Poppins font-semibold flex justify-end items-center">
+         <div className="lg:w-1/2 md:w-2/3 sm:w-full w-full flex justify-between flex-wrap">
+            <div className="px-3 lg:w-3/5 md:w-2/3 sm:w-full w-full flex justify-center items-center">
+               <h1 className="lg:text-base md:text-base sm:text-sm text-sm">Total Price</h1>
+               <div className="text-green-700 lg:mx-10 md:mx-10 sm:mx-3 mx-2">€{total}</div>
+            </div>
+            <div className="px-3 lg:w-1/3 md:w-1/3 sm:w-full w-full flex justify-center ">
+               <Link className="" to="/Checkout">
+                  <Button label="Ceckout" size="medium" />
+               </Link>
+            </div>
          </div>
       </div>
    );
