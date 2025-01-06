@@ -41,11 +41,11 @@ function Header() {
       <div className="flex justify-between text-neutral-900 w-full bg-white fixed top-0 z-10">
         <div className="w-full ml-6 mr-2 my-3 py-0.5 flex justify-between">
           <div className="flex justify-start lg:w-2/5 2/4 md:w-3/5 w-5/6">
-            <h1 className="font-great-vibes lg:pr-5 md:mr-5 mr-0 text-2xl font-bold text-rose-600 sm:text-xl lg:font-extrabold md:font-extrabold sm:bold lg:text-4xl md:text-3xl">
+            <h1 className="font-great-vibes lg:pr-5 md:mr-5 mr-0 text-2xl font-bold text-rose-600 sm:text-2xl lg:font-extrabold md:font-extrabold sm:bold lg:text-4xl md:text-3xl">
               ChicMarket
             </h1>
           </div>
-          <div className="lg:w-32 pb-1 sm:pb-1 md:w-32 sm:w-28 w-28 flex justify-between items-center text-neutral-700 lg:text-xl md:text-xl sm:text-xl text-base">
+          <div className="lg:w-32 pb-1 sm:pb-1 md:w-32 sm:w-28 w-28 flex justify-between items-center text-neutral-700 lg:text-xl md:text-xl sm:text-base text-base">
             <div className="hover:scale-105 transition duration-200 ease-in-out">
               <Link to="/">
                 <FontAwesomeIcon icon={faHome} />
@@ -58,7 +58,7 @@ function Header() {
               <div className="flex hover:scale-105 transition duration-200 ease-in-out">
                 <FontAwesomeIcon icon={faShoppingCart} size="1x" />
                 <div className="bg-rose-400 rounded-full text-center  text-[9px] font-semibold h-3 w-3 lg:h-4 lg:w-4 md:h-4 md:w-4 sm:w-3 sm:h-3 lg:py-0.5 md:py-0.5 text-neutral-700 lg:-translate-x-1 lg:-translate-y-3 md:-translate-x-1 md:-translate-y-3 sm:-translate-x-1  inline -translate-x-1 -translate-y-2 cursor-pointer">
-                  <div className=" lg:-translate-y-2 md:-translate-y-2 sm:-translate-y-2 -translate-y-1.5 flex justify-center items-center">
+                  <div className=" lg:-translate-y-2 md:-translate-y-2 sm:-translate-y-1.5 -translate-y-1.5 flex justify-center items-center">
                     {cartItems.length === 0 ||
                     cartItems === undefined ||
                     cartItems === null
