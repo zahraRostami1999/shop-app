@@ -1,6 +1,5 @@
 export const PriceFilterList = [
    { label: "Price", value: "all" },
-   { label: "All", value: "all" },
    { label: "Below €10", value: "10" },
    { label: "€10 to €30", value: "30" },
    { label: "€30 to €100", value: "100" },
@@ -9,7 +8,6 @@ export const PriceFilterList = [
 
 export const CategoryFilterList = [
    { label: "Category", value: "all" },
-   { label: "All", value: "all" },
    { label: "Men", value: "men's clothing" },
    { label: "Women", value: "women's clothing" },
    { label: "Jewelery", value: "jewelery" },
@@ -18,8 +16,7 @@ export const CategoryFilterList = [
 
 export const RatingFilterList = [
    { label: "Rate", value: "all" },
-   { label: "All", value: "all" },
    { label: "High", value: "4" },
-   { label: "Medium", value: "3" },
-   { label: "Low", value: "1" },
+   { label: "Medium", value: "2" },
+   { label: "Low", value: "0" },
 ];
