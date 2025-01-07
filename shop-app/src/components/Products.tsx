@@ -21,7 +21,7 @@ const Products: React.FC = () => {
    };
 
    const handleRateFilterChange = (value: string) => {
-      setRateFilter(value);      
+      setRateFilter(value); 
    };
 
    const filteredProducts = useMemo(() => {
@@ -35,14 +35,11 @@ const Products: React.FC = () => {
          if (priceFilter === "100") filter = filter?.filter((item) => item.price <= 100 && item.price >= 30);
          if (priceFilter === "+100") filter = filter?.filter((item) => item.price >= 100);
       }
-      if (rateFilter!= "all") {
-         if (rateFilter === "4") filter = filter?.filter((item) => item.rating.rate >= 4);
-         // if (rateFilter === "4") console.log("*4");
-         if (rateFilter === "3") filter = filter?.filter((item) => item.rating.rate >= 3);
-         if (rateFilter === "1") filter = filter?.filter((item) => item.rating.rate >= 1);
+      if (rateFilter != "all") {
+         filter = filter?.filter((item) => item.rating.rate >= parseInt(rateFilter) && item.rating.rate <= parseInt(rateFilter)+2)
       }
       return filter;
-   }, [productData, categoryFilter, priceFilter]);
+   }, [productData, categoryFilter, priceFilter, rateFilter]);
 
    return (
       <>
