@@ -35,7 +35,7 @@ const CartItem: React.FC<Item> = ({ id, title, image, price, qty }) => {
                   <p className=" text-green-700 lg:text-sm md:text-sm sm:text-xs text-xs">€{price}</p>
                </li>
                <li className="lg:w-1/6 md:w-1/6 flex justify-center h-7 lg:text-center">
-                  <div className="border border-rose-400 lg:w-1/2 md:w-1/2 sm:w-2/3 w-3/5 flex justify-center">
+                  <div className="border border-rose-900 lg:w-1/2 md:w-1/2 sm:w-2/3 w-3/5 flex justify-center">
                      <Button label="+" color="gold" size="xs" rounded={true} onClick={() => handleAdd(id, price)} />
                      <p className="w-10 lg:text-xs md:text-sm sm:text-xs text-xs flex justify-center items-center">{qty}</p>
                      <Button label="-" size="xs" color="gold" rounded={true} onClick={() => handleRemove(id, qty, title)} />
