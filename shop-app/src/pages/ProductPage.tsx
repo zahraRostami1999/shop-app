@@ -36,23 +36,23 @@ const ProductPage: React.FC = () => {
             <Spinner />
          ) : (
             <div className="w-full min-h-screen flex items-center">
-               <div className="h-full mx-auto mt-10 py-5 flex flex-col lg:flex-row justify-center lg:justify-around my-28 sm:my-48 md:my-48">
-                  <div className="w-32 h-44 sm:w-60 sm:h-72 md:w-60 md:h-72 lg:w-72 lg:h-60 mx-auto ">
+               <div className="h-full mx-auto mt-10 py-5 flex flex-col lg:flex-row justify-center lg:justify-around my-28 sm:my-20 md:my-20">
+                  <div className="w-24 h-32 sm:w-32 sm:h-44 md:w-32 md:h-44 lg:w-44 lg:h-40 mx-auto ">
                      <img src={productDetails?.image} alt={productDetails?.title} className="w-full object-cover" />
                   </div>
-                  <div className="lg:mx-20 md:mx-0 md:px-20 sm:px-20 mx-1 w-full lg:w-3/5 h-auto flex flex-col justify-between px-7 lg:px-0  my-28 sm:my-48 md:my-48 lg:my-5">
+                  <div className="lg:mx-20 md:mx-0 md:px-20 sm:px-20 mx-1 w-full lg:w-3/5 h-auto flex flex-col justify-between px-7 lg:px-0  my-7 sm:my-10 md:my-20 lg:my-5">
                      <div>
-                        <h1 className="lg:text-3xl md:text-3xl text-base font-bold lg:pb-3 md:pb-3 pb-1">{productDetails?.title}</h1>
-                        <h3 className="h-1/2 lg:text-xl md:text-xl text-base lg:mt-14 md:mt-16 my-5">{productDetails?.description}</h3>
+                        <h1 className="lg:text-3xl md:text-xl sm:text-lg text-base font-semibold lg:pb-3 md:pb-3 pb-1">{productDetails?.title}</h1>
+                        <h3 className="h-1/2 lg:text-xl md:text-sm text-xs sm:text-sm lg:mt-14 md:mt-16 my-5">{productDetails?.description}</h3>
                      </div>
                      <div className="w-full h-20 flex flex-row lg:flex-row justify-around items-center lg:mt-10 mt-5">
-                        <h2 className="text-base font-bold text-green-700">€{productDetails?.price}</h2>
+                        <h2 className="lg:text-base md:text-sm sm:text-sm text-xs font-bold text-green-700">€{productDetails?.price}</h2>
                         <div>
                            <Button label="Add to Basket" size="medium" onClick={() => handleAddToBasket(id)} />
                         </div>
                         <div>
                            <Link to="/Products">
-                              <Button label="Back to Store" color="neutral" size="medium" onClick={() => handleAddToBasket(id)} />
+                              <Button label="Back to Store" color="neutral" size="medium" />
                            </Link>
                         </div>
                      </div>

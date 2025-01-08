@@ -5,10 +5,9 @@ import HomeIntro from "../components/HomeIntro";
 import { useGettingProducts } from "../services/Query";
 import Spinner from "../components/Spinner";
 import Button from "../components/Btn/Button";
-import Electronic from "../assets/images/Electronic.jpeg";
-import Men from "../assets/images/Men.jpeg";
-import Women from "../assets/images/Women.jpeg";
-import Jewelery from "../assets/images/jewelery.jpeg";
+import Electronic from "../assets/images/Electronics.png";
+import fashion from "../assets/images/fashion.png";
+import Jewelery from "../assets/images/jewelery.png";
 
 function HomePage() {
    const { data: products, isLoading: loading } = useGettingProducts();
@@ -19,24 +18,30 @@ function HomePage() {
             <Spinner />
          ) : (
             <div className=" w-full h-full flex flex-wrap justify-between lg:pt-16 md:pt-24 pt-16 ">
-               <div className=" w-full ">
-                  <img className="bg-cover w-full mx-auto" src={cover} />
+               <div className=" w-full h-full">
+                  <img className="bg-cover w-full h-full mx-auto" src={cover} />
                </div>
-               <div className="w-full my-20 bg-neutralLight py-10">
-                  <div className="lg:text-2xl mb-10 mx-10">New to ChicMarket?</div>
+               <div className="w-full bg-red-200 pb-5 text-neutral-800 lg:text-base md:text-sm sm:text-sm text-xs text-center">
+                  <div className="lg:text-xl text-sm font-medium lg:text-center text-left lg:my-6 mb-3 lg:px-10 md:px-10 sm:px-5 px-5 pt-1">New to ChicMarket?</div>
                   <div className="flex justify-around">
-                     <div className="text-center border-2 border-neutral-600 rounded px-10 py-10">
-                        Fashion
-                        <img className="w-44 h-40" src={Men} alt="" />
-                     </div>
-                     <div className="text-center border-2 border-neutral-600 rounded px-10 py-10">
-                        Jewelery
-                        <img className="w-44 h-40 " src={Jewelery} alt="" />
-                     </div>
-                     <div className="text-center border-2 border-neutral-600 rounded px-10 py-10">
-                        Electronics
-                        <img className="w-44 h-40 " src={Electronic} alt="" />
-                     </div>
+                     <Link to="/Products">
+                        <div className="border-2 bg-white rounded lg:px-10 lg:py-10 hover:border-rose-900">
+                           <img className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24" src={fashion} alt="" />
+                           Fashion
+                        </div>
+                     </Link>
+                     <Link to="/Products">
+                        <div className="text-center border-2 bg-white rounded lg:px-10 lg:py-10 hover:border-rose-900">
+                           <img className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24" src={Jewelery} alt="" />
+                           Jewelery
+                        </div>
+                     </Link>
+                     <Link to="/Products">
+                        <div className="text-center border-2 bg-white rounded lg:px-10 lg:py-10 hover:border-rose-900">
+                           <img className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24" src={Electronic} alt="" />
+                           Electronics
+                        </div>
+                     </Link>
                   </div>
                </div>
                <div className="w-full font-Poppins text-left ">

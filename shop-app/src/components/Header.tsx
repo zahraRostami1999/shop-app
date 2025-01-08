@@ -45,20 +45,20 @@ function Header() {
               ChicMarket
             </h1>
           </div>
-          <div className="lg:w-32 pb-1 sm:pb-1 md:w-32 sm:w-28 w-28 flex justify-between items-center text-neutral-700 lg:text-xl md:text-xl sm:text-base text-base">
+          <div className="lg:w-32 pb-1 sm:pb-1 md:w-32 sm:w-28 w-28 flex justify-between items-center text-neutral-700 lg:text-2xl md:text-xl sm:text-base text-base">
             <div className="hover:scale-105 transition duration-200 ease-in-out">
               <Link to="/">
                 <FontAwesomeIcon icon={faHome} />
               </Link>
             </div>
-            <div className="flex justify-center items-center pb0.5 hover:scale-105 transition duration-200 ease-in-out">
+            <div className="flex justify-center items-center hover:scale-105 transition duration-200 ease-in-out">
               {handleLoginIcon()}
             </div>
             <Link to="/Handle">
               <div className="flex hover:scale-105 transition duration-200 ease-in-out">
                 <FontAwesomeIcon icon={faShoppingCart} size="1x" />
-                <div className="bg-rose-400 rounded-full text-center lg:text-[10px]  text-[9px] font-semibold h-3 w-3 lg:h-4 lg:w-4 md:h-4 md:w-4 sm:w-3 sm:h-3 lg:py-0.5 md:py-0.5 text-neutral-700 lg:-translate-x-1 lg:-translate-y-3 md:-translate-x-1 md:-translate-y-3 sm:-translate-x-1  inline -translate-x-1 -translate-y-2 cursor-pointer">
-                  <div className=" lg:-translate-y-2 md:-translate-y-2 sm:-translate-y-1.5 -translate-y-1.5 flex justify-center items-center">
+                <div className="bg-rose-900 text-white rounded-full text-center lg:text-[11px]  text-[9px] font-semibold h-3 w-3 lg:h-5 lg:w-5 md:h-4 md:w-4 sm:w-3 sm:h-3 lg:py-0.5 md:py-0.5 lg:-translate-x-2 lg:-translate-y-3 md:-translate-x-1 md:-translate-y-3 sm:-translate-x-1  inline -translate-x-1 -translate-y-2 cursor-pointer">
+                  <div className=" lg:-translate-y-2.5 md:-translate-y-2 sm:-translate-y-1.5 -translate-y-1.5 flex justify-center items-center">
                     {cartItems.length === 0 ||
                     cartItems === undefined ||
                     cartItems === null

@@ -47,7 +47,7 @@ const Products: React.FC = () => {
             <Spinner />
          ) : (
             <div className="min-h-screen">
-               <div className="mt-20 font-Poppins font-medium w-full lg:px-7 md:px-7 px-0 flex lg:justify-start justify-center">
+               <div className="mt-20 font-Poppins font-medium w-full lg:px-7 md:px-7 px-0 flex lg:justify-start justify-center border-b border-b-neutral-200 pb-2">
                   <ProductFitler options={CategoryFilterList} onSelectChange={handleCategoryFilterChange} />
                   <ProductFitler options={PriceFilterList} onSelectChange={handlePriceFilterChange} />
                   <ProductFitler options={RatingFilterList} onSelectChange={handleRateFilterChange} />

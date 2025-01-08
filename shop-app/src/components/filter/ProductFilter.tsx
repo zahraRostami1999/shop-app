@@ -17,15 +17,18 @@ const ProductFitler: React.FC<Props> = ({ options, onSelectChange }) => {
    const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
       const value = e.target.value;
       setSelected(value);
-      onSelectChange(value); 
+      onSelectChange(value);
    };
 
    return (
       <>
-         <select className="lg:w-32 md:w-32 sm:w-24 w-20 border-2 rounded lg:text-sm md:text-sm sm:text-xs text-xs mx-2 border-neutral-300 focus-within:border-neutral-400" onChange={(e) => handleSelectChange(e)}>
+         <select
+            className="lg:w-32 md:w-32 sm:w-24 w-20 border-2 rounded lg:text-sm md:text-sm sm:text-xs text-xs mx-2 border-neutral-300 focus-within:border-neutral-500"
+            onChange={(e) => handleSelectChange(e)}
+         >
             {options.map((option) => {
                return (
-                  <option key={option.value} value={option.value} className="text-xs hover:bg-rose-400 bg-rose-200">
+                  <option key={option.value} value={option.value} className="text-xs">
                      {option.label}
                   </option>
                );

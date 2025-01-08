@@ -5,7 +5,7 @@ const Spinner: React.FC = () => {
 
     return (
         <>
-            <div className="bg-neutralLight min-h-screen flex justify-center items-center text-white">
+            <div className=" min-h-screen flex justify-center items-center text-white">
                 <span className="loader"></span>
             </div>
         </>
