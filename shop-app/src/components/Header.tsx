@@ -14,7 +14,7 @@ import { RootState } from "../redux/Store";
 function Header() {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
   const dispatch = useDispatch();
-  const isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn") || "");
+  const isLoggedIn = localStorage.getItem("isLoggedIn") || "";
   const navigate = useNavigate();
 
   const handleLoginIcon = () => {

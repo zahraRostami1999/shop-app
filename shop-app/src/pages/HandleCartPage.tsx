@@ -3,7 +3,7 @@ import CartPage from './CartPage';
 import LoginPage from "./LoginPage";
 
 const HandleCartPage: React.FC = () => {
-    const isLoggedIn: boolean = JSON.parse(localStorage.getItem("isLoggedIn") || "");
+    const isLoggedIn: string = localStorage.getItem("isLoggedIn") || "";
     return (
         <>
             {isLoggedIn ? <CartPage /> : <LoginPage />}
