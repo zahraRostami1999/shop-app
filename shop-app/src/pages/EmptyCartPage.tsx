@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import cover from "../assets/images/Empty.png";
+import  Button  from "../components/Btn/Button";
 
 function EmptyCartPage() {
   return (
@@ -23,9 +24,7 @@ function EmptyCartPage() {
             </h2>
           </div>
           <Link className=" w-full flex justify-center" to="/Products">
-            <button className="bg-orange-500 hover:scale-105 transition duration-100 ease-in-out text-zinc-900 lg:text-xl md:lg:text-xl text-lg text-center font-bold py-3 px-10 rounded-xl mt-6">
-              Let's Go
-            </button>
+            <Button label="Let's Go" size="large"/>
           </Link>
         </div>
       </div>
