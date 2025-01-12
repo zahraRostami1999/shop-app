@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-import Spinner from "./Spinner";
-import DisplaycartItems from "./DisplaycartItems";
-import ConfirmOrder from "./ConfirmOrder";
-import { useGettingProducts } from "../services/Query";
+import {Spinner, DisplaycartItems, ConfirmOrder} from "../index"
+import { useGettingProducts } from "../../services/Query";
 
 const ShoppingCart = () => {
    const { isLoading: loading } = useGettingProducts();

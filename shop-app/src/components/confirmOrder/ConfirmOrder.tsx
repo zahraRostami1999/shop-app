@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useTotalPrice } from "../hooks/useTotalPrice";
-import Button from "./Btn/Button";
+import { useTotalPrice } from "../../hooks/useTotalPrice";
+import Button from "../button/Button";
 
 interface CartItem {
    id: string;

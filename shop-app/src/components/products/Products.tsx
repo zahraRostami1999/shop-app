@@ -1,10 +1,7 @@
 import React, { useState, useMemo } from "react";
-import Card from "./Card";
-import BackTop from "./BackTop";
-import Spinner from "./Spinner";
-import { useGettingProducts } from "../services/Query";
-import ProductFitler from "./filter/ProductFilter";
-import { PriceFilterList, CategoryFilterList, RatingFilterList } from "./filter/FilterList";
+import {BackTop, Card, Spinner, ProductFitler} from "../index";
+import { useGettingProducts } from "../../services/Query";
+import { PriceFilterList, CategoryFilterList, RatingFilterList } from "../../helpers/FilterList";
 
 const Products: React.FC = () => {
    const { data: productData, isLoading: loading } = useGettingProducts();

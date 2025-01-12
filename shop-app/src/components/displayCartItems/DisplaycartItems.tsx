@@ -1,8 +1,8 @@
 import React from "react";
 import { useSelector} from "react-redux";
-import { RootState } from "../redux/Store";
-import { useGettingProducts } from "../services/Query";
-import CartItem from "./CartItem";
+import { RootState } from "../../redux/Store";
+import { useGettingProducts } from "../../services/Query";
+import CartItem from "../cartItem/CartItem";
 
 interface CartItem {
    id: string | number;

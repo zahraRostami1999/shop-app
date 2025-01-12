@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AddToCart } from "../redux/CartSlice";
+import { AddToCart } from "../../redux/CartSlice";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Button from "./Btn/Button";
+import {Button} from "../index";
 
 interface Item {
    id: string;

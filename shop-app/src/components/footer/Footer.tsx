@@ -1,5 +1,5 @@
 import React from "react";
-import { testers } from "./TesterList";
+import { testers } from "../../helpers/TesterList";
 const Footer:React.FC = () => {
     return (
         <>

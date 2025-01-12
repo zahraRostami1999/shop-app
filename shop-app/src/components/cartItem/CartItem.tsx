@@ -1,8 +1,8 @@
 import React from "react";
-import { useHandleDelete } from "../hooks/useHandleDelete";
-import { useHandleRemove } from "../hooks/useHandleRemove";
-import Button from "./Btn/Button";
-import { AddToCart, removeFromCart, deleteFromCart } from "../redux/CartSlice";
+import { useHandleDelete } from "../../hooks/useHandleDelete";
+import { useHandleRemove } from "../../hooks/useHandleRemove";
+import {Button} from "../index";
+import { AddToCart} from "../../redux/CartSlice";
 import { useDispatch } from "react-redux";
 
 interface Item {

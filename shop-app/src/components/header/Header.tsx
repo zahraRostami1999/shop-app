@@ -1,4 +1,3 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShoppingCart,
@@ -8,8 +7,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { logOut } from "../redux/UserSlice";
-import { RootState } from "../redux/Store";
+import { logOut } from "../../redux/UserSlice";
+import { RootState } from "../../redux/Store";
 
 function Header() {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
