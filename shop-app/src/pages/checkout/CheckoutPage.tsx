@@ -1,9 +1,8 @@
-import React from "react";
-import cover from "../assets/images/checkout.png";
-import googlepay from "../assets/images/googlePay.png";
-import Input from "../components/Input";
+import cover from "../../assets/covers/checkout.png";
+import googlepay from "../../assets/icons/googlePay.png";
+import {Input} from "../../components";
 import { useSelector } from "react-redux";
-import { RootState } from "../redux/Store";
+import { RootState } from "../../redux/Store";
 
 function CheckoutPage() {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);

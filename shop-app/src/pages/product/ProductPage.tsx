@@ -1,14 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { AddToCart } from "../redux/CartSlice";
+import { AddToCart } from "../../redux/CartSlice";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useProductDetails } from "../services/Query";
-import Spinner from "../components/Spinner";
-import Button from "../components/Btn/Button";
-
+import { useProductDetails } from "../../services/Query";
+import {Spinner, Button} from "../../components";
 const ProductPage: React.FC = () => {
    const { id } = useParams<{ id: string }>();
    const { data: productDetails, isLoading: loading } = useProductDetails(id);

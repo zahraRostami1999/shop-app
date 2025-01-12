@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import cover from "../assets/images/Login.png";
-import ForgetUserOrPass from "../components/ForgetUserOrPass";
-import { verifyUser } from "../services/api";
+import cover from "../../assets/covers/Login.png";
+import { verifyUser } from "../../services/api";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { logIn } from "../redux/UserSlice";
+import { logIn } from "../../redux/UserSlice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Button from "../components/Btn/Button";
+import {Button, ForgetUserOrPass,} from "../../components";
 
 const LoginPage: React.FC = () => {
    const [username, setUsername] = useState<string>("");

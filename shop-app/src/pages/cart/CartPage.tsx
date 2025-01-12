@@ -1,8 +1,7 @@
-import React from "react";
 import { useSelector } from "react-redux";
-import EmptyCartPage from "./EmptyCartPage";
-import { RootState } from "../redux/Store";
-import ShoppingCart from "../components/ShoppingCart";
+import {EmptyCartPage} from "../index";
+import { RootState } from "../../redux/Store";
+import {ShoppingCart} from "../../components";
 
 function CartPage() {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);

@@ -1,7 +1,6 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import cover from "../assets/images/Empty.png";
-import  Button  from "../components/Btn/Button";
+import cover from "../../assets/covers/Empty.png";
+import  {Button}  from "../../components";
 
 function EmptyCartPage() {
   return (

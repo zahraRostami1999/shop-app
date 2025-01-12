@@ -1,17 +1,13 @@
-import cover from "../assets/images/HomePage.jpg";
+import cover from "../../assets/covers/HomePage.jpg";
 import { Link } from "react-router-dom";
-import Carousel from "../components/Carousel";
-import HomeIntro from "../components/HomeIntro";
-import { useGettingProducts } from "../services/Query";
-import Spinner from "../components/Spinner";
-import Button from "../components/Btn/Button";
-import Electronic from "../assets/images/Electronics.png";
-import fashion from "../assets/images/fashion.png";
-import Jewelery from "../assets/images/jewelery.png";
+import {Carousel, HomeIntro, Spinner, Button} from "../../components";
+import { useGettingProducts } from "../../services/Query";
+import Electronic from "../../assets/images/Electronics.png";
+import fashion from "../../assets/images/fashion.png";
+import Jewelery from "../../assets/images/jewelery.png";
 
 function HomePage() {
    const { data: products, isLoading: loading } = useGettingProducts();
-
    return (
       <>
          {loading ? (
