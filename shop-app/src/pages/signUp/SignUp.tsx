@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ForgetUserOrPass } from "../../components";
 import { OutlinedInput, InputLabel, FormControl, TextField, Typography, Button } from "@mui/material";
 
-const LoginPage: React.FC = () => {
+const SignUp = () => {
    const [username, setUsername] = useState<string>("");
    const [password, setPassword] = useState<string>("");
    const [forget, setForget] = useState<boolean>(false);
@@ -52,7 +52,6 @@ const LoginPage: React.FC = () => {
          console.error("Error verifying user:", error);
       }
    };
-
    return (
       <>
          <div className="min-h-screen flex justify-center items-center pt-10">
@@ -75,6 +74,14 @@ const LoginPage: React.FC = () => {
                         <OutlinedInput id="password" type="password" name="password" label="password" size="small" onChange={(e) => setPassword(e.target.value)} />
                      </FormControl>
                   </div>
+                  <div className="my-3 w-4/5">
+                     <FormControl fullWidth className="mb-4">
+                        <InputLabel htmlFor="password" size="small" sx={{ fontSize: "14px" }}>
+                           Confirm Password
+                        </InputLabel>
+                        <OutlinedInput id="password" type="password" name="password" label="Confirm Password" size="small" onChange={(e) => setPassword(e.target.value)} />
+                     </FormControl>
+                  </div>
                   <div className="w-4/5 my-2">
                      <Button
                         type="submit"
@@ -86,21 +93,13 @@ const LoginPage: React.FC = () => {
                         }}
                         onClick={verifyNewUser}
                      >
-                        Login
+                        Sign up
                      </Button>
                   </div>
                </div>
-               <div>
-                  <p className="text-xs lg:text-sm ">
-                     Forget your username or password?{" "}
-                     <span className="cursor-pointer text-blue-700" onClick={() => handleForget()}>
-                        Click
-                     </span>
-                  </p>
-               </div>
-               <div className="w-full">{forget ? <ForgetUserOrPass /> : null}</div>
-               <div className="text-neutral-700 w-full">
-                  <Link to="/SignUp">Create a Account</Link>
+               <div className="text-neutral-800 w-full">
+                  Already have a account?
+                  <Link to="/Login"> Log In</Link>
                </div>
             </div>
             <ToastContainer />
@@ -109,4 +108,4 @@ const LoginPage: React.FC = () => {
    );
 };
 
-export default LoginPage;
+export default SignUp;

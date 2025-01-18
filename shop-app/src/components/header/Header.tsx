@@ -13,8 +13,11 @@ import { RootState } from "../../redux/Store";
 function Header() {
   const cartItems = useSelector((state: RootState) => state.cart.cartItems);
   const dispatch = useDispatch();
-  const isLoggedIn = localStorage.getItem("isLoggedIn") || "";
   const navigate = useNavigate();
+  const LoggedIn = localStorage.getItem("isLoggedIn") || "";
+  const isLoggedIn = LoggedIn ? JSON.parse(LoggedIn) : false;
+
+  
 
   const handleLoginIcon = () => {
     if (isLoggedIn) {

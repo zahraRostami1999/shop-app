@@ -9,6 +9,7 @@ const LazyLogin = React.lazy(() => import("../login/LoginPage"));
 const LazyHandleCart = React.lazy(() => import("../handleCart/HandleCartPage"));
 const LazyHome = React.lazy(() => import("../home/HomePage"));
 const LazyProducts = React.lazy(() => import("../productList/ProductsListPage"));
+const LazySignUp = React.lazy(() => import("../signUp/SignUp"));
 
 const App: React.FC = () => {
    return (
@@ -77,6 +78,14 @@ const App: React.FC = () => {
                   element={
                      <React.Suspense fallback="Loading">
                         <LazyProducts />
+                     </React.Suspense>
+                  }
+               ></Route>
+               <Route
+                  path="/SignUp"
+                  element={
+                     <React.Suspense fallback="Loading">
+                        <LazySignUp />
                      </React.Suspense>
                   }
                ></Route>
