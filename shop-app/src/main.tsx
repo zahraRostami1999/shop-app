@@ -10,7 +10,7 @@ if (rootElem) {
   const root = createRoot(rootElem);
   root.render(
     <ReactQueryProvider>
-      <Provider store={Store}>
+      <Provider store={Store} >
         <App />
       </Provider>
     </ReactQueryProvider>

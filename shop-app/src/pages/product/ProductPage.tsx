@@ -6,10 +6,12 @@ import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useProductDetails } from "../../services/Query";
-import {Spinner, Button} from "../../components";
+import { Spinner, Button } from "../../components";
+import { useState } from "react";
 const ProductPage: React.FC = () => {
    const { id } = useParams<{ id: string }>();
    const { data: productDetails, isLoading: loading } = useProductDetails(id);
+   const [imgLoaded, setImgLoaded] = useState(false);
    const dispatch = useDispatch();
 
    const handleAddToBasket = (id: string | undefined) => {
@@ -35,8 +37,9 @@ const ProductPage: React.FC = () => {
          ) : (
             <div className="w-full min-h-screen flex items-center">
                <div className="h-full mx-auto mt-10 py-5 flex flex-col lg:flex-row justify-center lg:justify-around my-28 sm:my-20 md:my-20">
-                  <div className="w-24 h-32 sm:w-32 sm:h-44 md:w-32 md:h-44 lg:w-44 lg:h-40 mx-auto ">
-                     <img src={productDetails?.image} alt={productDetails?.title} className="w-full object-cover" />
+                  <div className="w-24 h-32 sm:w-32 sm:h-44 md:w-32 md:h-44 lg:w-44 lg:h-40 mx-auto">
+                      {!imgLoaded && <div className="w-24 h-32 sm:w-32 sm:h-44 md:w-32 md:h-44 lg:w-44 lg:h-40 mx-auto" />}
+                     <img src={productDetails?.image} alt={productDetails?.title} className="w-full object-cover" onLoad={() => setImgLoaded(true)} style={{ display: imgLoaded ? "block" : "none" }}/>
                   </div>
                   <div className="lg:mx-20 md:mx-0 md:px-20 sm:px-20 mx-1 w-full lg:w-3/5 h-auto flex flex-col justify-between px-7 lg:px-0  my-7 sm:my-10 md:my-20 lg:my-5">
                      <div>

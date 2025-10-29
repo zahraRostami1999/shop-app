@@ -60,7 +60,7 @@ function Header() {
               <div className="flex hover:scale-105 transition duration-200 ease-in-out">
                 <FontAwesomeIcon icon={faShoppingCart} size="1x" />
                 <div className="bg-rose-900 text-white rounded-full text-center lg:text-[11px] text-[9px] font-semibold h-3 w-3 lg:h-5 lg:w-5 md:h-4 md:w-4 sm:w-3 sm:h-3 lg:py-0.5 md:py-0.5 lg:-translate-x-2 lg:-translate-y-3 md:-translate-x-1 md:-translate-y-3 sm:-translate-x-1  inline -translate-x-1 -translate-y-2 cursor-pointer">
-                  <div className=" lg:-translate-y-2.5 md:-translate-y-2 sm:-translate-y-1.5 -translate-y-1.5 flex justify-center items-center">
+                  <div className=" lg:-translate-y-2 md:-translate-y-2 sm:-translate-y-1.5 -translate-y-1.5 flex justify-center items-center">
                     {cartItems.length === 0 ||
                     cartItems === undefined ||
                     cartItems === null

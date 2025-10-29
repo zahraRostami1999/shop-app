@@ -24,15 +24,8 @@ const App: React.FC = () => {
                         <LazyHome />
                      </React.Suspense>
                   }
-               ></Route>
-               <Route
-                  path="*"
-                  element={
-                     <React.Suspense fallback="Loading">
-                        <LazyUndefined />
-                     </React.Suspense>
-                  }
-               ></Route>
+               />
+
                <Route
                   path="/Checkout"
                   element={
@@ -40,15 +33,8 @@ const App: React.FC = () => {
                         <LazyCheckout />
                      </React.Suspense>
                   }
-               ></Route>
-               <Route
-                  path="/:id"
-                  element={
-                     <React.Suspense fallback="Loading">
-                        <LazyProduct />
-                     </React.Suspense>
-                  }
-               ></Route>
+               />
+
                <Route
                   path="/Login"
                   element={
@@ -56,7 +42,8 @@ const App: React.FC = () => {
                         <LazyLogin />
                      </React.Suspense>
                   }
-               ></Route>
+               />
+
                <Route
                   path="/Handle"
                   element={
@@ -64,7 +51,8 @@ const App: React.FC = () => {
                         <LazyHandleCart />
                      </React.Suspense>
                   }
-               ></Route>
+               />
+
                <Route
                   path="/Cart"
                   element={
@@ -72,7 +60,8 @@ const App: React.FC = () => {
                         <LazyCart />
                      </React.Suspense>
                   }
-               ></Route>
+               />
+
                <Route
                   path="/Products"
                   element={
@@ -80,7 +69,8 @@ const App: React.FC = () => {
                         <LazyProducts />
                      </React.Suspense>
                   }
-               ></Route>
+               />
+
                <Route
                   path="/SignUp"
                   element={
@@ -88,8 +78,27 @@ const App: React.FC = () => {
                         <LazySignUp />
                      </React.Suspense>
                   }
-               ></Route>
+               />
+
+               <Route
+                  path="/product/:id"
+                  element={
+                     <React.Suspense fallback="Loading">
+                        <LazyProduct />
+                     </React.Suspense>
+                  }
+               />
+
+               <Route
+                  path="*"
+                  element={
+                     <React.Suspense fallback="Loading">
+                        <LazyUndefined />
+                     </React.Suspense>
+                  }
+               />
             </Routes>
+
             <Footer />
          </BrowserRouter>
       </>
