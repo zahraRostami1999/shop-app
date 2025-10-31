@@ -46,14 +46,14 @@ function HomePage() {
                      <Link to="/Products">
                         <div className="border-2 bg-white rounded-lg lg:px-10 lg:py-10 hover:border-rose-900 transition-all duration-300">
                            {!imgLoaded1 && (
-                              <div className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24" />
+                              <div className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24 bg-red-500" />
                            )}
                            <img
                               className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24"
                               src={fashion}
                               alt="Fashion"
                               onLoad={() => setImgLoaded1(true)}
-                              style={{ display: coverLoaded ? "block" : "none" }}
+                              style={{ display: imgLoaded1 ? "block" : "none" }}
                            />
                            Fashion
                         </div>
@@ -63,7 +63,7 @@ function HomePage() {
                         <div
                            className="text-center border-2 bg-white rounded-lg lg:px-10 lg:py-10 hover:border-rose-900 transition-all duration-300"
                            onLoad={() => setImgLoaded2(true)}
-                           style={{ display: coverLoaded ? "block" : "none" }}
+                           style={{ display: imgLoaded2 ? "block" : "none" }}
                         >
                            {!imgLoaded2 && (
                               <div className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24" />
@@ -81,7 +81,7 @@ function HomePage() {
                         <div
                            className="text-center border-2 bg-white rounded-lg lg:px-10 lg:py-10 hover:border-rose-900 transition-all duration-300"
                            onLoad={() => setImgLoaded3(true)}
-                           style={{ display: coverLoaded ? "block" : "none" }}
+                           style={{ display: imgLoaded3 ? "block" : "none" }}
                         >
                            {!imgLoaded3 && (
                               <div className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24" />
