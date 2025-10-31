@@ -1,11 +1,11 @@
-import cover from "../../assets/covers/HomePage.jpg";
+import cover from "../../assets/covers/HomePage.webp"
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Carousel, HomeIntro, Spinner, Button } from "../../components";
 import { useGettingProducts } from "../../services/Query";
-import Electronic from "../../assets/images/Electronics.png";
-import fashion from "../../assets/images/fashion.png";
-import Jewelery from "../../assets/images/jewelery.png";
+import Electronic from "../../assets/images/Electronics.webp";
+import fashion from "../../assets/images/fashion.webp";
+import Jewelery from "../../assets/images/jewelery.webp";
 
 function HomePage() {
    const [coverLoaded, setCoverLoaded] = useState(false);
@@ -46,7 +46,7 @@ function HomePage() {
                      <Link to="/Products">
                         <div className="border-2 bg-white rounded-lg lg:px-10 lg:py-10 hover:border-rose-900 transition-all duration-300">
                            {!imgLoaded1 && (
-                              <div className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24 bg-red-500" />
+                              <div className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24" />
                            )}
                            <img
                               className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24"

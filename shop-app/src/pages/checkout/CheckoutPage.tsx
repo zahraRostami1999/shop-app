@@ -1,5 +1,5 @@
 import { useState } from "react";
-import cover from "../../assets/covers/checkout.png";
+import cover from "../../assets/covers/checkout.webp";
 import googlepay from "../../assets/icons/googlePay.png";
 import { Input } from "../../components";
 import { useSelector } from "react-redux";

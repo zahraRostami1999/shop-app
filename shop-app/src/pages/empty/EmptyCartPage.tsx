@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import cover from "../../assets/covers/Empty.png";
+import cover from "../../assets/covers/Empty.webp";
 import { Button } from "../../components";
 
 function EmptyCartPage() {
