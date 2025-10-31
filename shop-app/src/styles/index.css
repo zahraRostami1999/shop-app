@@ -8,3 +8,18 @@
     margin: 0;
     padding: 0;
 }
+
+@layer components {
+  .bg-cherry-50 {
+    background-color: #f9e6e6;
+  }
+  .bg-cherry-100 {
+    background-color: #f2c2c2;
+  }
+  .text-cherry-800 {
+    color: #9f2d3c;
+  }
+  .border-cherry-500 {
+    border-color: #c43f5a;
+  }
+}

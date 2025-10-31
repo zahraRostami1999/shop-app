@@ -17,12 +17,12 @@ const Button: React.FC<BtnProps> = ({ label, color = "rose", size = "small", rou
 
    const sizeStyle = {
       xs: "text-sm w-7",
-      small: "text-xs sm:text-sm md:text-sm lg:text-sm sm:px-2 sm:py-2 px-2 py-2 font-normal",
+      small: "text-[12px] sm:text-[12px] md:text-sm lg:text-sm sm:px-2 sm:py-2 px-2 py-2 font-normal",
       medium: "text-xs sm:text-sm md:text-sm lg:text-base lg:px-20 md:px-20 sm:px-3 px-10 py-2",
       large: "lg:text-lg md:text-lg sm:text-sm text-sm lg:px-32 md:px-32 sm:px-20 px-20 py-2 my-5",
    };
 
-   const baseStyle = `${rounded ? "rounded-full" : "rounded"} font-medium px-2 transition duration-200 ease-in-out`;
+   const baseStyle = `${rounded ? "rounded-full" : "rounded-lg"} font-medium px-2 transition duration-200 ease-in-out`;
 
    return (
       <>

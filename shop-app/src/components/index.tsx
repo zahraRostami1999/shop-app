@@ -1,5 +1,5 @@
 import BackTop from "./backTop/index";
-import ProductFitler from "./filter/ProductFilter";
+import { ProductFilter } from "./filter/ProductFilter";
 import Card from "./card/Card";
 import Button from "./button/Button";
 import Carousel from "./carousel/Carousel";
@@ -15,4 +15,21 @@ import Products from "./products/Products";
 import ShoppingCart from "./shoppingCart/ShoppingCart";
 import Spinner from "./spinner/Spinner";
 
-export { BackTop, ProductFitler, Card, Button, Carousel, CartItem, ConfirmOrder, DisplaycartItems, Header, Footer, ForgetUserOrPass, HomeIntro, Input, Spinner, ShoppingCart, Products };
+export { 
+  BackTop, 
+  ProductFilter,  
+  Card, 
+  Button, 
+  Carousel, 
+  CartItem, 
+  ConfirmOrder, 
+  DisplaycartItems, 
+  Header, 
+  Footer, 
+  ForgetUserOrPass, 
+  HomeIntro, 
+  Input, 
+  Spinner, 
+  ShoppingCart, 
+  Products 
+};
