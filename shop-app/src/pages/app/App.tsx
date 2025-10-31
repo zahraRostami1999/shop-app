@@ -12,97 +12,38 @@ const LazyProducts = React.lazy(() => import("../productList/ProductsListPage"))
 const LazySignUp = React.lazy(() => import("../signUp/SignUp"));
 
 const App: React.FC = () => {
-   return (
-      <>
-         <BrowserRouter>
-            <Header />
+  return (
+    <BrowserRouter>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+
+        <main className="flex-1">
+          <React.Suspense
+            fallback={
+              <div className="flex justify-center items-center h-full min-h-[60vh]">
+                Loading...
+              </div>
+            }
+          >
             <Routes>
-               <Route
-                  path="/"
-                  element={
-                     <React.Suspense fallback="Loading">
-                        <LazyHome />
-                     </React.Suspense>
-                  }
-               />
-
-               <Route
-                  path="/Checkout"
-                  element={
-                     <React.Suspense fallback="Loading">
-                        <LazyCheckout />
-                     </React.Suspense>
-                  }
-               />
-
-               <Route
-                  path="/Login"
-                  element={
-                     <React.Suspense fallback="Loading">
-                        <LazyLogin />
-                     </React.Suspense>
-                  }
-               />
-
-               <Route
-                  path="/Handle"
-                  element={
-                     <React.Suspense fallback="Loading">
-                        <LazyHandleCart />
-                     </React.Suspense>
-                  }
-               />
-
-               <Route
-                  path="/Cart"
-                  element={
-                     <React.Suspense fallback="Loading">
-                        <LazyCart />
-                     </React.Suspense>
-                  }
-               />
-
-               <Route
-                  path="/Products"
-                  element={
-                     <React.Suspense fallback="Loading">
-                        <LazyProducts />
-                     </React.Suspense>
-                  }
-               />
-
-               <Route
-                  path="/SignUp"
-                  element={
-                     <React.Suspense fallback="Loading">
-                        <LazySignUp />
-                     </React.Suspense>
-                  }
-               />
-
-               <Route
-                  path="/product/:id"
-                  element={
-                     <React.Suspense fallback="Loading">
-                        <LazyProduct />
-                     </React.Suspense>
-                  }
-               />
-
-               <Route
-                  path="*"
-                  element={
-                     <React.Suspense fallback="Loading">
-                        <LazyUndefined />
-                     </React.Suspense>
-                  }
-               />
+              <Route path="/" element={<LazyHome />} />
+              <Route path="/Checkout" element={<LazyCheckout />} />
+              <Route path="/Login" element={<LazyLogin />} />
+              <Route path="/Handle" element={<LazyHandleCart />} />
+              <Route path="/Cart" element={<LazyCart />} />
+              <Route path="/Products" element={<LazyProducts />} />
+              <Route path="/SignUp" element={<LazySignUp />} />
+              <Route path="/product/:id" element={<LazyProduct />} />
+              <Route path="*" element={<LazyUndefined />} />
             </Routes>
+          </React.Suspense>
+        </main>
 
-            <Footer />
-         </BrowserRouter>
-      </>
-   );
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 };
+
 
 export default App;
