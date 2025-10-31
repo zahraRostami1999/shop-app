@@ -44,7 +44,7 @@ function HomePage() {
 
                   <div className="flex justify-around">
                      <Link to="/Products">
-                        <div className="border-2 bg-white rounded-xl lg:px-10 lg:py-10 hover:border-rose-900 transition-all duration-300">
+                        <div className="border-2 bg-white rounded-xl lg:px-10 lg:py-7 sm:py-5 sm:px-3 py-3 px-2 hover:border-rose-900 transition-all duration-300">
                            {!imgLoaded1 && (
                               <div className="lg:w-40 lg:h-44 md:w-32 md:h-40 sm:w-28 sm:h-32 w-20 h-24" />
                            )}
@@ -61,7 +61,7 @@ function HomePage() {
 
                      <Link to="/Products">
                         <div
-                           className="text-center border-2 bg-white rounded-xl lg:px-10 lg:py-10 hover:border-rose-900 transition-all duration-300"
+                           className="text-center border-2 bg-white rounded-xl lg:px-10 lg:py-7 sm:py-5 sm:px-3 py-3 px-2 hover:border-rose-900 transition-all duration-300"
                            onLoad={() => setImgLoaded2(true)}
                            style={{ display: imgLoaded2 ? "block" : "none" }}
                         >
@@ -79,7 +79,7 @@ function HomePage() {
 
                      <Link to="/Products">
                         <div
-                           className="text-center border-2 bg-white rounded-xl lg:px-10 lg:py-10 hover:border-rose-900 transition-all duration-300"
+                           className="text-center border-2 bg-white rounded-xl lg:px-10 lg:py-7 sm:py-5 sm:px-3 py-3 px-2 hover:border-rose-900 transition-all duration-300"
                            onLoad={() => setImgLoaded3(true)}
                            style={{ display: imgLoaded3 ? "block" : "none" }}
                         >
