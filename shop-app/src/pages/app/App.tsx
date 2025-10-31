@@ -21,7 +21,6 @@ const App: React.FC = () => {
           <React.Suspense
             fallback={
               <div className="flex justify-center items-center h-full min-h-[60vh]">
-                Loading...
               </div>
             }
           >
